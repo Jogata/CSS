@@ -1,0 +1,60 @@
+/* ===============  HTML  =============== */
+/* <div class="transparent-bg">
+<h1>Change the <em>href</em> attribute of the stylesheet in order to see the result</h1>
+</div> */
+
+/* ===============  CSS  =============== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url("./assets/img/stock-photo-127204601-copy.jpg") no-repeat;
+    /* background: url("./assets/img/stock-photo-131318185-copy.jpg") no-repeat; */
+    /* background: url("./assets/img/stock-photo-245492421-copy.jpg") no-repeat; */
+    background-position: center;
+    background-size: 120% 120%;
+    animation: move 60s linear infinite alternate;
+}
+@keyframes move {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
+.transparent-bg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.transparent-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: -1;
+}
+
+h1 {
+    width: 100% !important;
+    color: white;
+}
+
