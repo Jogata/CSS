@@ -17,7 +17,7 @@ body {
     /* background: url("./assets/img/stock-photo-131318185-copy.jpg") no-repeat; */
     /* background: url("./assets/img/stock-photo-245492421-copy.jpg") no-repeat; */
     background-position: center;
-    background-size: 120% 120%;
+    background-size: cover;
     animation: move 60s linear infinite alternate;
 }
 @keyframes move {
@@ -57,4 +57,3 @@ h1 {
     width: 100% !important;
     color: white;
 }
-
