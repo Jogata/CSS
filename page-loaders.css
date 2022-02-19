@@ -161,3 +161,81 @@ h1 {
 @keyframes text {
     50% {color: transparent;}
 }
+        /* ------------------------------  v2.2  ------------------------------ */
+        /* ===============  HTML  =============== 
+        <section class="flex">
+            <div class="loader-v2_2"></div>
+            <span class="loader-v2_2-text">loading...</span>
+        </section>
+        */
+
+        /* ===============  CSS  =============== */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+}
+        .loader-v2_2 {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+            animation: rotatev22 2s linear infinite;
+        }
+        @keyframes rotatev22 {
+            0% {
+                transform: rotate(0deg);
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+                filter: hue-rotate(360deg);
+            }
+        }
+        .loader-v2_2::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            background: #000;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        .loader-v2_2::after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+            filter: blur(20px);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .loader-v2_2-text {
+            position: absolute;
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            line-height: 200px;
+            letter-spacing: 1px;
+            z-index: 3;
+            animation: textv2 2s linear infinite;
+        }
+        @keyframes textv2 {
+            50% {color: transparent;}
+            /* TODO: why this doesn't work */
+            /* 0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rotate(360deg);
+            } */
+        }
