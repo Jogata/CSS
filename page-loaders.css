@@ -383,3 +383,64 @@ h1 {
         text-shadow: none;
     }
 }
+
+/* ------------------------------------------------------  Neumorphic  ------------------------------------------------------ */
+/* ===============  HTML  ===============
+    <div class="neumorphic-loader-v1 flex bg-lightblue">
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+        <span style="--i:4"></span>
+        <span style="--i:5"></span>
+        <span style="--i:6"></span>
+        <span style="--i:7"></span>
+    </div>
+*/
+
+/* ===============  CSS  =============== */
+/* .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: #cde8f8;
+} */
+.bg-lightblue {
+    background: #cde8f8;
+}
+.neumorphic-loader-v1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* align-items: flex-end; */
+}
+.neumorphic-loader-v1 span {
+    width: 40px;
+    height: 40px;
+    /* height: calc(40px * var(--i)); */
+    margin: 0 15px;
+    border-radius: 50px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.6);
+    animation: neumorphicloader 7s linear infinite;
+    animation-delay: calc(0.5s * var(--i));
+}
+@keyframes neumorphicloader {
+    0% {
+        /* background-color: red; */
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1),
+        -6px -6px 10px rgba(255, 255, 255, 0.6);
+    }
+    /* 50% {
+        background-color: red;
+    }
+    51% {
+        background-color: #18b201;
+    } */
+    100% {
+        /* background-color: #18b201; */
+        box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.6);
+    }
+}
