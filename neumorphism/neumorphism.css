@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #8a92a5;
+    background: #ebecf0;
+    font-family: 'Poppins', sans-serif;
+}
+/* body {
+    width: 100%;
+    height: 100vh;
+    background: url("./assets/img/stock-photo-127204601-copy.jpg") no-repeat;
+    background: url("./assets/img/stock-photo-131318185-copy.jpg") no-repeat;
+    background: url("./assets/img/stock-photo-245492421-copy.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: move 60s linear infinite alternate;
+}
+@keyframes move {
+    0% {background-position: left;}
+    100% {background-position: right;}
+} */
+
+/* ========================================================  Search Bar  ======================================================== */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+    <div class="searchbox-container">
+        <div class="searchbox">
+          <div class="searchbox-field">
+            <!-- <span class="fas fa-search" aria-hidden="true"></span> -->
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="search" placeholder="search">
+          </div>
+        </div>
+    </div>
+*/
+
+/* ===============  CSS  =============== */
+.searchbox-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1100px;
+    margin: 20px;
+    padding: 10px 10px;
+}
+
+.searchbox {
+    position: relative;
+    display: block;
+}
+
+.searchbox-field {
+    position: relative;
+    display: flex;
+    width: 180%;
+    height: 40px;
+}
+.searchbox-field i {
+    position: absolute;
+    width: 50px;
+    line-height: 40px;
+    color: #8a92a5;
+}
+.searchbox-field input {
+    height: 100%;
+    width: 100%;
+    padding-left: 45px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    color: #595959;
+    background:#ebecf0;
+    border-radius: 25px;
+    box-shadow:
+    inset -3px -3px 6px  #ffffff,
+    inset  3px 3px 6px  #d1d9e6;
+}
+::placeholder {
+    text-align: center;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #8a92a5;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
