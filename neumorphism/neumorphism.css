@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;400;700;800&display=swap');
 
+/*
+font-family: 'Poppins', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Russo One', sans-serif;
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -7,28 +14,64 @@
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    color: #8a92a5;
-    background: #ebecf0;
-    font-family: 'Poppins', sans-serif;
-}
-/* body {
+    display: block !important;
     width: 100%;
     height: 100vh;
-    background: url("./assets/img/stock-photo-127204601-copy.jpg") no-repeat;
-    background: url("./assets/img/stock-photo-131318185-copy.jpg") no-repeat;
-    background: url("./assets/img/stock-photo-245492421-copy.jpg") no-repeat;
-    background-position: center;
-    background-size: cover;
-    animation: move 60s linear infinite alternate;
 }
-@keyframes move {
-    0% {background-position: left;}
-    100% {background-position: right;}
-} */
+
+/* ========================================================  Text  ======================================================== */
+/* ===============  HTML  =============== 
+    <div class="text-bg-navy">
+        <h1 class="text-up">NEUMORPHISM</h1>
+    </div>
+    <div class="text-bg-light">
+        <p class="text-down">I love Neumorphism Effect</p>
+    </div>
+*/
+
+/* ===============  CSS  =============== */
+.text-bg-navy {
+  height: 50vh;
+  width: 100vw;
+  display: inline-flex;
+  flex-direction: row;
+  background: #4a678e;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.text-up {
+  width: 100%;
+  margin: 0 1em;
+  color: #4a678e;
+  font-size: 9vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 5px 5px 10px #394f6c, -5px -5px 10px #5f80ac;
+}
+
+.text-bg-light {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    /* background: #e0e5ec; */
+    background: #4a678e;
+    align-items: center;
+    justify-content: center;
+}
+.text-down {
+    font-size: 70px;
+    font-weight: bolder;
+    color: transparent;
+    /* background: #b1b1b1; */
+    background: #394f6c;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    /* text-shadow: 1px 2px 1px rgba(255, 255, 255, 0.5) ; */
+    text-shadow: 1px 2px 1px rgba(255, 255, 255, 0.193) ;
+}
 
 /* ========================================================  Search Bar  ======================================================== */
 /* ===============  HTML  =============== 
@@ -54,20 +97,18 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 1100px;
-    margin: 20px;
+    width: 90%;
+    margin: 20px auto;
     padding: 10px 10px;
 }
 
 .searchbox {
-    position: relative;
-    display: block;
+    width: 100%;
 }
 
 .searchbox-field {
     position: relative;
     display: flex;
-    width: 180%;
     height: 40px;
 }
 .searchbox-field i {
