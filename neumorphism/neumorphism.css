@@ -82,7 +82,6 @@ body {
     <div class="searchbox-container">
         <div class="searchbox">
           <div class="searchbox-field">
-            <!-- <span class="fas fa-search" aria-hidden="true"></span> -->
             <i class="fa fa-search" aria-hidden="true"></i>
             <input type="search" placeholder="search">
           </div>
@@ -114,6 +113,7 @@ body {
 .searchbox-field i {
     position: absolute;
     width: 50px;
+    text-align: center;
     line-height: 40px;
     color: #8a92a5;
 }
@@ -277,3 +277,167 @@ body {
     text-shadow: 0 0 15px #4cd137;
 }
 
+
+/* ========================================================  Buttons .v3  ======================================================== */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./neumorphism/neumorphism.css" />
+</head>
+
+    <div class="sci-buttons-v3-container">
+        <section class="sci-buttons-v3-inner">
+            <div class="toggle-box">
+                <i class="fa fa-youtube toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-whatsapp toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-twitter toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-facebook-f toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-snapchat-ghost toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-pinterest toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-behance toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-dribbble toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-instagram toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-tumblr toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-linkedin toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-github toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-skype toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-weixin toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-reddit-alien toggles-icon"></i>
+            </div>
+            <div class="toggle-box">
+                <i class="fa fa-etsy toggles-icon"></i>
+            </div>
+        </section>
+    </div>
+*/
+
+/* ===============  JS  ===============
+    <script>
+        const toggleBtns = document.querySelectorAll('.toggle-box');
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('pressed');
+            })
+        })
+    </script>
+*/
+
+/* ===============  CSS  =============== */
+
+.sci-buttons-v3-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    color: #8f8f8f;
+    background: #deeaf6;
+}
+.sci-buttons-v3-inner {
+    width: 350px;
+    height: 350px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+    background: linear-gradient(-45deg, rgb(224, 236, 248), rgb(243, 247, 251));
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(166, 182, 195, 0.72),
+              -3px -3px 10px rgba(255, 255, 255, 0.58);
+}
+
+.toggle-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(-45deg, rgb(224, 236, 248), rgb(243, 247, 251));
+    border-radius: 10px;
+    box-shadow: -3px -3px 10px rgb(255, 255, 255),
+          3px 3px 10px rgba(183, 193, 204, 0.678);
+    transition: box-shadow 700ms ease, color 700ms ease;
+}
+.pressed {
+    background: linear-gradient(-45deg, rgb(243, 247, 251), rgb(224, 236, 248));
+}
+.toggles-icon {
+    font-size: 25px;
+}
+.toggle-box:nth-child(1) i {
+    color: #c4302b;
+}
+.toggle-box:nth-child(2) i {
+    color: #4dae4f;
+}
+.toggle-box:nth-child(3) i {
+    color: #00acee;
+}
+.toggle-box:nth-child(4) i {
+    color: #3b5998;
+}
+.toggle-box:nth-child(5) i {
+    color: #fdc13b;
+}
+.toggle-box:nth-child(6) i {
+    color: #b23d3b;
+}
+.toggle-box:nth-child(7) i {
+    color: #2b7fb5;
+}
+.toggle-box:nth-child(8) i {
+    color: #ea4c89;
+}
+.toggle-box:nth-child(9) i {
+    color: #ce5761;
+}
+.toggle-box:nth-child(10) i {
+    color: #34414b;
+}
+.toggle-box:nth-child(11) i {
+    color: #2174c9;
+}
+.toggle-box:nth-child(12) i {
+    color: #211f1f;
+}
+.toggle-box:nth-child(13) i {
+    color: #00aff0;
+}
+.toggle-box:nth-child(14) i {
+    color: #8ed131;
+}
+.toggle-box:nth-child(15) i {
+    color: #ff4500;
+}
+.toggle-box:nth-child(16) i {
+    color: rgb(220, 116, 25);
+}
