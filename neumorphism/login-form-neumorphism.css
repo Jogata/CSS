@@ -19,7 +19,7 @@ body {
 /* ===============  HTML  =============== 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./neumorphism/login-form.css" />
+    <link rel="stylesheet" href="./neumorphism/login-form-neumorphism.css" />
 </head>
 
     <div class="login-form-neumorphic-container-v1" id="loginv1">
@@ -176,10 +176,129 @@ body {
 }
 
 
+/* ------------------------------------------------------  Login Form Neumorphic Dark UI Desing | v.1  ------------------------------------------------------ */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./neumorphism/login-form-neumorphism.css" />
+</head>
+
+    <section class="login-form-neumorphic-dark-v1-container">
+        <div class="login-box-dark-v1" id="logindarkv1">
+            <h2>login</h2>
+            <form class="inputs-neumorphic-dark-v1-container">
+                <div class="input-box-neumorphic-dark-v1">
+                    <label for="und1">Username</label>
+                    <input type="text" name="" id="und1" placeholder="Username">
+                </div>
+                <div class="input-box-neumorphic-dark-v1">
+                    <label for="pd1">Password</label>
+                    <input type="password" name="" id="pd1" placeholder="Password">
+                </div>
+                <div class="input-box-neumorphic-dark-v1">
+                    <input type="submit" name="" value="Sigh In">
+                </div>
+            </form>
+            <p class="forgot-pass-dark-v1">Forgot Password?
+                <a href="#darkformv1">Click Here</a>
+            </p>
+            <p class="signup-dark-v1">Don't have an account?
+                <a href="#logindarkv1">Sign Up Now</a>
+            </p>
+        </div>
+    </section>
+
+/* ===============  CSS  =============== */
+.login-form-neumorphic-dark-v1-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #131419;
+}
+
+.login-box-dark-v1 {
+    position: relative;
+    width: 350px;
+    padding: 40px 40px 60px 40px;
+    text-align: center;
+    border-radius: 10px;
+    background: #131419;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5),
+    -5px -5px 10px rgba(255, 255, 255, 0.05);
+}
+
+.login-box-dark-v1 h2 {
+    color: #c7c7c7;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.inputs-neumorphic-dark-v1-container {
+    text-align: left;
+    margin-top: 40px;
+}
+
+.input-box-neumorphic-dark-v1 {
+    margin-top: 20px;
+}
+.input-box-neumorphic-dark-v1 label {
+    display: block;
+    color: #868686;
+    margin-bottom: 5px;
+    font-size: 18px;
+    visibility: hidden;
+}
+.input-box-neumorphic-dark-v1 input {
+    width: 100%;
+    height: 50px;
+    padding: 5px 15px;
+    font-size: 18px;
+    color: #fff;
+    color: #03a9f4;
+    background: #131419;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.8),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.1);
+}
+.input-box-neumorphic-dark-v1 input::placeholder {
+    color: #555;
+    /* font-size: 18px; */
+}
+
+.input-box-neumorphic-dark-v1 input[type="submit"] {
+    margin-top: 20px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8),
+    -2px -2px 6px rgba(255, 255, 255, 0.1);
+}
+.input-box-neumorphic-dark-v1 input[type="submit"]:hover {
+    color: #006c9c;
+    font-weight: 800;
+}
+.input-box-neumorphic-dark-v1 input[type="submit"]:active {
+    font-size: 17px;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.8),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.1);
+}
+
+.forgot-pass-dark-v1,
+.signup-dark-v1 {
+    margin-top: 30px;
+    color: #555;
+}
+.forgot-pass-dark-v1 a,
+.signup-dark-v1 a {
+    color: #ff0047;
+}
+
+
 /* ------------------------------------------------------  Login Form Neumorphic UI Desing | v.2  ------------------------------------------------------ */
 /* ===============  HTML  =============== 
 <head>
-    <link rel="stylesheet" href="./neumorphism/login-form.css" />
+    <link rel="stylesheet" href="./neumorphism/login-form-neumorphism.css" />
 </head>
 
     <section class="login-form-neumorphic-container-v2">
