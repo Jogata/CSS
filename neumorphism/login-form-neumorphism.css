@@ -15,6 +15,13 @@ body {
     display: block !important;
 }
 
+:root {
+    --background: rgba(230, 230, 230);
+    --shadow1: rgba(119, 119, 119, 0.5);
+    --shadow2: rgba(255, 255, 255, 0.85);
+    --label: black;
+}
+
 /* ------------------------------------------------------  Login Form Neumorphic UI Desing | v.1  ------------------------------------------------------ */
 /* ===============  HTML  =============== 
 <head>
@@ -463,6 +470,152 @@ body {
     transform: scale(1.3) translateX(10px);
     text-decoration: underline;
 }
+
+/* ------------------------------------------------------  Login Form Neumorphic UI Desing | v.3  ------------------------------------------------------ */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./neumorphism/login-form.css" />
+</head>
+
+    <section class="login-form-neumorphic-containerv3">
+        <form class="login-form-neumorphic-containerv3-form">
+            <div class="login-form-neumorphic-containerv3-form-icon">
+                <img src="./assets/img/pngegg20-copy.png" alt="">
+                <h3 class="login-form-neumorphic-containerv3-title">login</h3>
+            </div>
+            <label for="email" class="login-form-neumorphic-containerv3-label">Email</label>
+            <input class="login-form-neumorphic-containerv3-form-control" type="email" name="email" id="email" placeholder="Email Adress" autocomplete="off">
+            <label for="password" class="login-form-neumorphic-containerv3-label">Password</label>
+            <input class="login-form-neumorphic-containerv3-form-control" type="password" name="password" id="password" placeholder="Password">
+            <button class="login-form-neumorphic-containerv3-login-button" type="button">login</button>
+        </form>
+    </section>
+
+/* ===============  CSS  =============== */
+/* :root {
+    --background: rgba(230, 230, 230);
+    --shadow1: rgba(119, 119, 119, 0.5);
+    --shadow2: rgba(255, 255, 255, 0.85);
+    --label: black;
+} */
+.login-form-neumorphic-containerv3 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+}
+
+.login-form-neumorphic-containerv3-form {
+    position: relative;
+    width: 350px;
+    height: auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: #ecf0f3;
+    box-shadow: 
+    14px 14px 20px #cbced1,
+    -14px -14px 20px #fff;
+    font-family: 'Russo One', sans-serif;
+}
+
+.login-form-neumorphic-containerv3-form-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+    height: 150px;
+    margin: 20px auto;
+}
+.login-form-neumorphic-containerv3-form-icon img {
+    position: absolute;
+    width: 100%;
+}
+.login-form-neumorphic-containerv3-title {
+    position: absolute;
+    color: #ecf0f3;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: translate(5px, -10px);
+    text-shadow: 
+    6px 6px 6px #cbced1,
+    -6px -6px 6px #fff;
+    text-shadow: 2px 2px 6px rgb(0, 0, 0, 0.8), -2px -2px 6px rgb(255, 255, 255, 0.1);
+    text-shadow: -1px -1px 0px rgb(255 255 255), 1px 1px 0px black;
+}
+
+.login-form-neumorphic-containerv3-label {
+    display: block;
+    visibility: hidden;
+    font-size: 20px;
+}
+.login-form-neumorphic-containerv3-form-control {
+    height: 50px;
+    width: 100%;
+    padding: 20px;
+    color: #ac40ab;
+    background: #ecf0f3;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    box-shadow: 
+    inset 6px 6px 6px #cbced1,
+    inset -6px -6px 6px #fff;
+    transition: all 0.3s ease 0s;
+}
+::placeholder {
+    color: #808080;
+    font-size: 16px;
+    font-weight: bold;
+}
+.login-form-neumorphic-containerv3-form-control:focus {
+    color: #ac40ab;
+    box-shadow:
+    5px 5px 5px 2px var(--shadow1),
+    0px -5px 5px 2px var(--shadow2),
+    inset 5px 5px 5px 2px var(--shadow1),
+    inset -5px -5px 5px 2px var(--shadow2);
+}
+
+.login-form-neumorphic-containerv3-login-button {
+    width: 100%;
+    margin: 50px 0 20px;
+    padding: 12px 15px 11px;
+    color: #d06ace;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 
+    3px 3px 3px #cbced1,
+    -3px -3px 4px #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 
+    6px 6px 6px #cbced1,
+    -6px -6px 6px #fff;
+    cursor: pointer;
+}
+.login-form-neumorphic-containerv3-login-button:hover {
+    /* TODO */
+    background: #ecf0f3;
+}
+.login-form-neumorphic-containerv3-login-button:active {
+    color: #c05fbf;
+    font-size: 19px;
+    box-shadow:
+    5px 5px 5px 2px var(--shadow1),
+    0px -5px 5px 2px var(--shadow2),
+    inset 5px 5px 5px 2px var(--shadow1),
+    inset -5px -5px 5px 2px var(--shadow2);
+}
+
 
 /* ------------------------------------------------------    ------------------------------------------------------ */
 /* ===============  HTML  =============== 
