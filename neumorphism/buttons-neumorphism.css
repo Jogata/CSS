@@ -322,7 +322,7 @@ body {
 }
 
 
-/* ===========================================  Neumorphic Social Media Icons .v1  =========================================== */
+/* ===========================================  Neumorphic Social Media Icons | .v1  =========================================== */
 /* ---------------  HTML  --------------- 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -461,11 +461,152 @@ body {
     }
 
 
-/* ========================================================    ======================================================== */
+/* ===========================================  Neumorphic Social Media Icons | .v2  =========================================== */
 /* ---------------  HTML  --------------- 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./neumorphism/neumorphism.css" />
+
+    <div class="neumorphic-social-media-icons-container-v2">
+        <ul class="neumorphic-icons-v2">
+            <li><a class="wpexplorer"><span class="fa fa-wpexplorer"></span></a></li>
+            <li><a class="university"><span class="fa fa-university"></span></a></li>
+            <li><a class="gavel"><span class="fa fa-gavel"></span></a></li>
+            <li><a class="anchor"><span class="fa fa-anchor"></span></a></li>
+            <li><a class="free-code-camp"><span class="fa fa-free-code-camp"></span></a></li>
+        </ul>
+    </div>
+</head>
+
+/* ---------------  CSS  --------------- */
+.neumorphic-social-media-icons-container-v2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #dde1e7;
+    text-align: center;
+}
+
+.neumorphic-icons-v2 {
+    position: relative;
+    display: flex;
+}
+.neumorphic-icons-v2 li {
+    list-style: none;
+}
+
+.neumorphic-icons-v2 li a {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+    background: #dde1e7;
+    border-radius: 50%;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    z-index: 2;
+}
+.neumorphic-icons-v2 li a:hover {
+    transform: translateY(-20px) scale(1.2);
+    box-shadow: 2px 24px 10px rgba(0, 0, 0, 0.1),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.2);
+}
+.neumorphic-icons-v2 li a.wpexplorer:before {
+    content: '';
+    position: absolute;
+    width: 67%;
+    height: 67%;
+    background: currentColor;
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.neumorphic-icons-v2 li a.university:before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: currentColor;
+    outline: 1px solid currentColor;
+    outline-offset: 2px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.neumorphic-icons-v2 li a.gavel:before {
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    background: currentColor;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.neumorphic-icons-v2 li a.anchor span {
+    color: currentColor;
+}
+.neumorphic-icons-v2 li a.anchor:before {
+    content: '';
+    position: absolute;
+    width: 67%;
+    height: 67%;
+    background: #dde1e7;
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.neumorphic-icons-v2 li a.free-code-camp:before {
+    content: '';
+    position: absolute;
+    width: 67%;
+    height: 67%;
+    background: currentColor;
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.neumorphic-icons-v2 li a span {
+    position: relative;
+    color: #fff;
+    z-index: 2;
+}
+
+.wpexplorer {
+    color: #1877f2;
+}
+.university {
+    color: #ea4c89;
+}
+.gavel {
+    color: #1da1f2;
+}
+.anchor {
+    color: #c32aa3;
+    background: #c32aa3;
+}
+.free-code-camp {
+    color: #0f8c2e;
+}
+
+
+/* ===========================================    =========================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./neumorphism/neumorphism.css" />
+
 </head>
 
 /* ---------------  CSS  --------------- */
