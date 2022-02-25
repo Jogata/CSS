@@ -336,7 +336,18 @@ body {
             <i class="fa fa-twitter"></i>
             <i class="fa fa-pinterest"></i>
         </div>
+
+        <!-- ------------ v.1.2 ----------- -->
+            <div class="iconsv12">
+                <ul>
+                    <li><a ><span class="fa fa-facebook"></span></a></li>
+                    <li><a ><span class="fa fa-instagram"></span></a></li>
+                    <li><a ><span class="fa fa-twitter"></span></a></li>
+                    <li><a ><span class="fa fa-pinterest"></span></a></li>
+                </ul>
+            </div>
     </div>
+
 */
 
 /* ---------------  CSS  --------------- */
@@ -390,3 +401,71 @@ body {
     color: rgb(223, 10, 10);
 }
 
+    /* ---------------  v.1.2  --------------- */
+    .iconsv12 ul {
+        display: flex;
+        flex-direction: row;
+        margin: 40px 0;
+    }
+    .iconsv12 li {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        margin: 0 10px;
+        font-size: 27px;
+        padding: 21px;
+        border: 4px solid #dde1e7;
+        border-radius: 50%;
+        background: #dde1e7;
+        list-style: none;
+        box-shadow:
+        -3px -3px 7px #ffffff73,
+        3px 3px 5px rgba(94, 104, 121, 0.288);
+    }
+    
+    .iconsv12 li a {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        line-height: 60px;
+        border-radius: 50%;
+        box-shadow:
+        inset -3px -3px 7px #ffffff73,
+        inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+    }
+    
+    .iconsv12 li a:active {
+        box-shadow:
+        inset 0px 0px 0px #ffffff73,
+        inset 0px 0px 0px rgba(94, 104, 121, 0.288);
+    }
+    .iconsv12 li a:active span{
+        color: #b6bbc5;
+    }
+    
+    .iconsv12 .fa-facebook{
+        color: rgb(13, 16, 233);
+    }
+    .iconsv12 .fa-instagram {
+        color: rgb(240, 10, 201);
+    }
+    .iconsv12 .fa-twitter {
+        color: rgb(9, 177, 228);
+    }
+    .iconsv12 .fa-pinterest {
+        color: rgb(223, 10, 10);
+    }
+
+
+/* ========================================================    ======================================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./neumorphism/neumorphism.css" />
+</head>
+
+/* ---------------  CSS  --------------- */
