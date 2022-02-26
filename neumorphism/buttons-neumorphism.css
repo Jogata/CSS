@@ -89,6 +89,103 @@ body {
     color: #92969e;
 }
 
+/* ===========================================  Neumorphic Like Button  =========================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./neumorphism/neumorphism.css" />
+</head>
+
+    <h1>Did you like the Neumorphism Effect?</h1>
+    <div class="btn-heart">
+        <div id="heart"></div>
+    </div>
+
+/* ---------------  JS  --------------- 
+    <script>
+        const heartBox = document.querySelector('.btn-heart')
+        heartBox.addEventListener('click', (e) => {
+            e.currentTarget.classList.toggle('btn-heart-pressed');
+        });
+    </script>
+*/
+
+/* ---------------  CSS  --------------- */
+.neumorphic-like-button-container {
+    height: 40vh;
+    background: #101214;
+}
+.btn-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 7vh auto;
+    padding-top: 10px;
+    color: #22262a;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px #070911, -2px -3px 3px #22262a;
+}
+/* .btn-heart:hover {
+  cursor: pointer;
+  box-shadow: inset 3px 3px 15px #070911, inset -2px -2px 3px #22262a;
+} */
+
+.btn-heart:hover #heart {
+    transform: scale(1.1) rotate(45deg);
+}
+.btn-heart:active {
+    box-shadow: inset 3px 3px 20px #070911, inset -2px -2px 5px #22262a, inset 0 0 0 3px #FF0000;
+}
+.btn-heart:active #heart {
+    transform: scale(0.8) rotate(45deg);
+}
+
+#heart {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    border-bottom-right-radius: 8px;
+    background: currentColor;
+}
+#heart:before,
+#heart:after {
+    width: 40px;
+    height: 40px;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+#heart:before {
+    transform: translate(-20px, 0);
+}
+#heart:after {
+    transform: translate(0, -20px);
+}
+#heart, #heart::before, #heart::after {
+    background: currentColor;
+}
+
+.btn-heart-pressed {
+    color: #FF0000;
+    box-shadow: inset 3px 3px 15px #070911, inset -2px -2px 3px #22262a;
+}
+.btn-heart-pressed #heart {
+    transform: scale(0.8) rotate(45deg);
+}
+
+h1 {
+    color:#4b5055;
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+
 
 /* ========================================================  Buttons .v2  ======================================================== */
 /* ---------------  HTML  --------------- 
@@ -732,14 +829,3 @@ body {
 .free-code-camp {
     color: #0f8c2e;
 }
-
-
-/* ===========================================    =========================================== */
-/* ---------------  HTML  --------------- 
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./neumorphism/neumorphism.css" />
-
-</head>
-
-/* ---------------  CSS  --------------- */
