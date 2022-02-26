@@ -97,14 +97,59 @@ body {
     <link rel="stylesheet" href="./neumorphism/neumorphism.css" />
 </head>
 
-    <section class="sci-buttons-v2-container">
+    <section class="sci-buttons-v2-container" id="scibv2">
         <ul class="sci-buttons-v2">
-            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+            <li><a href="#scibv2"><i class="fa fa-facebook-f"></i></a></li>
+            <li><a href="#scibv2"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#scibv2"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#scibv2"><i class="fa fa-whatsapp"></i></a></li>
+        </ul>
+
+        --------------------  v2.1  ------------------------
+        <ul class="neumorphic-buttons-v21">
+            <li>
+                <label for="television">
+                    <input type="checkbox" name="television" id="television">
+                    <div class="neumorphic-button-v21-icon-box">
+                        <i class="fa fa-television" aria-hidden="true"></i>
+                    </div>
+                </label>
+            </li>
+            <li>
+                <label for="gamepad">
+                    <input type="checkbox" name="gamepad" id="gamepad">
+                    <div class="neumorphic-button-v21-icon-box">
+                        <i class="fa fa-gamepad" aria-hidden="true"></i>
+                    </div>
+                </label>
+            </li>
+            <li>
+                <label for="headphones">
+                    <input type="checkbox" name="headphones" id="headphones">
+                    <div class="neumorphic-button-v21-icon-box">
+                        <i class="fa fa-headphones" aria-hidden="true"></i>
+                    </div>
+                </label>
+            </li>
+            <li>
+                <label for="microphone">
+                    <input type="checkbox" name="microphone" id="microphone">
+                    <div class="neumorphic-button-v21-icon-box">
+                        <i class="fa fa-microphone" aria-hidden="true"></i>
+                    </div>
+                </label>
+            </li>
+            <li>
+                <label for="wifi">
+                    <input type="checkbox" name="wifi" id="wifi">
+                    <div class="neumorphic-button-v21-icon-box">
+                        <i class="fa fa-wifi" aria-hidden="true"></i>
+                    </div>
+                </label>
+            </li>
         </ul>
     </section>
+
 */
 
 /* ---------------  CSS  --------------- */
@@ -113,11 +158,11 @@ body {
     align-items:center;
     justify-content:center;
     background:#18191f;
-    min-height:20vh;
+    min-height:100vh;
 }
 .sci-buttons-v2 {
     display:flex;
-    margin: 10px 0;
+    margin: 40px auto;
 }
 .sci-buttons-v2 li {
     list-style:none;
@@ -135,11 +180,12 @@ body {
     -2px -2px 3px rgba(255,255,255,0.05);
     transition: all .2s ease-in-out;
 }
+
 .sci-buttons-v2 li a .fa {
     font-size:22px;
     color: #555;
 }
-.sci-buttons-v2 li a:hover .fa {
+.sci-buttons-v2 li:nth-child(1) a:hover .fa {
     color: #054982;
     text-shadow: 0 0 15px #054982;
 }
@@ -156,6 +202,91 @@ body {
     text-shadow: 0 0 15px #4cd137;
 }
 
+.sci-buttons-v2 li a:active {
+    box-shadow: inset 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.1),
+        inset -0.1rem -0.1rem 0.2rem rgba(255, 255, 255, 0.1);
+}
+.sci-buttons-v2 li a:active .fa {
+    font-size: 21px;
+}
+
+    /* --------------------  v2.1  ------------------------ */
+    .neumorphic-buttons-v21 {
+        display:flex;
+        margin: 40px auto;
+    }
+    .neumorphic-buttons-v21 li {
+        list-style: none;
+    }
+    .neumorphic-buttons-v21 li label {
+        position: relative;
+    }
+    .neumorphic-buttons-v21 li label input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    
+    .neumorphic-button-v21-icon-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        margin: 0 10px;
+        color: #555;
+        background: #18191f;
+        border-radius: 10px;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2),
+            -1px -1px 4px rgba(255, 255, 255, 0.05),
+                inset 1px 1px 1px rgba(0, 0, 0, 0.1),
+        inset -1px -1px 4px rgba(255, 255, 255, 0.05);
+        font-size: 22px;
+    }
+    .neumorphic-button-v21-icon-box::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: calc(100% - 5px);
+        height: calc(55% - 5px);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    input:checked ~ .neumorphic-button-v21-icon-box {
+        box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.2),
+            inset 0px 0px 2px rgba(255, 255, 255, 0.05);
+    }
+
+/* One color for all buttons */
+    input:checked ~ .neumorphic-button-v21-icon-box i {
+        color: #00f3ff;
+        text-shadow: 0px 0px 15px #00f3ff;
+    }
+/* Different color for each button */
+    /* input#television:checked ~ div i {
+        color: #00f3ff;
+        text-shadow: 0px 0px 15px #00f3ff;
+    }
+    input#gamepad:checked ~ div i {
+        color: #dc7419;
+        text-shadow: 0 0 15px #dc7419;
+    }
+    input#headphones:checked ~ div i {
+        color: #d43256;
+        text-shadow: 0 0 15px #d43256;
+    }
+    input#microphone:checked ~ div i {
+        color: #1c7dd5;
+        text-shadow: 0 0 15px #1c7dd5;
+    }
+    input#wifi:checked ~ div i {
+        color: #4cd137;
+        text-shadow: 0 0 15px #4cd137;
+    } */
 
 /* ========================================================  Buttons .v3  ======================================================== */
 /* ---------------  HTML  --------------- 
@@ -318,8 +449,10 @@ body {
     color: #ff4500;
 }
 .toggle-box:nth-child(16) i {
-    color: rgb(220, 116, 25);
+    color: #dc7419;
 }
+
+
 
 
 /* ===========================================  Neumorphic Social Media Icons | .v1  =========================================== */
@@ -401,7 +534,7 @@ body {
     color: rgb(223, 10, 10);
 }
 
-    /* ---------------  v.1.2  --------------- */
+    /* ---------------  .v1.2  --------------- */
     .iconsv12 ul {
         display: flex;
         flex-direction: row;
