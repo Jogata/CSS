@@ -17,10 +17,15 @@ body {
     100% {background-position: right;}
 }
 
-/* ===============  HTML  =============== 
-         <section class="sidebar-v1-container">
+/* ==========================================================  Side Bar .v1  ==========================================================  */
+/* ---------------  HTML  --------------- 
+    <section class="sidebar-v1-container">
         <nav class="sidebar-v1">
-            <div class="hamburger-menu"></div>
+            <div class="sidebar-v1-menu-toggle">
+                <div class="sidebar-v1-hamburger">
+                    <span></span>
+                </div>
+            </div>
             <ul class="sidebar-v1-links">
                 <li class="active-link">
                     <a href="#" class="sidebar-v1-link">
@@ -54,16 +59,17 @@ body {
                 </li>
             </ul>
         </nav>
-      </section>
+    </section>
 */
-/* ===============  JS  =============== 
+/* ---------------  JS  --------------- 
     <script>
         const sidebar = document.querySelector('.sidebar-v1');
-        const hamburger = document.querySelector('.hamburger-menu');
+        const hamburger = document.querySelector('.sidebar-v1-menu-toggle');
         hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
             sidebar.classList.toggle('opened');
         })
-
+        
         const links = document.querySelectorAll('.sidebar-v1-links li');
         function activate() {
             links.forEach(link => {
@@ -71,14 +77,13 @@ body {
             })
             this.classList.add('active-link');
         }
-        console.log(links);
         links.forEach(link => {
             link.addEventListener('click', activate);
         })
     </script>
 */
 
-/* ===============  CSS  =============== */
+/* ---------------  CSS  --------------- */
 
 .sidebar-v1-container {
     width: 300px;
@@ -99,42 +104,53 @@ body {
     width: 250px;
 }
 
-.hamburger-menu {
-    width: 100%;
-    height: 60px;
-    padding: 0 23px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-    cursor: pointer;
+.sidebar-v1-menu-toggle {
+	width: 60px;
+	height: 60px;
+    margin: 6px;
+	border-radius: 10px;
+    background: #fff;
+	cursor: pointer;
 }
-.hamburger-menu::before {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 2px;
-    background: #333;
-    transform: translateY(-8px);
-    transition: 0.5s;
+
+.sidebar-v1-hamburger {
+	position: relative;
+	top: calc(50% - 2px);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 32px;
 }
-.opened .hamburger-menu::before {
-    transform: translateY(0px) rotate(-45deg);
+
+.sidebar-v1-hamburger > span,
+.sidebar-v1-hamburger > span::before,
+.sidebar-v1-hamburger > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 99px;
+  background-color: #2e3047;
+  transition-duration: .25s;
 }
-.hamburger-menu::after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 2px;
-    background: #333;
-    transform: translateY(8px);
-    transition: transform 0.5s;
-    box-shadow: 0 -8px 0 #333;
+
+.sidebar-v1-hamburger > span::before {
+  content: '';
+  top: -8px;
 }
-.opened .hamburger-menu::after {
-    /* TODO: fix transform */
-    transform: translateY(0px) rotate(45deg);
-    box-shadow: 0px -8px 0px transparent;
+.sidebar-v1-hamburger > span::after {
+  content: '';
+  top: 8px;
+}
+.sidebar-v1-menu-toggle.active .sidebar-v1-hamburger > span {
+  transform: rotate(45deg);
+}
+.sidebar-v1-menu-toggle.active .sidebar-v1-hamburger > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+.sidebar-v1-menu-toggle.active .sidebar-v1-hamburger > span::after {
+  top: 0;
+  transform: rotate(90deg);
 }
 
 .sidebar-v1-links li {
@@ -216,3 +232,124 @@ body {
 .sidebar-v1.opened a {
     transform: translateX(20px);
 }
+
+
+
+/* ==========================================================  Side Bar .v2  ==========================================================  */
+/* ---------------  HTML  --------------- 
+*/
+
+/* ---------------  JS  --------------- 
+*/
+
+/* ---------------  CSS  --------------- */
+:root {
+    /* ----- Colors ----- */
+    --body-color: #e4e9f7;
+    --sidebar-color: #fff;
+    --primary-color: #b145f9;
+    --primary-color-light: #f6f5ff;
+    --toggle-color: #ddd;
+    --text-color: #707070;
+}
+
+.sidebar-v2-container {
+    width: 250px;
+    height: 100vh;
+    background: var(--body-color);
+}
+.sidebar-v2 {
+    position: fixed;
+    top: 0;
+    left: 300px;
+    width: 250px;
+    height: 100%;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+.logo img {
+    width: 75px;
+}
+.logo-text {
+    margin: auto;
+    padding: 0px 10px;
+    color: var(--text-color);
+}
+.title {
+    font-size: 30px;
+}
+.subtitle {
+    font-size: 16px;
+}
+
+.logo .fa-chevron-right {
+    position: absolute;
+    right: -11px;
+    width: 25px;
+    height: 25px;
+    padding: 7px 10px;
+    font-size: 12px;
+    border-radius: 50%;
+    color: var(--sidebar-color);
+    background: var(--primary-color);
+}
+
+.menu-search {
+    margin-top: 25px;
+}
+.menu-search i {
+    position: absolute;
+    padding: 10px 13px;
+    color: var(--primary-color);
+}
+.menu-search input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    text-align: center;
+    background: var(--primary-color-light);
+}
+.menu-search input::placeholder {
+    color: var(--primary-color);
+}
+
+.menu-link {
+    height: 50px;
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.menu-link:hover {
+    background: var(--primary-color);
+}
+.menu-link a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.menu-link:hover a {
+    color: var(--sidebar-color);
+}
+.menu-link a i {
+    font-size: 30px;
+    margin: 0 20px;
+}
+.text {
+    font-size: 22px;
+}
+
+.menu-links {}
+.sidebar-v2-link {}
