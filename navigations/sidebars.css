@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url("../assets/img/stock-photo-127204601-copy.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: move 60s linear infinite alternate;
+}
+@keyframes move {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
+/* ===============  HTML  =============== 
+         <section class="sidebar-v1-container">
+        <nav class="sidebar-v1">
+            <div class="hamburger-menu"></div>
+            <ul class="sidebar-v1-links">
+                <li class="active-link">
+                    <a href="#" class="sidebar-v1-link">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-v1-link">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <span class="text">About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-v1-link">
+                        <i class="fa fa-comments-o" aria-hidden="true"></i>
+                        <span class="text">Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-v1-link">
+                        <i class="fa fa-picture-o" aria-hidden="true"></i>
+                        <span class="text">Photos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-v1-link">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+      </section>
+*/
+/* ===============  JS  =============== 
+    <script>
+        const sidebar = document.querySelector('.sidebar-v1');
+        const hamburger = document.querySelector('.hamburger-menu');
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('opened');
+        })
+
+        const links = document.querySelectorAll('.sidebar-v1-links li');
+        function activate() {
+            links.forEach(link => {
+                link.classList.remove('active-link');
+            })
+            this.classList.add('active-link');
+        }
+        console.log(links);
+        links.forEach(link => {
+            link.addEventListener('click', activate);
+        })
+    </script>
+*/
+
+/* ===============  CSS  =============== */
+
+.sidebar-v1-container {
+    width: 300px;
+    height: 100vh;
+    text-align: center;
+    background: rgb(0, 0, 0, 0.4);
+}
+
+.sidebar-v1 {
+    position: fixed;
+    width: 75px;
+    inset: 20px 0 20px 20px;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.sidebar-v1.opened {
+    width: 250px;
+}
+
+.hamburger-menu {
+    width: 100%;
+    height: 60px;
+    padding: 0 23px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.hamburger-menu::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #333;
+    transform: translateY(-8px);
+    transition: 0.5s;
+}
+.opened .hamburger-menu::before {
+    transform: translateY(0px) rotate(-45deg);
+}
+.hamburger-menu::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #333;
+    transform: translateY(8px);
+    transition: transform 0.5s;
+    box-shadow: 0 -8px 0 #333;
+}
+.opened .hamburger-menu::after {
+    /* TODO: fix transform */
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0px -8px 0px transparent;
+}
+
+.sidebar-v1-links li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    list-style: none;
+    transition: 0.5s;
+}
+.sidebar-v1-link {
+    display: flex;
+    margin: 10px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.sidebar-v1-link i {
+    width: 55px;
+    height: 55px;
+    padding: 13px 0px;
+    font-size: 26px;
+    color: #222;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.sidebar-v1-link .text {
+    padding: 14px 15px;
+    color: #333;
+    opacity: 0;
+    transition: 0.5s;
+}
+.sidebar-v1.opened ul li a .text {
+    opacity: 1;
+}
+
+.active-link {
+    transform: translate(20px);
+}
+.active-link .sidebar-v1-link .fa-home {
+    color: #fff;
+    background: #f44366;
+    box-shadow: 4px 4px 10px rgba(244, 67, 102, 0.7);
+}
+.active-link .sidebar-v1-link .fa-home ~ span {
+    color: #f44366;
+}
+.active-link .sidebar-v1-link .fa-eye {
+    color: #fff;
+    background: #ffa117;
+    box-shadow: 4px 4px 10px rgba(255, 161, 23, 0.7);
+}
+.active-link .sidebar-v1-link .fa-eye ~ span {
+    color: rgba(255, 161, 23, 0.7);
+}
+.active-link .sidebar-v1-link .fa-comments-o {
+    color: #fff;
+    background: #0fc70f;
+    box-shadow: 4px 4px 10px rgba(15, 199, 15, 0.7);
+}
+.active-link .sidebar-v1-link .fa-comments-o ~ span {
+    color: rgba(15, 199, 15, 0.7);
+}
+.active-link .sidebar-v1-link .fa-picture-o {
+    color: #fff;
+    background: #2196f3;
+    box-shadow: 4px 4px 10px rgba(33, 150, 243, 0.7);
+}
+.active-link .sidebar-v1-link .fa-picture-o ~ span {
+    color: rgba(33, 150, 243, 0.7);
+}
+.active-link .sidebar-v1-link .fa-cog {
+    color: #fff;
+    background: #b145f9;
+    box-shadow: 4px 4px 10px rgba(177, 69, 249, 0.7);
+}
+.active-link .sidebar-v1-link .fa-cog ~ span{
+    color: rgba(177, 69, 249, 0.7);
+}
+.sidebar-v1.opened a {
+    transform: translateX(20px);
+}
