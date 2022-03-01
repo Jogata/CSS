@@ -157,7 +157,153 @@ body {
   
   .neu-onoff-check input {
     display: none;
-  } 
+  }
+
+
+/* ========================================================  On-Off  ======================================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
+</head>
+
+    <section class="neumorphic-radio-checkbox-buttons-container">
+        <fieldset>
+            <legend>Neumorphic Radio & Checkbox Buttons</legend>
+
+            <fieldset class="neumorphic-radio-set">
+                <legend>What is your favorite Color?</legend>
+
+                <div class="radios">
+                    <div class="radio-wrapper">
+                        <input type="radio" name="favColor" id="red">
+                        <label for="red"><span>Red</span></label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <input type="radio" name="favColor" id="green ">
+                        <label for="green "><span>Green </span></label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <input type="radio" name="favColor" id="blue">
+                        <label for="blue"><span>Blue</span></label>
+                    </div>
+                </div>
+
+            </fieldset>
+
+        </fieldset>
+    </section>
+*/
+
+/* ---------------  CSS  --------------- */
+:root {
+    --base1: #EBEFF3;
+    --base2: #C3D0DB;
+    --base3: #88A1B7;
+    --baseDark1: #396387;
+    --input-shadow:
+    2px 2px 9px var(--base3),
+    -2px -2px 9px var(--base1);
+    --input-shadow-active:
+    inset 2px 2px 6px var(--base3),
+    inset -2px -2px 6px var(--base1),
+    1px 1px 6px var(--base3),
+    -1px -1px 6px var(--base1);
+    --input-shadow-valid:
+    inset 2px 2px 4px var(--base3),
+    inset -2px -2px 4px var(--base1),
+    1px 1px 6px var(--base3),
+    -1px -1px 6px var(--base1);
+    --shadow-transition: all 0.25s cubic-bezier(.17, .67, .83, .67);
+    --input-radio-inner-valid:
+    inset 2px 2px 4px var(--base3),
+    inset -2px -2px 4px var(--base1),
+    1px 1px 4px var(--base3),
+    -1px -1px 4px var(--base1);
+}
+.neumorphic-radio-checkbox-buttons-container {
+    padding: 20px 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    background: var(--base2);
+}
+fieldset {
+    margin: 9px;
+    padding: revert;
+    border-radius: 10px;
+}
+legend {
+    margin: auto;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.radios {
+    display: grid;
+    padding: 10px;
+}
+.radio-wrapper {
+    margin: 0.5rem 0;
+}
+  
+input[type="radio"] {
+    opacity: 0;
+}
+input[type="radio"] + label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+input[type="radio"] + label span {
+    margin-left: 6px;
+}
+input[type="radio"] + label::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    left: -24px;
+    border-radius: 50%;
+    border: 2px solid var(--base2);
+    /* box-shadow: var(--input-shadow); */
+    box-shadow: var(--input-shadow-valid);
+    width: 18px;
+    height: 18px;
+}
+input[type="radio"] + label::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    left: -19px;
+    top: 3px;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: var(--shadow-transition);
+    transition: var(--shadow-transition);
+}
+input[type="radio"]:checked + label::before {
+    box-shadow: var(--input-radio-inner-valid);
+}
+input[type="radio"]:checked + label::after {
+    background: var(--baseDark1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+input[type="radio"]:focus + label span, 
+input[type="radio"]:active + label span {
+    font-weight: 600;
+}
+input[type="radio"]:focus + label::before, 
+input[type="radio"]:active + label::before {
+    box-shadow: var(--input-shadow-active);
+    border-color: var(--base3);
+}
+
 
 /* ========================================================  Buttons .v1  ======================================================== */
 /* ---------------  HTML  --------------- 
