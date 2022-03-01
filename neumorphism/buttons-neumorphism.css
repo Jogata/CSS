@@ -172,7 +172,6 @@ body {
 
             <fieldset class="neumorphic-radio-set">
                 <legend>What is your favorite Color?</legend>
-
                 <div class="radios">
                     <div class="radio-wrapper">
                         <input type="radio" name="favColor" id="red">
@@ -187,7 +186,32 @@ body {
                         <label for="blue"><span>Blue</span></label>
                     </div>
                 </div>
+            </fieldset>
 
+            <fieldset class="neumorphic-checkbox-set">
+                <legend>What are your favorite Pizza toppings?</legend>
+                <div class="radios radios-checkbox">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" name="favToppings" id="cheese">
+                        <label for="cheese"><span>Cheese</span></label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" name="favToppings" id="pepperoni">
+                        <label for="pepperoni"><span>Pepperoni</span></label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" name="favToppings" id="pineapple">
+                        <label for="pineapple"><span>Pineapple</span></label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" name="favToppings" id="sausage">
+                        <label for="sausage"><span>Sausage</span></label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" name="favToppings" id="moreCheese">
+                        <label for="moreCheese"><span>More cheese</span></label>
+                    </div>
+                </div>
             </fieldset>
 
         </fieldset>
@@ -195,6 +219,7 @@ body {
 */
 
 /* ---------------  CSS  --------------- */
+/* Globals */
 :root {
     --base1: #EBEFF3;
     --base2: #C3D0DB;
@@ -225,6 +250,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: normal;
     font-size: 16px;
+    line-height: 22px;
     background: var(--base2);
 }
 fieldset {
@@ -238,6 +264,7 @@ legend {
     text-align: center;
 }
 
+/* Radio Buttons */
 .radios {
     display: grid;
     padding: 10px;
@@ -286,6 +313,9 @@ input[type="radio"] + label::after {
     -webkit-transition: var(--shadow-transition);
     transition: var(--shadow-transition);
 }
+input[type="radio"]:checked + label {
+    font-weight: 700;
+}
 input[type="radio"]:checked + label::before {
     box-shadow: var(--input-radio-inner-valid);
 }
@@ -303,6 +333,82 @@ input[type="radio"]:active + label::before {
     box-shadow: var(--input-shadow-active);
     border-color: var(--base3);
 }
+
+/* Checkbox Buttons */
+.neumorphic-checkbox-set .radios {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 33%));
+}
+
+.checkbox-wrapper {
+    margin: 0.5rem 0;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+}
+input[type="checkbox"] + label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+input[type="checkbox"] + label span {
+    margin-left: 6px;
+}
+input[type="checkbox"] + label::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    left: -24px;
+    border-radius: 6px;
+    border: 2px solid var(--base2);
+    /* box-shadow: var(--input-shadow); */
+    box-shadow: var(--input-radio-inner-valid);
+    width: 18px;
+    height: 18px;
+}
+input[type="checkbox"] + label::after {
+    content: "\2713";
+    position: absolute;
+    display: inline-block;
+    left: -19px;
+    top: 3px;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: var(--shadow-transition);
+    transition: var(--shadow-transition);
+}
+input[type="checkbox"]:checked + label::before {
+    box-shadow: var(--input-radio-inner-valid);
+}
+input[type="checkbox"]:checked + label::after {
+    background: var(--baseDark1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+input[type="checkbox"]:active + label span {
+    font-weight: 600;
+}
+input[type="checkbox"]:focus + label::before, 
+input[type="checkbox"]:active + label::before {
+    box-shadow: var(--input-shadow-active);
+    border-color: var(--base3);
+}
+input[type="checkbox"]:checked + label {
+    font-weight: 700;
+}
+input[type="checkbox"]:checked+label::after {
+    top: 0;
+    background-color: transparent;
+}
+
+
+
 
 
 /* ========================================================  Buttons .v1  ======================================================== */
