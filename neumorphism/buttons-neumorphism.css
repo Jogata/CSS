@@ -160,7 +160,7 @@ body {
   }
 
 
-/* ========================================================  On-Off  ======================================================== */
+/* ========================================================  Neumorphic Radio & Checkbox Buttons  ======================================================== */
 /* ---------------  HTML  --------------- 
 <head>
     <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
@@ -1053,6 +1053,115 @@ input:checked ~ .fa-times {
 }
 
 
+/* ========================================================  Buttons .v4  ======================================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
+</head>
+
+    <section class="buttons-v4-container">
+        <div class="buttons-v4-inner-container">
+          <button class="button-v4 toggle" id="theme" >
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                      d="M18 9.52V6h-3.52L12 3.52 9.52 6H6v3.52L3.52 12 6 14.48V18h3.52L12 20.48 14.48 18H18v-3.52L20.48 12 18 9.52zm-6 7.98c-3.03 0-5.5-2.47-5.5-5.5S8.97 6.5 12 6.5s5.5 2.47 5.5 5.5-2.47 5.5-5.5 5.5z"
+                      opacity=".3" />
+                <path
+                      d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6.5c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5-2.47-5.5-5.5-5.5zm0 9c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" />
+              </svg>
+          </button>
+          Theme Toggle
+        </div>
+    </section>
+*/
+
+/* ---------------  JS  --------------- 
+    <script>
+        const buttonv4 = document.querySelector('.button-v4');
+        buttonv4.addEventListener('click', () => {
+            buttonv4.classList.toggle('active');
+        })
+    </script>
+*/
+/* ---------------  CSS  --------------- */
+:root {
+    --base1: #EBEFF3;
+    /* --base2: #C3D0DB; */
+    --base3: #88A1B7;
+    --baseDark2: #204566;
+    --base-shadow: inset 0px 0px 0px var(--base3),
+                inset 0px 0px 0px var(--base1),
+                4px 4px 9px var(--base3),
+                -4px -4px 9px var(--base1);
+    --base-shadow-active: inset 4px 4px 9px var(--base3),
+                inset -4px -4px 6px var(--base1),
+                2px 2px 9px var(--base3),
+                -2px -2px 9px var(--base1);
+}
+
+.buttons-v4-container {
+    min-height: 200px;
+    padding: 50px 25px;
+    color: var(--baseDark2);
+    background: var(--base2);
+}
+
+.buttons-v4-inner-container {
+    justify-self: end;
+    padding: 50px 20px 50px 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 20px;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.button-v4 {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    color: var(--baseDark2);
+    background: var(--base2);
+    border: 2px solid var(--base2);
+    border-radius: 10px;
+    box-shadow: var(--base-shadow);
+}
+
+.button-v4:hover,
+.button-v4:focus {
+    outline: none;
+    color: var(--baseDark2);
+    border-color: var(--base3);
+    box-shadow: inset 1px 1px 3px var(--base3),
+        inset -1px -1px 3px var(--base1),
+        2px 2px 9px var(--base3),
+        -2px -2px 9px var(--base1);
+}
+
+.button-v4:active,
+.button-v4.active {
+    outline: none;
+    color: var(--baseDark2);
+    border-color: var(--base3);
+    box-shadow: var(--base-shadow-active);
+}
+
+.button-v4 svg path:nth-child(2) {
+    fill: var(--baseDark2);
+}
+.button-v4 svg path:nth-child(3) {
+    fill: var(--baseDark2);
+}
 
 
 /* ===========================================  Neumorphic Social Media Icons | .v1  =========================================== */
