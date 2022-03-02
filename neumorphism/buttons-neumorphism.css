@@ -19,6 +19,100 @@ body {
     height: 100vh;
 }
 
+/* ========================================================  Neumorphic Hamburger Button  ======================================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
+</head>
+
+    <section class="neumorphic-hamburger-button-container">
+        <div class="neumorphic-hamburger-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+*/
+
+/* ---------------  JS  --------------- 
+    <script>
+        const hamburger = document.querySelector('.neumorphic-hamburger-button');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+        })
+    </script>
+*/
+
+/* ---------------  CSS  --------------- */
+.neumorphic-hamburger-button-container {
+    background: #eeeeee;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.neumorphic-hamburger-button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: #eeeeee;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+    -webkit-transition: box-shadow 0.6s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+    transition: box-shadow 0.6s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+}
+
+.neumorphic-hamburger-button span {
+    background-color: lightcoral;
+    box-shadow: 0px 0px 10px 0px rgba(240, 128, 128, 0.3);
+    width: 40px;
+    height: 4px;
+    border-radius: 4px;
+    margin: 3px 0px 3px 0px;
+    -webkit-transition: margin 0.4s cubic-bezier(0.79, 0.21, 0.06, 0.81), -webkit-transform 0.4s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+    transition: margin 0.4s cubic-bezier(0.79, 0.21, 0.06, 0.81), -webkit-transform 0.4s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+    transition: margin 0.4s cubic-bezier(0.79, 0.21, 0.06, 0.81), transform 0.4s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+    transition: margin 0.4s cubic-bezier(0.79, 0.21, 0.06, 0.81), transform 0.4s cubic-bezier(0.79, 0.21, 0.06, 0.81), -webkit-transform 0.4s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+}
+.neumorphic-hamburger-button span:nth-child(2) {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.neumorphic-hamburger-button.active {
+    box-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -7px -7px 20px 0px #fff9, inset -4px -4px 5px 0px #fff9, inset 7px 7px 20px 0px #0003, inset 4px 4px 5px 0px #0001;
+}
+.neumorphic-hamburger-button.active span {
+    margin: -2px;
+}
+.neumorphic-hamburger-button.active span:nth-child(1) {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.neumorphic-hamburger-button.active span:nth-child(2) {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.neumorphic-hamburger-button.active span:nth-child(3) {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
 /* ========================================================  On-Off  ======================================================== */
 /* ---------------  HTML  --------------- 
 <head>
@@ -27,16 +121,22 @@ body {
 
     <div class="onoff-container">
         <div id="neu-onoff-button" class="onoff-button">
-          <div class="onoff-button-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24.303 24.303" style="enable-background:new 0 0 24.303 24.303;" xml:space="preserve" class="hovered-paths"><g><g>
-          <path d="M10.269,11.298V1.883C10.269,0.844,11.113,0,12.152,0s1.883,0.844,1.883,1.883v9.415   c0,1.039-0.844,1.883-1.883,1.883S10.269,12.337,10.269,11.298z M19.616,2.761c-0.61-0.483-1.5-0.377-1.983,0.234   c-0.483,0.612-0.378,1.5,0.234,1.984c2.24,1.767,3.524,4.413,3.524,7.261c0,5.094-4.145,9.239-9.238,9.239   c-5.094,0-9.239-4.145-9.239-9.239c0-2.847,1.283-5.492,3.521-7.258c0.612-0.483,0.717-1.371,0.234-1.984   c-0.483-0.612-1.37-0.716-1.984-0.234C1.764,5.069,0.089,8.523,0.089,12.24c0,6.652,5.412,12.063,12.063,12.063   s12.063-5.412,12.063-12.063C24.215,8.521,22.538,5.067,19.616,2.761z" data-original="#030104" class="hovered-path active-path" data-old_color="#030104"></path>
-          </g></g> </svg>
+            <div class="onoff-button-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    id="Capa_1" x="0px" y="0px" viewBox="0 0 24.303 24.303"
+                    style="enable-background:new 0 0 24.303 24.303;" xml:space="preserve" class="hovered-paths">
+                    <g><g><path
+                        d="M10.269,11.298V1.883C10.269,0.844,11.113,0,12.152,0s1.883,0.844,1.883,1.883v9.415   c0,1.039-0.844,1.883-1.883,1.883S10.269,12.337,10.269,11.298z M19.616,2.761c-0.61-0.483-1.5-0.377-1.983,0.234   c-0.483,0.612-0.378,1.5,0.234,1.984c2.24,1.767,3.524,4.413,3.524,7.261c0,5.094-4.145,9.239-9.238,9.239   c-5.094,0-9.239-4.145-9.239-9.239c0-2.847,1.283-5.492,3.521-7.258c0.612-0.483,0.717-1.371,0.234-1.984   c-0.483-0.612-1.37-0.716-1.984-0.234C1.764,5.069,0.089,8.523,0.089,12.24c0,6.652,5.412,12.063,12.063,12.063   s12.063-5.412,12.063-12.063C24.215,8.521,22.538,5.067,19.616,2.761z"
+                        data-original="#030104" class="hovered-path active-path" data-old_color="#030104">
+                    </path></g></g>
+                </svg>
+            </div>
         </div>
+
+        <label class="neu-onoff-check" for="check">
+            <input type="checkbox" id="check" />
+        </label>
     </div>
-        
-    <label class="neu-onoff-check" for="check">
-        <input type="checkbox" id="check" />
-    </label>
 */
 
 /* ---------------  JS  --------------- 
@@ -488,10 +588,12 @@ input[type="checkbox"]:checked+label::after {
     <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
 </head>
 
-    <h1>Did you like the Neumorphism Effect?</h1>
-    <div class="btn-heart">
-        <div id="heart"></div>
-    </div>
+    <section class="neumorphic-like-button-container">
+        <h1>Did you like the Neumorphism Effect?</h1>
+        <div class="btn-heart">
+          <div id="heart"></div>
+        </div>
+    </section>
 
 /* ---------------  JS  --------------- 
     <script>
