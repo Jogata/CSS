@@ -1158,7 +1158,6 @@ input:checked ~ .fa-times {
 /* ========================================================  Buttons .v4  ======================================================== */
 /* ---------------  HTML  --------------- 
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
 </head>
 
@@ -1263,6 +1262,66 @@ input:checked ~ .fa-times {
 }
 .button-v4 svg path:nth-child(3) {
     fill: var(--baseDark2);
+}
+
+
+/* ========================================================  Buttons .v5  ======================================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
+</head>
+
+    <section class="neumorphic-btn-v5-container">
+        <button class="btn-v5-main btn-v5">Button</button>
+    </section>
+*/
+
+/* ---------------  CSS  --------------- */
+:root {
+    --white: #FFFFFF;
+    --btn-v5-main: #6d5dfc;
+    --btn-v5-light: #8abdff;
+    --btn-v5-dark: #5b0eeb;
+    --btn-v5-greyLight: #E4EBF5;
+}
+.neumorphic-btn-v5-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background: var(--btn-v5-main);
+}
+
+.btn-v5-main {
+    width: 15rem;
+    height: 4rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+.btn-v5 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    color: var(--btn-v5-greyLight);
+    background: var(--btn-v5-main);
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--btn-v5-light), 
+    inset -0.2rem -0.2rem 1rem var(--btn-v5-dark), 
+    0.3rem 0.3rem 0.6rem var(--btn-v5-main), 
+    -0.2rem -0.2rem 0.5rem var(--btn-v5-light);
+}
+.btn-v5:hover {
+    color: var(--white);
+}
+.btn-v5:active {
+    font-size: 1.5rem;
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--btn-v5-dark), 
+    inset -0.2rem -0.2rem 1rem var(--btn-v5-light);
 }
 
 
