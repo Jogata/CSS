@@ -1325,6 +1325,103 @@ input:checked ~ .fa-times {
 }
 
 
+/* ========================================================  Button .v6  ======================================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
+</head>
+
+    <section class="button-v6-container">
+        <div class="button-v6" id="bv6">
+            <a href="#bv6">Learn more <i class="fa fa-location-arrow" aria-hidden="true"></i></a>
+        </div>
+    </section>
+*/
+
+/* ---------------  CSS  --------------- */
+.button-v6-container {
+    height: 150px;
+    background-image: linear-gradient(to bottom, #e03e25 0%, #de4523 100%);
+    position: relative;
+    z-index: -5;
+}
+
+.button-v6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-v6 a {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    margin-top: 40px;
+    padding: 10px 28px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 40px;
+    background-image: linear-gradient(to bottom, #ffbc37 0%, #fc6e02 100%);
+    box-shadow:
+        0px 4px 11px rgba(169, 36, 19, 0.98),
+        0px -1px 0px 0px #fd7414 inset,
+        0px -2px 0px 0px rgba(255, 255, 255, 0.14) inset;
+}
+
+
+.button-v6 a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: 8px;
+    padding: 38px 125px;
+    border-radius: 40px;
+    background: #ed5234;
+    z-index: -2;
+    /* box-shadow:
+        -0.819px -0.574px 1px 0px rgba(255, 255, 255, 0.04),
+        -0.819px -0.574px 3px 0px rgba(255, 255, 255, 0),
+        2.598px 1.5px 5px 0px rgba(48, 21, 14, 0.02),
+        1.6px 1.2px 1px 0px #f6603b,
+        inset 0.707px 0.707px 0px 0px #f6603b,
+        inset -1.638px -1.147px 3px 0px #f2543b; */
+        box-shadow:
+        -0.819px -0.574px 1px 0px rgba(255, 255, 255, 0.04),
+        -0.819px -0.574px 3px 0px rgba(255, 255, 255, 0),
+        2.598px 1.5px 5px 0px rgba(48, 21, 14, 0.02),
+        1.6px 1.2px 1px 0px rgb(246, 96, 59),
+        inset 0.707px 0.707px 0px 0px rgb(246, 96, 59),
+        inset -1.638px -1.147px 3px 0px rgb(242, 84, 59);
+}
+
+.fa-location-arrow {
+    display: inline-block;
+    position: relative;
+    left: 12px;
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+    line-height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    transform: rotate(40deg);
+    z-index: 5;
+}
+
+.fa-location-arrow:hover {
+    box-shadow:
+        -4px -4px 5px -1px #ffbc37,
+        3px 3px 5px -1px #fc6e02;
+}
+
+
 /* ===========================================  Neumorphic Social Media Icons | .v1  =========================================== */
 /* ---------------  HTML  --------------- 
 <head>
