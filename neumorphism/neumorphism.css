@@ -246,6 +246,110 @@ body {
 }
 /* TODO: CUSTOM CLEAR BUTTON */
 
+/* ========================================================  Slider Range Bar  ======================================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="./neumorphism/neumorphism.css" />
+</head>
+
+    <section class="neumorphic-range-slider-v1-container">
+        <label for="orange-3d-slider" id="label-for-orange-3d-slider"></label>
+        <input type="range" id="orange-3d-slider">
+    </section>
+*/
+
+/* ---------------  CSS  --------------- */
+.neumorphic-range-slider-v1-container {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b4c1cb;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .5) 30%, rgba(0, 0, 0, .1));
+}
+
+#orange-3d-slider {
+    -webkit-appearance: none;
+    position: absolute;
+    width: 25em;
+    background: transparent;
+}
+#orange-3d-slider:focus {
+    outline: 0;
+}
+
+/* SLIDER THUMB (the orange ball) */
+/* Webkit based browsers (chrome, opera, ...) */
+#orange-3d-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 3em;
+    height: 3em;
+    margin: .5em 0;
+    background: #fc7303;
+    border-radius: 100%;
+    box-shadow:
+        inset .8em .8em 5px -8px rgba(255, 255, 255, 0.4),
+        inset -.4em -.4em 10px -3px rgba(0, 0, 0, 0.2),
+        0.7em 0.5em 7px -0.5em rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+/* firefox */
+#orange-3d-slider::-moz-range-thumb {
+    width: 3em;
+    height: 3em;
+    margin: .5em 0;
+    border: 0;
+    border-radius: 100%;
+    background: #fd8421;
+    box-shadow:
+        inset .8em .8em 5px -8px rgba(255, 255, 255, 0.4),
+        inset -.4em -.4em 10px -3px rgba(0, 0, 0, 0.2),
+        0.7em 0.5em 7px -0.5em rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+/* RUNNABLE TRACK*/
+/* Webkit browsers */
+#orange-3d-slider::-webkit-slider-runnable-track {
+    background: transparent;
+    width: 100%;
+    height: 4em;
+    padding: 0 1em;
+    border-radius: 2em;
+    box-shadow: inset 0.6em 1em 10px rgba(0, 0, 0, 0.15),
+        inset -0.6em -1em 10px rgba(255, 255, 255, 0.415);
+}
+/* firefox */
+#orange-3d-slider::-moz-range-track {
+    background: transparent;
+    width: 100%;
+    height: 4em;
+    padding: 0 1em;
+    border-radius: 2em;
+    box-shadow: inset 0.6em 1em 10px rgba(0, 0, 0, 0.15),
+        inset -0.6em -1em 10px rgba(255, 255, 255, 0.415);
+}
+
+#label-for-orange-3d-slider {
+    position: absolute;
+    width: 25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* TODO: Numbers doesn't show on firefox but shows on chrome and opera */
+#label-for-orange-3d-slider::before {
+    content: "0 1 2 3 4 5 6 7 8 9";
+    padding-left: 0.6em;
+    color: #c4c4c4;
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: 0.65em;
+    text-shadow: 0.5px 0.5px 0.9px rgba(0, 0, 0, 0.4);
+}
+
+
 /* ========================================================  Relef Frame | Convex  ======================================================== */
 /* ---------------  HTML  --------------- 
 <head>
