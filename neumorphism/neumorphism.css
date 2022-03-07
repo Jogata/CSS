@@ -178,6 +178,85 @@ body {
     color: #c2c3c3;
 }
 
+/* ========================================================  Neumorphic Shadow on PNG Image  ======================================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
+</head>
+
+    <section class="shadow-png-container">
+        <div class="box-shadow">
+            <h2 class="title-boxshadow">box shadow</h2>
+            <img class="img-boxshadow" src="./assets/img/img-copy.png" alt="">
+        </div>
+            <div class="box-shadow">
+            <h2 class="title-dropshadow">drop shadow</h2>
+            <img class="img-dropshadow" src="./assets/img/img-copy.png" alt="">
+        </div>
+    </section>
+*/
+
+/* ---------------  CSS  --------------- */
+.shadow-png-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background: #a682df;
+}
+h2 {
+    margin: 20px;
+    padding: 5px 20px;
+    font-size: 5em;
+    line-height: 1em;
+    color: #a682df;
+}
+.title-boxshadow {
+    text-transform: capitalize;
+    border-radius: 20px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6), 
+        -1px -1px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), 
+             15px 15px 15px rgba(0, 0, 0, 0.2),
+        -3px -3px 2px rgba(255, 255, 255, 0.3);
+}
+.title-dropshadow {
+    text-transform: capitalize;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5)) 
+        drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.2))
+    drop-shadow(-3px -3px 2px rgba(255, 255, 255, 0.4));
+}
+
+.box-shadow {
+    width: 95%;
+    max-width: 450px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    box-shadow: inset 5px 5px 5px rgb(0, 0, 0, 0.2), 
+    inset -3px -3px 2px rgb(255, 255, 255, 0.2);
+}
+
+.img-boxshadow {
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), 
+             15px 15px 15px rgba(0, 0, 0, 0.2),
+        -3px -3px 2px rgba(255, 255, 255, 0.3);
+}
+.img-dropshadow {
+    width: 100%;
+    border-radius: 40px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2)) 
+        drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.2))
+    drop-shadow(-3px -3px 2px rgba(255, 255, 255, 0.3));
+}
 
 /* ========================================================  Search Bar  ======================================================== */
 /* ---------------  HTML  --------------- 
