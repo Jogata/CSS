@@ -1,8 +1,42 @@
-
-/* <head>
+/*  ===============  HTML  ===============
+<head>
     <link rel="stylesheet" href="./honeycomb/honeycomb.css" />
-</head> */
+</head>
 
+<ul class="honeycomb">
+        <li class="cell">
+            <img class="cell-img" src="./honeycomb/img/mY263iB-copy.jpg" alt="">
+            <h2 class="cell-title">Web Design</h2>
+        </li>
+        <li class="cell">
+            <img class="cell-img" src="./honeycomb/img/mY263iB-copy.jpg" alt="">
+            <h2 class="cell-title">Graphic Design</h2>
+        </li>
+        <li class="cell">
+            <img class="cell-img" src="./honeycomb/img/wp7360943-black-lady-wallpapers-copy.jpg" alt="">
+            <h2 class="cell-title">Illustration</h2>
+        </li>
+        <li class="cell">
+            <img class="cell-img" src="./honeycomb/img/hip-hop-dance-copy.jpg" alt="">
+            <h2 class="cell-title">Motion Graphics</h2>
+        </li>
+        <li class="cell">
+            <img class="cell-img" src="./honeycomb/img/yamaha-vmax.jpg" alt="">
+            <h2 class="cell-title">Animation <br> 3D</h2>
+        </li>
+        <li class="cell">
+            <img class="cell-img" src="./honeycomb/img/cinematic-4d.jpg" alt="">
+            <h2 class="cell-title">Cinematic <br> 4D</h2>
+        </li>
+        <li class="cell">
+            <img class="cell-img" src="./honeycomb/img/mY263iB-copy.jpg" alt="">
+            <h2 class="cell-title">Share Design</h2>
+        </li>
+        <li class="cell hidden"></li>
+    </ul>
+*/
+
+/* ===============  CSS  =============== */
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -106,5 +140,3 @@ body {
     width: 250px;
     margin: 0 12.5px;
 }
-
-
