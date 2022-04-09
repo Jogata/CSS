@@ -3,14 +3,14 @@
     <link rel="stylesheet" href="./honeycomb/honeycomb.css" />
 </head>
 
-<ul class="honeycomb">
+    <ul class="honeycomb">
         <li class="cell">
             <img class="cell-img" src="./honeycomb/img/mY263iB-copy.jpg" alt="">
-            <h2 class="cell-title">Web Design</h2>
+            <h2 class="cell-title">Web <br> Design</h2>
         </li>
         <li class="cell">
-            <img class="cell-img" src="./honeycomb/img/mY263iB-copy.jpg" alt="">
-            <h2 class="cell-title">Graphic Design</h2>
+            <img class="cell-img" src="./honeycomb/img/bauble-abstract-graphics-4k-pw.jpg" alt="">
+            <h2 class="cell-title">Graphic <br> Design</h2>
         </li>
         <li class="cell">
             <img class="cell-img" src="./honeycomb/img/wp7360943-black-lady-wallpapers-copy.jpg" alt="">
@@ -30,7 +30,7 @@
         </li>
         <li class="cell">
             <img class="cell-img" src="./honeycomb/img/mY263iB-copy.jpg" alt="">
-            <h2 class="cell-title">Share Design</h2>
+            <h2 class="cell-title">Share <br> Design</h2>
         </li>
         <li class="cell hidden"></li>
     </ul>
