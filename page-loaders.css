@@ -6,6 +6,19 @@
 
 body {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    width: 100% !important;
+    color: white;
+}
+
+.loader-container {
+    width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -26,11 +39,6 @@ body {
     }
 }
 
-h1 {
-    width: 100% !important;
-    color: white;
-}
-
 
 /* ------------------------------------------------------  Loader.v1  ------------------------------------------------------ */
 /* ===============  HTML  ===============
@@ -44,7 +52,7 @@ h1 {
 
 /* ===============  CSS  =============== */
 .loader {
-    width: 100%;
+    width: 50%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -253,6 +261,7 @@ h1 {
 /* ===============  JS (just for test)  ===============
     <script>
         const element = document.querySelector('.flex');
+        const outerCircle = document.querySelector('.loader-v3-outer');
         const percentages = document.querySelector('.loader-v3-inner span');
         let count = 0;
 
@@ -317,24 +326,23 @@ h1 {
 
 /* ------------------------------------------------------  Glowing Loading Text  ------------------------------------------------------ */
 /* ===============  HTML  ===============
-    <h2 class="glowing-text-loader">
-        <span>L</span>
-        <span>o</span>
-        <span>a</span>
-        <span>d</span>
-        <span>i</span>
-        <span>n</span>
-        <span>g</span>
-        <span>...</span>
-    </h2>
+    <section class="flex">
+        <h2 class="glowing-text-loader">
+            <span>L</span>
+            <span>o</span>
+            <span>a</span>
+            <span>d</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+            <span>...</span>
+        </h2>
+    </section>
 */
 
 /* ===============  CSS  =============== */
 .glowing-text-loader {
     display: flex;
-    position: fixed;
-    right: 30%;
-    bottom: 0;
     color: #000;
     font-size: 6em;
 }
@@ -447,7 +455,7 @@ h1 {
 
 /* ------------------------------------------------------  Neumorphic v1.2 ------------------------------------------------------ */
 /* ===============  HTML  ===============
-    <div class="neumorphic-loader-v1 flex bg-light">
+    <div class="neumorphic-loader-v1_2 flex bg-light">
         <span style="--i:1"></span>
         <span style="--i:2"></span>
         <span style="--i:3"></span>
@@ -537,16 +545,21 @@ h1 {
 
 /* ------------------------------------------------------  Neumorphic v2 ------------------------------------------------------ */
 /* ===============  HTML  ===============
-    <div class="neumorphic-loader-v2">
-        <span></span>
-    </div>
+    <section class="neumorphic-loader-v2-container">
+        <div class="neumorphic-loader-v2">
+            <span></span>
+        </div>
+    </section>
 */
 
 /* ===============  CSS  =============== */
 body {
-    background: #240229;
     text-align: unset !important;
 }
+.neumorphic-loader-v2-container {
+    background: #240229;
+}
+
 .neumorphic-loader-v2 {
     position: relative;
     width: 200px;
@@ -559,7 +572,6 @@ body {
     inset -5px -5px 5px rgba(255, 255, 255, 0.2),
     inset 10px 10px 10px rgba(0, 0, 0, 0.4);
   }
-  
   .neumorphic-loader-v2:before {
     content: "";
     position: absolute;
@@ -582,7 +594,6 @@ body {
     border-radius: 50%;
     background-image: linear-gradient(-225deg, #ff057c 0%, #8d0b93 50%, #321575 100%);
     filter: blur(20px);
-    z-index: -1;
     animation: neumorphicloaderv2 0.5s linear infinite;
   }
   
