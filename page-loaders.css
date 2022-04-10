@@ -269,7 +269,7 @@ h1 {
 
 /* ===============  CSS  =============== */
 .loader-v3-container {
-    background: #000;
+    background: rgb(0, 0, 0);
 }
 .loader-v3 {
     width: auto;
@@ -309,6 +309,83 @@ h1 {
     color: #fff;
     z-index: 10;
 }
+
+        /* ------------------------------  v3.2  ------------------------------ */
+        /* ===============  HTML  =============== 
+        <section class="loader-v3_2-container flex">
+            <div class="loader-v3_2 flex">
+                <div class="loader-v3_2-ring"></div>
+                <div class="loader-v3_2-ring"></div>
+                <div class="loader-v3_2-ring"></div>
+                <div class="loader-v3_2-ring"></div>
+            </div>
+            <div class="loader-v3_2-text">
+                <span>loading...</span>
+            </div>
+        </section>
+        */
+
+        /* ===============  CSS  =============== */
+        .loader-v3_2-container {
+            background: rgb(0, 0, 0);
+        }
+        .loader-v3_2 {
+            width: auto;
+            height: auto;
+        }
+        
+        .loader-v3_2-ring {
+            position: absolute;
+            border-radius: 50%;
+        }
+        .loader-v3_2-ring:nth-child(1) {
+            width: 250px;
+            height: 250px;
+            border-top: 4px solid rgb(0, 217, 255);
+            animation: loaderv321 2s linear infinite;
+        }
+        @keyframes loaderv321 {
+            0% { transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);}
+            100% { transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);}
+        }
+        .loader-v3_2-ring:nth-child(2) {
+            width: 250px;
+            height: 250px;
+            border-right: 4px solid rgb(217, 0, 255);
+            animation: loaderv322 2s linear infinite;
+        }
+        @keyframes loaderv322 {
+            0% { transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);}
+            100% { transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);}
+        }
+        .loader-v3_2-ring:nth-child(3) {
+            width: 250px;
+            height: 250px;
+            border-bottom: 4px solid rgb(157, 255, 0);
+            animation: loaderv323 2s linear infinite;
+        }
+        @keyframes loaderv323 {
+            0% { transform: rotateX(35deg) rotateY(65deg) rotateZ(0deg);}
+            100% { transform: rotateX(35deg) rotateY(65deg) rotateZ(360deg);}
+        }
+        .loader-v3_2-ring:nth-child(4) {
+            width: 250px;
+            height: 250px;
+            border-left: 4px solid rgb(240, 52, 133);
+            animation: loaderv324 2s linear infinite;
+        }
+        @keyframes loaderv324 {
+            0% { transform: rotateX(50deg) rotateY(150deg) rotateZ(0deg);}
+            100% { transform: rotateX(50deg) rotateY(150deg) rotateZ(360deg);}
+        }
+        
+        .loader-v3_2-text {
+            position: absolute;
+            text-transform: capitalize;
+            font-size: 22px;
+            color: #fff;
+            z-index: 10;
+        }
 
 /* ------------------------------------------------------  Loader.v4  ------------------------------------------------------ */
 /* ===============  HTML  ===============
