@@ -17,6 +17,14 @@ h1 {
     color: white;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
 .loader-container {
     width: 100%;
     height: 100vh;
@@ -178,14 +186,6 @@ h1 {
         */
 
         /* ===============  CSS  =============== */
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-}
         .loader-v2_2 {
             position: relative;
             width: 150px;
@@ -248,11 +248,73 @@ h1 {
             } */
         }
 
+
 /* ------------------------------------------------------  Loader.v3  ------------------------------------------------------ */
 /* ===============  HTML  ===============
-    <section class="flex">
-        <div class="loader-v3-outer"></div>
-        <div class="loader-v3-inner">
+<head>
+    <link rel="stylesheet" href="./page-loaders.css" />
+</head>
+
+    <section class="loader-v3-container flex">
+            <div class="loader-v3 flex">
+                <div class="loader-v3-ring"></div>
+                <div class="loader-v3-ring"></div>
+                <div class="loader-v3-ring"></div>
+            </div>
+            <div class="loader-v3-text">
+                <span>loading...</span>
+            </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+.loader-v3-container {
+    background: #000;
+}
+.loader-v3 {
+    width: auto;
+    height: auto;
+    animation: loaderv3 2s linear infinite;
+}
+@keyframes loaderv3 {
+    to { transform: rotate(360deg);}
+}
+
+.loader-v3-ring {
+    position: absolute;
+    border-radius: 50%;
+}
+.loader-v3-ring:nth-child(1) {
+    width: 250px;
+    height: 250px;
+    border-top: 4px solid rgb(0, 217, 255);
+}
+.loader-v3-ring:nth-child(2) {
+    width: 230px;
+    height: 230px;
+    border-top: 4px solid rgb(217, 0, 255);
+    transform: rotate(120deg);
+}
+.loader-v3-ring:nth-child(3) {
+    width: 210px;
+    height: 210px;
+    border-top: 4px solid rgb(157, 255, 0);
+    transform: translate(-10px) rotate(240deg);
+}
+
+.loader-v3-text {
+    position: absolute;
+    text-transform: capitalize;
+    font-size: 22px;
+    color: #fff;
+    z-index: 10;
+}
+
+/* ------------------------------------------------------  Loader.v4  ------------------------------------------------------ */
+/* ===============  HTML  ===============
+    <section class="flex count">
+        <div class="loader-v4-outer"></div>
+        <div class="loader-v4-inner">
             <span>0%</span>
         </div>
     </section>
@@ -260,14 +322,14 @@ h1 {
 
 /* ===============  JS (just for test)  ===============
     <script>
-        const element = document.querySelector('.flex');
-        const outerCircle = document.querySelector('.loader-v3-outer');
-        const percentages = document.querySelector('.loader-v3-inner span');
+        const element = document.querySelector('.count');
+        const outerCircle = document.querySelector('.loader-v4-outer');
+        const percentages = document.querySelector('.loader-v4-inner span');
         let count = 0;
 
         element.addEventListener('click', () => {
             let loading = setInterval(increaseValue, 200);
-            outerCircle.classList.add('active-loader-v3');
+            outerCircle.classList.add('active-loader-v4');
 
             function increaseValue() {
                 if (count < 100) {
@@ -275,7 +337,7 @@ h1 {
                     percentages.textContent = count + '%';
                 } else {
                     clearInterval();
-                    outerCircle.classList.remove('active-loader-v3');
+                    outerCircle.classList.remove('active-loader-v4');
                 }
             }
         })
@@ -291,19 +353,19 @@ h1 {
     height: 100vh;
     background: #240f52;
 } */
-.loader-v3-outer {
+.loader-v4-outer {
     width: 300px;
     height: 300px;
     background: linear-gradient(135deg, #feed07 0%, #fe6a50 5%, #ed00aa 15%, #2fe3fe 50%, #8900ff 100%);
     border-radius: 50%;
 }
-.active-loader-v3 {
-    animation: loaderv3 2s ease infinite;
+.active-loader-v4 {
+    animation: loaderv4 2s ease infinite;
 }
-@keyframes loaderv3 {
+@keyframes loaderv4 {
     to { transform: rotate(360deg);}
 }
-.loader-v3-inner {
+.loader-v4-inner {
     position: absolute;
     width: 275px;
     height: 275px;
@@ -312,7 +374,7 @@ h1 {
     background: #240f52;
     border-radius: 50%;
 }
-.loader-v3-inner span {
+.loader-v4-inner span {
     font-size: 60px;
     font-weight: 800;
     color: transparent;
