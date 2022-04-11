@@ -1,0 +1,98 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: block !important;
+    background: url("./assets/img/miao-gengxin-gu435nBTLW4-unsplash.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: move 60s linear infinite alternate;
+}
+@keyframes move {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ----------------------------------------------  Rotating Border Animation Effects  ---------------------------------------------- */
+/* ==============   HTML   ============== 
+<head>
+    <link rel="stylesheet" href="./effects.js" />
+</head>
+
+    <section class="border-effect-v1 container">
+        <div class="box border-one"></div>
+        <div class="box border-two"></div>
+        <div class="box round"></div>
+    </section>
+*/
+
+/* ==============   CSS   ==============  */
+.border-effect-v1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(45deg, rgba(5, 29, 72, 0.82), rgba(5, 29, 72, 0.729));
+}
+
+.border-effect-v1 .box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #020223;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.border-effect-v1 .box::before {
+    content: '';
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    background: conic-gradient(from 90deg, rgb(0 0 0 / 0%) 70%, rgb(11 78 230 / 9%) 80%, rgb(0 220 255) 100%);
+    animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+    100% {transform: rotate(360deg);}
+}
+.border-effect-v1 .box::after {
+    content: '';
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: #020223;
+}
+
+.border-one, .border-one.box::after {
+    border-radius: 20px;
+}
+.border-two, .border-two.box::after {
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.round, .round.box::after {
+    border-radius: 50%;
+}
+
+
+/* ----------------------------------------------    ---------------------------------------------- */
+/* ===============  HTML  =============== */
+
+/* ===============  CSS  =============== */
