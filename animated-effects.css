@@ -31,7 +31,7 @@ body {
 /* ----------------------------------------------  Rotating Border Animation Effects  ---------------------------------------------- */
 /* ==============   HTML   ============== 
 <head>
-    <link rel="stylesheet" href="./effects.js" />
+    <link rel="stylesheet" href="./animated-effects.js" />
 </head>
 
     <section class="border-effect-v1 container">
@@ -90,6 +90,62 @@ body {
 .round, .round.box::after {
     border-radius: 50%;
 }
+
+
+/* ----------------------------------------------  Auto Typing Animation Effect  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./animated-effects.js" />
+</head>
+
+    <div class="typing-effect-slider">
+        <p>auto typing animation effect</p>
+    </div>
+*/
+
+/* ===============  CSS  =============== */
+.typing-effect-slider {
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 50px;
+}
+.typing-effect-slider p {
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.typing-effect-slider p::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-left: 3px solid #000;
+    background-color: #364155;
+    background-color: #fff;
+    animation: width 30s linear infinite backwards, cursor 1s linear infinite;
+}
+
+@keyframes cursor {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #64c9e2;
+    }
+}
+@keyframes width {
+    from {
+        width: 100%;
+    }
+    20%, to {
+        width: 0;
+    }
+}
+
+
 
 
 /* ----------------------------------------------    ---------------------------------------------- */
