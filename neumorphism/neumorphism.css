@@ -698,3 +698,120 @@ h2 {
     text-shadow: 0 0 15px #4cd137;
 }
 
+
+/* ========================================================  Glowing Cards  ======================================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./neumorphism/neumorphism.css" />
+</head>
+
+    <section class="glowing-cards-container">
+        <div class="glowing-card-box windows">
+            <div class="glowing-card-logo">
+                <i class="fa fa-windows" aria-hidden="true"></i>
+            </div>
+            <div class="glowing-card-info">
+                <p class="version">v. 11</p>
+                <h3 class="title">Windows</h3>
+            </div>
+        </div>
+        <div class="glowing-card-box apple">
+            <div class="glowing-card-logo">
+                <i class="fa fa-apple" aria-hidden="true"></i>
+            </div>
+            <div class="glowing-card-info">
+                <p class="version">v. 14.7</p>
+                <h3 class="title">Apple iOS</h3>
+            </div>
+        </div>
+        <div class="glowing-card-box ubuntu">
+            <div class="glowing-card-logo">
+                <i class="fa fa-life-ring" aria-hidden="true"></i>
+            </div>
+            <div class="glowing-card-info">
+                <p class="version">v. 20.04</p>
+                <h3 class="title">Ubuntu</h3>
+            </div>
+        </div>
+    </section>
+
+*/
+
+/* ---------------  CSS  --------------- */
+.glowing-cards-container {
+    width: 100%;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: auto;
+    padding: 50px;
+    background-color: #131415;
+}
+.glowing-card-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 250px;
+    max-width: 350px;
+    min-height: 500px;
+    margin: 50px 20px;
+    padding: 40px;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #232427;
+    box-shadow: 15px 15px 10px 5px rgba(0, 0, 0, 0.51),
+    -10px -10px 10px 5px rgba(108, 108, 108, 0.2),
+    inset 15px 15px 10px 5px rgba(0, 0, 0, 0.51),
+    inset -10px -10px 10px 5px rgba(108, 108, 108, 0.2);
+}
+
+.glowing-card-logo {
+    margin-top: 60px;
+}
+.glowing-card-logo i {
+    font-size: 170px;
+}
+.glowing-card-info {
+    height: 100%;
+    margin-top: 5%;
+}
+.glowing-card-info .version {
+    font-size: 20px;
+    padding: 10px 0px 30px;
+}
+.glowing-card-info .title {
+    position: relative;
+    font-size: 60px;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.windows:hover i {
+    color: rgb(202, 210, 221);
+    text-shadow: 
+    0 0 25px #006eff,
+    0 0 50px #006eff,
+    0 0 75px #006eff,
+    0 0 100px #006eff;
+}
+.apple:hover i {
+    color: rgb(195, 240, 245);
+    text-shadow: 
+    0 0 25px #00e5ff,
+    0 0 50px #00e5ff,
+    0 0 75px #00e5ff,
+    0 0 100px #00e5ff;
+}
+.ubuntu:hover i {
+    color: rgb(231, 180, 236);
+    text-shadow: 
+    0 0 25px #eb00ff,
+    0 0 50px #eb00ff,
+    0 0 75px #eb00ff,
+    0 0 100px #eb00ff;
+}
