@@ -22,7 +22,7 @@
             height: 600px;
             filter: url(#wavy) blur(1px);
         }
-        .circle::before {
+        .fire-circle::before {
             content: '';
             position: absolute;
             top: 100px;
@@ -36,7 +36,7 @@
             -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0002);
             animation: fire 5s linear infinite;
         }
-        .circle::after {
+        .fire-circle::after {
             content: '';
             position: absolute;
             top: 100px;
@@ -45,8 +45,8 @@
             bottom: 100px;
             border: 20px solid #fff;
             border-radius: 50%;
-            box-shadow: 0 0 50px #00f, 
-                  inset 0 0 50px #00f;
+            box-shadow: 0 0 50px #fff, 
+                  inset 0 0 50px #fff;
         }
         @keyframes fire {
             0% {
@@ -85,16 +85,13 @@
             top: 150px;
             left: 150px;
             width: 300px;
-            /* right: 100px;
-            bottom: 100px; */
         }
     </style>
 </head>
 
 <body>
     <img src="./assets/img/dragon-copy.png" alt="">
-    <div class="fire-circle">
-    </div>
+    <div class="fire-circle"></div>
     <svg>
         <filter id="wavy">
             <feTurbulence x="0" y="0" baseFrequency="0.009" numOctaves="5" seed="2">
