@@ -6,14 +6,6 @@
 
 body {
     display: block !important;
-    background: url("./assets/img/miao-gengxin-gu435nBTLW4-unsplash.jpg") no-repeat;
-    background-position: center;
-    background-size: cover;
-    animation: move 60s linear infinite alternate;
-}
-@keyframes move {
-    0% {background-position: left;}
-    100% {background-position: right;}
 }
 
 .container {
@@ -46,7 +38,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: linear-gradient(45deg, rgba(5, 29, 72, 0.82), rgba(5, 29, 72, 0.729));
+    background: linear-gradient(45deg, rgba(5, 29, 72, 0.82), rgba(5, 29, 72, 0.729)), url("./assets/img/miao-gengxin-gu435nBTLW4-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 .border-effect-v1 .box {
@@ -167,7 +161,7 @@ body {
     height: 100vh;
     background: #252839;
 }
-h2 {
+#change-color-container h2 {
     position: relative;
     color: #252839;
     color: transparent;
@@ -176,7 +170,7 @@ h2 {
     white-space: nowrap;
     -webkit-text-stroke: 0.3vw #383d52;
 }
-h2::before {
+#change-color-container h2::before {
     content: attr(data-text);
     position: absolute;
     top: 0;
@@ -196,6 +190,158 @@ h2::before {
     70%,90% {
         width: 100%;
     }
+}
+
+
+
+/* ----------------------------------------------    ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./animated-effects.js" />
+</head>
+
+    <section class="range-bars container flex">
+        <div>
+            <div class="bar">
+                <h2>HTML</h2>
+                <div class="scale" id="html">
+                    <div>
+                        <span class="flex">86%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bar">
+                <h2>CSS</h2>
+                <div class="scale" id="css">
+                    <div>
+                        <span class="flex">74%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bar">
+                <h2>JS</h2>
+                <div class="scale" id="js">
+                    <div>
+                        <span class="flex">65%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bar">
+                <h2>Python</h2>
+                <div class="scale" id="python">
+                    <div>
+                        <span class="flex">54%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bar">
+                <h2>React</h2>
+                <div class="scale" id="react">
+                    <div>
+                        <span class="flex">49%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+.range-bars {
+    background-color: #222;
+}
+
+.bar h2 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 40px 0 5px;
+}
+
+.scale {
+    width: 600px;
+    height: 10px;
+    color: #fff;
+    background-color: #959595;
+    /* background-color: transparent; */
+    border-radius: 5px;
+}
+
+.scale div {
+    width: 0px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.scale div span {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    margin-top: -15px;
+    margin-right: -20px;
+    border-radius: 50%;
+    background-color: #222;
+    float: right;
+}
+
+#html div {
+    background-color: #e91e63;
+    animation: html 2s linear forwards;
+}
+@keyframes html {
+    100% {width: 86%;}
+}
+#html div span {
+    border: 2px solid #e91e63;
+}
+
+#css div {
+    background-color: #9c27b0;
+    animation: css 2s linear forwards;
+}
+@keyframes css {
+    100% {width: 74%;}
+}
+#css div span {
+    border: 2px solid #9c27b0;
+}
+
+#js div {
+    background-color: #00bcd4;
+    animation: js 2s linear forwards;
+}
+@keyframes js {
+    100% {width: 65%;}
+}
+#js div span {
+    border: 2px solid #00bcd4;
+}
+
+#python div {
+    background-color: #ffeb3b;
+    animation: python 2s linear forwards;
+}
+@keyframes python {
+    100% {width: 54%;}
+}
+#python div span {
+    border: 2px solid #ffeb3b;
+}
+
+#react div {
+    background-color: #296d98;
+    animation: react 2s linear forwards;
+}
+@keyframes react {
+    100% {width: 49%;}
+}
+#react div span {
+    border: 2px solid #296d98;
+}
+
+@keyframes width5 {
+    100% {width: attr(data-value);}
 }
 
 
