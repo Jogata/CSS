@@ -2023,7 +2023,7 @@ input:checked ~ .fa-times {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     background: #dde1e7;
     text-align: center;
@@ -2137,4 +2137,76 @@ input:checked ~ .fa-times {
 }
 .free-code-camp {
     color: #0f8c2e;
+}
+
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
+
+    <div class="neumorphic-social-media-icons-container-v2">
+        <ul class="neumorphic-icons-v22">
+            <li><a class="empire"><span class="fa fa-empire"></span></a></li>
+            <li><a class="spinner"><span class="fa fa-spinner"></span></a></li>
+            <li><a class="key"><span class="fa fa-key"></span></a></li>
+            <li><a class="recycle"><span class="fa fa-recycle"></span></a></li>
+            <li><a class="gg"><span class="fa fa-gg"></span></a></li>
+        </ul>
+    </div>
+</head>
+
+/* ---------------  CSS  --------------- */
+.neumorphic-icons-v22 {
+    position: relative;
+    display: flex;
+}
+.neumorphic-icons-v22 li {
+    list-style: none;
+}
+
+.neumorphic-icons-v22 li a {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+    color: #262626;
+    background: #dde1e7;
+    border-radius: 50%;
+    font-size: 30px;
+    text-decoration: none;
+    background: linear-gradient(0deg, #ddd, #fff);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+.neumorphic-icons-v22 li a:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.neumorphic-icons-v22 li a span {
+    position: relative;
+    padding: 18px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, #fff, #ddd);
+}
+
+.empire:hover {
+    color: #3b5998;
+}
+.spinner:hover {
+    color: #00aced;
+}
+.key:hover {
+    color: #dd4b39;
+}
+.recycle:hover {
+    color: #007bb6;
+}
+.gg:hover {
+    color: #bc2a8d;
 }
