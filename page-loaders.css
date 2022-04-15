@@ -649,7 +649,7 @@ h1 {
     }
 } */
 
-    /* v2 */
+    /* v.2 */
 .neumorphic-loader-v1_2 span::before {
     position: absolute;
     content: '';
@@ -682,7 +682,7 @@ h1 {
     }
 }
 
-/* ------------------------------------------------------  Neumorphic v2 ------------------------------------------------------ */
+/* ------------------------------------------------------  Neumorphic v2  ------------------------------------------------------ */
 /* ===============  HTML  ===============
     <section class="neumorphic-loader-v2-container flex">
         <div class="neumorphic-loader-v2">
@@ -800,4 +800,71 @@ body {
   }
 
 
+/* ------------------------------------------------------  Loader.v5  ------------------------------------------------------ */
+/* ===============  HTML  ===============
+<head>
+    <link rel="stylesheet" href="./page-loaders.css" />
+</head>
 
+    <section class="container-v5">
+        <div class="box"></div>
+        <div class="box border"></div>
+        <div class="box round"></div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+.container-v5 {
+    width: 100%;
+    background-color: #000225;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 100px 30px;
+    background-color: #000225;
+    overflow: hidden;
+}
+.box::before {
+    content: '';
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    background: conic-gradient(from 60deg,
+        rgba(0, 0, 0, 0) 5%,
+        rgba(0, 220, 255, 0) 19.8%,
+        rgb(0, 220, 255) 34%,
+        rgba(0, 220, 255, 0) 46.5%,
+        rgb(0, 2, 37) 60%,
+        rgba(255, 0, 220, 0) 69.5%,
+        rgb(255, 0, 220) 84%,
+        rgba(255, 0, 220, 0) 97%);
+        animation: loaderv5 2s linear infinite;
+}
+@keyframes loaderv5 {
+    100% { transform: rotate(360deg); }
+}
+.box::after {
+    content: '';
+    width: 92%;
+    height: 92%;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    background-color: rgba(0, 2, 37, 0.65);
+}
+
+.border, .border.box::after {
+    border-radius: 50px;
+}
+.round, .round.box::after {
+    border-radius: 50%;
+}
