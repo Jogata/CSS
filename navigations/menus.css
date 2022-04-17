@@ -1,0 +1,152 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ----------------------------------------------  Circle Menu v.1  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./navigations/menus.css" />
+</head>
+
+    <section class="circlemenuv1 container flex">
+        <div class="circle-menu-v1">
+            <div class="share">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a></li>
+                <li><a href="#">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a></li>
+            </ul>
+        </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+.circlemenuv1 {
+    background: #2c4754;
+}
+
+.circle-menu-v1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.circle-menu-v1 .share {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    border: 2px solid #112833;
+    border-radius: 50%;
+    background: #607d8b;
+    z-index: 1;
+}
+
+.menu-items {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border: 2px solid #1b3646;
+    outline: 2px solid #fff;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0.3) rotate(-90deg);
+    opacity: 0;
+    transition: 1s;
+}
+.circle-menu-v1:hover ul {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.menu-items li {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    list-style: none;
+    text-align: center;
+}
+.menu-items li:nth-child(1) {
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.menu-items li:nth-child(2) {
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.menu-items li:nth-child(3) {
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+.menu-items li:nth-child(4) {
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+.menu-items li a .fa {
+    color: #112833;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.menu-items li:hover a .fa {
+    color: #f44336;
+    transform: scale(1.3);
+}
+.menu-items::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #112833;
+    transform: rotate(45deg);
+}
+.menu-items::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #112833;
+    transform: rotate(-45deg);
+}
