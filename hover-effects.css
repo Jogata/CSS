@@ -1,0 +1,80 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----------------------------------------------  Sliced Image Hover Effect  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<section class="bg1 container flex">
+        <div class="sliced-image-container">
+            <img src="./assets/img/clouds-bg-copy.jpg" alt="" class="slice-1">
+            <img src="./assets/img/clouds-bg-copy.jpg" alt="" class="slice-2">
+            <img src="./assets/img/clouds-bg-copy.jpg" alt="" class="slice-3">
+            <img src="./assets/img/clouds-bg-copy.jpg" alt="" class="slice-4">
+        </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+.bg2 {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.sliced-image-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+}
+.sliced-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+}
+
+.slice-1 {
+    clip-path: polygon(0 0, 0 32%, 28% 0);
+    transform: translate(-10px, -10px);
+    transition: transform 300ms ease;
+    transform-origin: top;
+}
+.sliced-image-container:hover .slice-1 {
+    transform: translate(0, 0);
+}
+.slice-2 {
+    clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
+    transform: translate(-30px, 5px);
+    transition: transform 300ms ease;
+}
+.sliced-image-container:hover .slice-2 {
+    transform: translate(0, 0);
+}
+.slice-3 {
+    clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
+    transform: translate(-15px, -10px);
+    transition: transform 300ms ease;
+}
+.sliced-image-container:hover .slice-3 {
+    transform: translate(0, 0);
+}
+.slice-4 {
+    clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
+    transform: translate(-32px, -5px);
+    transition: transform 300ms ease;
+}
+.sliced-image-container:hover .slice-4 {
+    transform: translate(0, 0);
+}
