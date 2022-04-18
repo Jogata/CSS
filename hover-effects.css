@@ -14,9 +14,63 @@
     justify-content: center;
 }
 
+/* ----------------------------------------------  Underline Hover Effect  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./hover-effects.css" />
+</head>
+
+    <nav>
+        <ul class="nav">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link">About us</a></li>
+            <li><a href="#" class="nav-link">Portfolio</a></li>
+            <li><a href="#" class="nav-link">Projects</a></li>
+            <li><a href="#" class="nav-link">Contact us</a></li>
+        </ul>
+    </nav>
+*/
+
+/* ===============  CSS  =============== */
+.nav {
+    background: #161616;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-link {
+    position: relative;
+    color: #c4c4c4;
+    padding: 7px 0;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    left: 50%;
+    bottom: 0;
+    background: #f7f7f7;
+    transition: 0.4s ease-out;
+}
+.nav-link:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
 /* ----------------------------------------------  Sliced Image Hover Effect  ---------------------------------------------- */
 /* ===============  HTML  =============== 
-<section class="bg1 container flex">
+<head>
+    <link rel="stylesheet" href="./hover-effects.css" />
+</head>
+
+    <section class="bg1 container flex">
         <div class="sliced-image-container">
             <img src="./assets/img/clouds-bg-copy.jpg" alt="" class="slice-1">
             <img src="./assets/img/clouds-bg-copy.jpg" alt="" class="slice-2">
@@ -78,3 +132,5 @@
 .sliced-image-container:hover .slice-4 {
     transform: translate(0, 0);
 }
+
+
