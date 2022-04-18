@@ -255,11 +255,24 @@ input:checked + label {
     width: 50px;
     height: 50px;
     background: #333;
-    border-radius: 3rem 3rem 0 0;
+    border-radius: 3rem 0;
     border-radius: 50%;
-    z-index: -3;
 }
 input:checked ~ .floater, 
-input:checked ~ label {
+input:checked ~ label  {
     transform: scale(1.2) translate(0, -5px);
+    transition: 1s;
+}
+
+input#a:is(:checked) + label {
+    background: rgb(220, 20, 60);
+}
+input#b:is(:checked) + label {
+    background: rgb(100, 149, 237);
+}
+input#c:is(:checked) + label {
+    background: rgb(154, 205, 50);
+}
+input#d:is(:checked) + label {
+    background: rgb(244, 164, 96);
 }
