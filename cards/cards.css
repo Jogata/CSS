@@ -76,3 +76,115 @@
     right: 30px;
     transform: rotateY(180deg);
 }
+
+
+/* ----------------------------------------------  Card Hover Effect | v.1  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+    <section class="bgimgrock container flex">
+        <div class="card-v1">
+            <div class="sides left-side">
+                <h2 class="name">john</h2>
+                <h3 class="profession">former</h3>
+            </div>
+            <div class="sides right-side">
+                <h2 class="name">wick</h2>
+                <h3 class="profession">hitman</h3>
+            </div>
+            <div class="back">
+                <p class="bio">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae voluptates dolorem tenetur quidem magnam commodi quaerat asperiores"</p>
+            </div>
+        </div>
+    </section>
+*/
+
+
+/* ===============  CSS  =============== */
+.bgimgrock {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('../assets/img/rocks-bg.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card-v1 {
+    position: relative;
+    width: 360px;
+    height: 560px;
+    perspective: 1000px;
+}
+.sides {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../assets/img/card-bg.jpg') no-repeat;
+    transition: transform 1.5s linear;
+}
+.left-side {
+    left: 0;
+    align-items: flex-end;
+    transform-origin: left;
+    background-position-x: 0;
+    background-size: cover;
+}
+.card-v1:hover .left-side {
+    transform: rotateY(-360deg);
+}
+.right-side {
+    right: 0;
+    transform-origin: right;
+    background-position-x: -180px;
+    background-size: cover;
+}
+.card-v1:hover .right-side {
+    transform: rotateY(360deg);
+}
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('../assets/img/pngegg20-copy.png') no-repeat;
+    background-position: center;
+    background-size: contain;
+    box-shadow: 40px 40px 80px #000;
+    transform: translateZ(-300px);
+    transition: z-index 1s step-end, transform 1.5s, box-shadow 1.5s;
+    z-index: -1;
+}
+.card-v1:hover .back {
+    transform: translateZ(0);
+    box-shadow: 50px 50px 100px #000;
+    z-index: 1;
+}
+
+.name {
+    color: #fff;
+    font-size: 35px;
+    margin: 20px 4px;
+}
+.profession {
+    color: #eee;
+    font-size: 20px;
+    margin: 15px 4px;
+}
+
+.bio {
+    color: #fff;
+    font-size: 22px;
+    background: rgba(0, 0, 0, 0.4);
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
