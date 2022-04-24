@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;700;800&family=Raleway&display=swap');
+
+/* 
+font-family: 'Dancing Script', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Limelight', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -13,6 +25,7 @@
     align-items: center;
     justify-content: center;
 }
+
 
 /* ----------------------------------------------  Underline Hover Effect  ---------------------------------------------- */
 /* ===============  HTML  =============== 
@@ -63,6 +76,7 @@
     width: 100%;
     left: 0%;
 }
+
 
 
 /* ----------------------------------------------  Hover Effect v.1  ---------------------------------------------- */
@@ -159,11 +173,11 @@
 </head>
 
     <section class="bg1 container flex">
-        <div class="sliced-image-container">
-            <img src="./assets/img/clouds-bg-copy.jpg" alt="" class="slice-1">
-            <img src="./assets/img/clouds-bg-copy.jpg" alt="" class="slice-2">
-            <img src="./assets/img/clouds-bg-copy.jpg" alt="" class="slice-3">
-            <img src="./assets/img/clouds-bg-copy.jpg" alt="" class="slice-4">
+        <div class="sliced-image-container flex">
+            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="" class="slice-1">
+            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="" class="slice-2">
+            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="" class="slice-3">
+            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="" class="slice-4">
         </div>
     </section>
 */
@@ -178,6 +192,36 @@
     width: 600px;
     height: 400px;
 }
+.sliced-image-container::before {
+    content: '';
+    position: absolute;
+    width: 620px;
+    height: 420px;
+    border: 3px solid black;
+    transform: scale(1.1) translate(-10px, -10px);
+    z-index: -2;
+    transition: 300ms ease;
+}
+.sliced-image-container:hover:before {
+    transform: scale(1);
+}
+
+.sliced-image-container::after {
+    content: '';
+    position: absolute;
+    width: 620px;
+    height: 420px;
+    border: 3px solid white;
+    background: white;
+    transform: scale(2) translate(-10px, -10px);
+    clip-path: polygon(49% -4%, 92% 45%, 51% 120%, 11% 47%);
+    z-index: -1;
+    transition: 1s ease;
+}
+.sliced-image-container:hover::after {
+    transform: scale(0.9);
+}
+
 .sliced-image-container img {
     position: absolute;
     top: 0;
@@ -194,7 +238,7 @@
     transform-origin: top;
 }
 .sliced-image-container:hover .slice-1 {
-    transform: translate(0, 0);
+    transform: translate(0.9px, 0.9px);
 }
 .slice-2 {
     clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
@@ -202,7 +246,7 @@
     transition: transform 300ms ease;
 }
 .sliced-image-container:hover .slice-2 {
-    transform: translate(0, 0);
+    transform: translate(0.6px, 0.6px);
 }
 .slice-3 {
     clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
@@ -210,7 +254,7 @@
     transition: transform 300ms ease;
 }
 .sliced-image-container:hover .slice-3 {
-    transform: translate(0, 0);
+    transform: translate(0.3px, 0.3px);
 }
 .slice-4 {
     clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
@@ -218,7 +262,8 @@
     transition: transform 300ms ease;
 }
 .sliced-image-container:hover .slice-4 {
-    transform: translate(0, 0);
+    transform: translate(-0.1px, -0.1px);
 }
+
 
 
