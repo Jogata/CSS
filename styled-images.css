@@ -27,15 +27,15 @@ font-family: 'Raleway', sans-serif;
 }
 
 
-/* ----------------------------------------------  v.1  ---------------------------------------------- */
+/* ---------------------------------------------- Art Panel | v.1 (4 parts)  ---------------------------------------------- */
 /* ===============  HTML  =============== 
 <head>
     <link rel="stylesheet" href="./styled-images.css" />
 </head>
 
-    <section class="container">
-        <h1 id="h2">The Winter is Coming</h1>
-        <div id="main" class="container flex">
+    <section class="bg1 flex">
+        <!-- <h1 id="h2">The Winter is Coming</h1> -->
+        <div id="main" class="flex">
             <div id="d1" class="wall"></div>
             <div id="d2" class="wall"></div>
             <div id="d3" class="wall"></div>
@@ -46,50 +46,55 @@ font-family: 'Raleway', sans-serif;
 */
 
 /* ===============  CSS  =============== */
+.bg1 {
+    background: url('./assets/img/winter-painting-copy.jpg');
+    background-position: right;
+    background-size: cover;
+}
+
 #main {
-    position: relative;
-    top: 20px;
-    left: 80px;
-    width: 900px;
-    height: 600px;
+    margin: auto;
+    padding: 80px 0px;
+    align-items: flex-start;
+    overflow: hidden;
 }
 
 .wall {
-    position: absolute;
-    background-image: url('./assets/img/87679801_2628285347300586_6945344129203175424_n-copy.jpg');
+    position: relative;
+    background-image: url('./assets/img/girl-winter-copy.jpg');
     background-size: 960px 640px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
 #d1 {
-    width: 150px;
+    min-width: 150px;
     height: 200px;
-    top: 150px;
+    margin-top: 150px;
     left: 0px;
     background-position: 0px -150px;
     z-index: 2;
 }
 #d2 {
-    width: 210px;
+    min-width: 210px;
     height: 520px;
-    top: 70px;
-    left: 112px;
+    margin-top: 70px;
+    left: -30px;
     background-position: -112px -60px;
     z-index: 1;
 }
 #d3 {
-    width: 400px;
+    min-width: 400px;
     height: 630px;
-    top: 0px;
-    left: 300px;
+    margin-top: 0px;
+    left: -40px;
     background-position: -300px 0px;
     z-index: 3;
 }
 #d4 {
-    width: 180px;
+    min-width: 180px;
     height: 515px;
-    top: 30px;
-    left: 690px;
+    margin-top: 30px;
+    left: -50px;
     background-position: -690px -20px;
     z-index: 1;
 }
@@ -101,6 +106,7 @@ font-family: 'Raleway', sans-serif;
     position: absolute;
     top: 200px;
     right: 100px;
+    right: 10vw;
     font-size: 60px;
     font-family: fantasy;
     text-align: right;
@@ -113,7 +119,7 @@ font-family: 'Raleway', sans-serif;
 }
 
 #h2 {
-    position: relative;
+    position: absolute;
     top: 100px;
     left: 200px;
     width: fit-content;
@@ -142,7 +148,7 @@ font-family: 'Raleway', sans-serif;
     70%,90% { width: 100%; }
 }
 
-/* ----------------------------------------------  v.1  ---------------------------------------------- */
+/* ----------------------------------------------  Art Panel | v.2 (5 parts)  ---------------------------------------------- */
 /* ===============  HTML  =============== 
 <head>
     <link rel="stylesheet" href="./styled-images.css" />
@@ -151,3 +157,246 @@ font-family: 'Raleway', sans-serif;
 */
 
 /* ===============  CSS  =============== */
+
+
+
+/* ----------------------------------------------  Sliced Image Hover Effect  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./styled-images.css" />
+</head>
+
+    <section class="container flex" style="overflow: hidden;">
+        <div class="sliced-image-container flex">
+            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="" class="slice-1">
+            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="" class="slice-2">
+            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="" class="slice-3">
+            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="" class="slice-4">
+        </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+.sliced-image-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+}
+.sliced-image-container::before {
+    content: '';
+    position: absolute;
+    width: 620px;
+    height: 420px;
+    border: 3px solid black;
+    transform: scale(1.1) translate(-10px, -10px);
+    z-index: -2;
+    transition: 300ms ease;
+}
+.sliced-image-container:hover:before {
+    transform: scale(1);
+}
+
+.sliced-image-container::after {
+    content: '';
+    position: absolute;
+    width: 620px;
+    height: 420px;
+    border: 3px solid white;
+    background: white;
+    transform: scale(2) translate(-10px, -10px);
+    clip-path: polygon(49% -4%, 92% 45%, 51% 120%, 11% 47%);
+    z-index: -1;
+    transition: 1s ease;
+}
+.sliced-image-container:hover::after {
+    transform: scale(0.9);
+}
+
+.sliced-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+}
+
+.slice-1 {
+    clip-path: polygon(0 0, 0 32%, 28% 0);
+    transform: translate(-10px, -10px);
+    transition: transform 300ms ease;
+    transform-origin: top;
+}
+.sliced-image-container:hover .slice-1 {
+    transform: translate(0.9px, 0.9px);
+}
+.slice-2 {
+    clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
+    transform: translate(-30px, 5px);
+    transition: transform 300ms ease;
+}
+.sliced-image-container:hover .slice-2 {
+    transform: translate(0.6px, 0.6px);
+}
+.slice-3 {
+    clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
+    transform: translate(-15px, -10px);
+    transition: transform 300ms ease;
+}
+.sliced-image-container:hover .slice-3 {
+    transform: translate(0.3px, 0.3px);
+}
+.slice-4 {
+    clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
+    transform: translate(-32px, -5px);
+    transition: transform 300ms ease;
+}
+.sliced-image-container:hover .slice-4 {
+    transform: translate(-0.1px, -0.1px);
+}
+
+
+/* ----------------------------------------------  |  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./styled-images.css" />
+</head>
+
+*/
+
+/* ===============  CSS  =============== */
+
+
+/* 
+<!------------------------------------------------->
+<!-- Fixed Responsive Navigation Bar | CSS Grid -->
+    <header id="header1">
+        <div class="nav-container">
+            <nav class="navbar1" id="1">
+                <a href="#1" class="logo1"><h2>logo</h2></a>
+                <input type="checkbox" id="ham1">
+                <label for="ham1" class="label1">
+                    <div class="burger-bar"></div>
+                    <div class="burger-bar"></div>
+                    <div class="burger-bar"></div>
+                </label>
+                <ul class="nav-links1">
+                    <li><a href="#1">home</a></li>
+                    <li><a href="#1">about</a></li>
+                    <li><a href="#1">blog</a></li>
+                    <li><a href="#1">services</a></li>
+                    <li><a href="#1">login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+*/
+        #header1 {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            margin: auto;
+            border: 1px solid transparent;
+            background-color: rgba(0, 0, 0, 0.404);
+            z-index: 10;
+        }
+        .nav-container {
+            width: 1280px;
+            margin: auto;
+        }
+
+        .navbar1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 10px 0px;
+        }
+
+        .logo1 {
+            width: fit-content;
+            color: #fff;
+            padding-left: 10px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        #ham1 {
+            display: none;
+            outline: none;
+        }
+
+        .label1 {
+            display: none;
+            color: #fff;
+        }
+        .burger-bar {
+            width: 35px;
+            height: 5px;
+            margin-top: 5px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .nav-links1 {
+            grid-column: 3;
+            list-style: none;
+        }
+        .nav-links1 li {
+            display: inline-block;
+            padding-right: 10px;
+        }
+        .nav-links1 li a {
+            position: relative;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .nav-links1 li a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            transform-origin: right;
+            transform: scale(0, 1);
+            transition: transform 0.5s ease-in-out;
+            background-color: #fff;
+        }
+        .nav-links1 li a:hover::after {
+            transform: scale(1, 1);
+        }
+
+        @media screen and (max-width: 1280px) {
+            .nav-container {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 770px) {
+            .label1 {
+                display: grid;
+                grid-column: 3;
+                padding-right: 10px;
+                cursor: pointer;
+            }
+
+            .nav-links1 {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-column: 1/4;
+                max-height: 0px;
+                text-align: center;
+                overflow: hidden;
+                transition: all 0.6s ease-in-out;
+            }
+
+            .nav-links1 li {
+                padding: 15px 0px;
+            }
+        }
+
+        .navbar1 input:checked ~ .nav-links1 {
+            max-height: 500px;
+        }
+/* <!-------------------------------------------------> */
