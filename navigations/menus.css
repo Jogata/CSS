@@ -490,6 +490,51 @@ input#d:is(:checked) + label {
 </head>
 
     <section class="container flex">
+        <ul class="menu-tooltips-vert relef-frame-up">
+            <li class="icon2 facebook">
+                <div class="tooltip">facebook</div>
+                <span><i class="fa fa-facebook" aria-hidden="true"></i></span>
+            </li>
+            <li class="icon2 instagram">
+                <div class="tooltip">instagram</div>
+                <span><i class="fa fa-instagram" aria-hidden="true"></i></span>
+            </li>
+            <li class="icon2 twitter">
+                <div class="tooltip">twitter</div>
+                <span><i class="fa fa-twitter" aria-hidden="true"></i></span>
+            </li>
+            <li class="icon2 github">
+                <div class="tooltip">github</div>
+                <span><i class="fa fa-github" aria-hidden="true"></i></span>
+            </li>
+            <li class="icon2 youtube">
+                <div class="tooltip">youTube</div>
+                <span><i class="fa fa-youtube-play" aria-hidden="true"></i></span>
+            </li>
+        </ul>
+
+        <ul class="menu-tooltips relef-frame-up">
+            <li class="icon2 facebook">
+                <div class="tooltip">facebook</div>
+                <span><i class="fa fa-facebook" aria-hidden="true"></i></span>
+            </li>
+            <li class="icon2 instagram">
+                <div class="tooltip">instagram</div>
+                <span><i class="fa fa-instagram" aria-hidden="true"></i></span>
+            </li>
+            <li class="icon2 twitter">
+                <div class="tooltip">twitter</div>
+                <span><i class="fa fa-twitter" aria-hidden="true"></i></span>
+            </li>
+            <li class="icon2 github">
+                <div class="tooltip">github</div>
+                <span><i class="fa fa-github" aria-hidden="true"></i></span>
+            </li>
+            <li class="icon2 youtube">
+                <div class="tooltip">youTube</div>
+                <span><i class="fa fa-youtube-play" aria-hidden="true"></i></span>
+            </li>
+        </ul>
     </section>
 
 
@@ -506,6 +551,57 @@ input#d:is(:checked) + label {
         inset 2px 2px 3px 0 rgba(255, 255, 255, 0.07);
 } */
 
+.flex {
+    flex-wrap: wrap;
+}
+
+.menu-tooltips {
+    display: inline-flex;
+    margin: 120px;
+    list-style: none;
+    margin: auto;
+}
+
+.icon2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease-out;
+    cursor: pointer;
+}
+.icon2:active {
+    transform: scale(0.98);
+}
+.icon2:active span {
+    box-shadow: 0px 3px 5px rgb(0, 0, 0, 0.8);
+}
+
+.icon2 span {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.icon2:hover span {
+    background-color: currentColor;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.6);
+}
+
+.icon2 span i {
+    font-size: 25px;
+    line-height: 60px;
+}
+.icon2:hover span i {
+    color: #fff;
+}
 
 .facebook:hover {
     color: #4267b2;
@@ -530,12 +626,28 @@ input#d:is(:checked) + label {
     font-size: 2px;
     text-transform: capitalize;
     text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.4);
-    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     pointer-events: none;
     opacity: 0;
 }
-.icon2:hover .tooltip {
+.menu-tooltips .icon2 .tooltip {
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.menu-tooltips .icon2:hover .tooltip {
     top: -50px;
     font-size: 20px;
     opacity: 1;
 }
+
+/* ===  VERTICAL  === */
+.menu-tooltips-vert {
+    display: block;
+    list-style: none;
+    margin-right: 100px;
+}
+.menu-tooltips-vert .icon2:hover .tooltip {
+    left: 65px;
+    font-size: 20px;
+    opacity: 1;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* ================== */
