@@ -14,6 +14,16 @@
     justify-content: center;
 }
 
+.relef-frame-up {
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    box-shadow: 1px 2px 3px 2px rgba(0, 0, 0, 0.28),
+        inset -3px -3px 4px 0px rgba(0, 0, 0, 0.11),
+        -1px -1px 3px 0 rgba(255, 255, 255, 0.075),
+        inset 3px 3px 6px 0px rgba(0, 0, 0, 0.28),
+        inset 2px 2px 3px 0 rgba(255, 255, 255, 0.07);
+
+}
 
 /* ----------------------------------------------  Circle Menu v.1  ---------------------------------------------- */
 /* ===============  HTML  =============== 
@@ -275,4 +285,257 @@ input#c:is(:checked) + label {
 }
 input#d:is(:checked) + label {
     background: rgb(244, 164, 96);
+}
+
+/* ----------------------------------------------  Menu with Expanding Buttons  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./navigations/menus.css" />
+</head>
+
+    <section class="container flex-between">
+        <ul class="expanding-buttons-vert relef-frame-up">
+            <div class="button facebook">
+                <div class="icon1">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </div>
+                <span>facebook</span>
+            </div>
+            <div class="button instagram">
+                <div class="icon1">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </div>
+                <span>instagram</span>
+            </div>
+            <div class="button twitter">
+                <div class="icon1">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </div>
+                <span>twitter</span>
+            </div>
+            <div class="button youtube">
+                <div class="icon1">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </div>
+                <span>youTube</span>
+            </div>
+        </ul>
+
+        <ul class="expanding-buttons-vert centered relef-frame-up">
+            <div class="button facebook">
+                <div class="icon1">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </div>
+                <span>facebook</span>
+            </div>
+            <div class="button instagram">
+                <div class="icon1">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </div>
+                <span>instagram</span>
+            </div>
+            <div class="button twitter">
+                <div class="icon1">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </div>
+                <span>twitter</span>
+            </div>
+            <div class="button youtube">
+                <div class="icon1">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </div>
+                <span>youTube</span>
+            </div>
+        </ul>
+
+        <ul class="expanding-buttons relef-frame-up">
+            <div class="button facebook">
+                <div class="icon1">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </div>
+                <span>facebook</span>
+            </div>
+            <div class="button instagram">
+                <div class="icon1">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </div>
+                <span>instagram</span>
+            </div>
+            <div class="button twitter">
+                <div class="icon1">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </div>
+                <span>twitter</span>
+            </div>
+            <div class="button youtube">
+                <div class="icon1">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </div>
+                <span>youTube</span>
+            </div>
+        </ul>
+    </section>
+
+
+*/
+
+/* ===============  CSS  =============== */
+/* .relef-frame-up {
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    box-shadow: 1px 2px 3px 2px rgba(0, 0, 0, 0.28),
+        inset -3px -3px 4px 0px rgba(0, 0, 0, 0.11),
+        -1px -1px 3px 0 rgba(255, 255, 255, 0.075),
+        inset 3px 3px 6px 0px rgba(0, 0, 0, 0.28),
+        inset 2px 2px 3px 0 rgba(255, 255, 255, 0.07);
+
+} */
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===  VERTICAL  === */
+.expanding-buttons-vert {
+    position: relative;
+    display: block;
+    width: 87px;
+}
+.expanding-buttons-vert .button:hover {
+    transition: all 0.3s linear;
+}
+    /* centered */
+.expanding-buttons-vert.centered .button:hover {
+    transform: translateX(-70px);
+    transition: all 0.3s linear;
+}
+/* ================== */
+
+/* ===  HORIZONTAL  === */
+.expanding-buttons {
+    display: inline-flex;
+    width: fit-content;
+}
+.expanding-buttons .button {
+    transition: width 0.3s ease-out;
+}
+/* ==================== */
+
+.expanding-buttons {
+    margin: 20px;
+    list-style: none;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    font-size: 25px;
+    border-radius: 50px;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.6);
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+}
+.button:hover {
+    width: 200px;
+}
+.button:active {
+    transform: scale(0.99);
+    box-shadow: 0px 3px 5px rgb(0, 0, 0, 0.8);
+}
+
+.icon1 {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50px;
+    transition: all 0.3s ease-out;
+}
+
+.button span {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+
+/* .facebook:hover {
+    color: #4267b2;
+}
+.instagram:hover {
+    color: #e1306c;
+}
+.twitter:hover {
+    color: #1da1f2;
+}
+.youtube:hover {
+    color: #ff0000;
+} */
+
+
+/* ----------------------------------------------  Menu with Tooltips on Hover  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./navigations/menus.css" />
+</head>
+
+    <section class="container flex">
+    </section>
+
+
+*/
+
+/* ===============  CSS  =============== */
+/* .relef-frame-up {
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    box-shadow: 1px 2px 3px 2px rgba(0, 0, 0, 0.28),
+        inset -3px -3px 4px 0px rgba(0, 0, 0, 0.11),
+        -1px -1px 3px 0 rgba(255, 255, 255, 0.075),
+        inset 3px 3px 6px 0px rgba(0, 0, 0, 0.28),
+        inset 2px 2px 3px 0 rgba(255, 255, 255, 0.07);
+} */
+
+
+.facebook:hover {
+    color: #4267b2;
+}
+.instagram:hover {
+    color: #e1306c;
+}
+.twitter:hover {
+    color: #1da1f2;
+}
+.youtube:hover {
+    color: #ff0000;
+}
+.github:hover {
+    color: #24292f;
+}
+
+.tooltip {
+    position: absolute;
+    top: 0px;
+    padding: 10px 18px;
+    font-size: 2px;
+    text-transform: capitalize;
+    text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.4);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: none;
+    opacity: 0;
+}
+.icon2:hover .tooltip {
+    top: -50px;
+    font-size: 20px;
+    opacity: 1;
 }
