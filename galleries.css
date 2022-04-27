@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;700;800&family=Raleway&display=swap');
+
+/* 
+font-family: 'Dancing Script', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Limelight', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ----------------------------------------------  Gallerie v.1  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./buttons.css" />
+</head>
+
+    <section class="sgi container flex">
+        <ul class="gallerie-v1">
+            <li class="gallerie-v1-li">
+                <span class="gallerie-v1-li-title">Alley</span>
+                <img src="./assets/img/alley-copy.jpg" alt="">
+            </li>
+            <li class="gallerie-v1-li">
+                <span class="gallerie-v1-li-title">Branch</span>
+                <img src="./assets/img/branch-copy.jpg" alt="">
+            </li>
+            <li class="gallerie-v1-li">
+                <span class="gallerie-v1-li-title">River</span>
+                <img src="./assets/img/river-bank-copy.jpg" alt="">
+            </li>
+            <li class="gallerie-v1-li">
+                <span class="gallerie-v1-li-title">Road</span>
+                <img src="./assets/img/road-copy.jpg" alt="">
+            </li>
+            <li class="gallerie-v1-li">
+                <span class="gallerie-v1-li-title">Spring</span>
+                <img src="./assets/img/spring-forest-copy.jpg" alt="">
+            </li>
+            <li class="gallerie-v1-li">
+                <span class="gallerie-v1-li-title">Winter</span>
+                <img src="./assets/img/winter-painting-copy.jpg" alt="">
+            </li>
+        </ul>
+    </section>
+    
+*/
+
+/* ===============  CSS  =============== */
+.sgi {
+    font-family: 'Raleway', sans-serif;
+}
+.gallerie-v1 {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 450px;
+    margin: auto;
+    list-style: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px 1px #000;
+    overflow: hidden;
+}
+
+.gallerie-v1-li {
+    position: relative;
+    width: 190px;
+    height: 450px;
+    float: left;
+    border-left: 1px solid #fff;
+    transition: all 0.7s;
+    box-shadow: -2px 0px 10px 2px #000;
+}
+.gallerie-v1-li:first-child {
+    border: none;
+}
+
+.gallerie-v1-li-title {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    padding: 20px;
+    color: #fff;
+    white-space: nowrap;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.gallerie-v1-li img {
+    width: 800px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.gallerie-v1:hover li {
+    width: 50px;
+}
+
+.gallerie-v1 li:hover {
+    width: 750px;
+}
