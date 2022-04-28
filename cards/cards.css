@@ -188,3 +188,153 @@
     border-radius: 10px;
 }
 
+
+/* ----------------------------------------------  Card Hover Effect | v.2  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+    <section class="container flex">
+        <div class="card-v2">
+            <div class="profile-2">
+                <img src="./assets/img/profile-copy.jpg" alt="Profile picture">
+            </div>
+            <div class="content-2">
+                <div class="details-2">
+                    <h2>lara croft</h2>
+                    <span>tomb raider</span>
+                    <div class="data-2">
+                        <h3>342 <br><span>posts</span></h3>
+                        <h3>120k <br><span>followers</span></h3>
+                        <h3>285 <br><span>following</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-2">
+                <button class="follow">follow</button>
+                <button>message</button>
+            </div>
+        </div>
+    </section>
+*/
+
+
+/* ===============  CSS  =============== */
+.card-v2 {
+    position: relative;
+    width: 250px;
+    height: auto;
+    height: fit-content;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 8px rgb(0, 0, 0, 0.15);
+    transition: all 0.5s linear;
+}
+.card-v2:hover {
+    width: 350px;
+}
+
+.profile-2 {
+    position: relative;
+    top: -25px;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: inherit;
+    /* box-shadow: 0 15px 50px rgb(0, 0, 0, 0.35); */
+    box-shadow: 5px 5px 8px rgb(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: all 0.5s linear;
+}
+.card-v2:hover .profile-2 {
+    position: relative;
+    top: -50px;
+    width: 250px;
+    height: 250px;
+}
+
+.profile-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-2 {
+    position: relative;
+    top: -25px;
+    text-align: center;
+    text-transform: capitalize;
+    transition: all 0.5s linear;
+}
+.card-v2:hover .content-2 {
+    top: -50px;
+}
+
+.details-2 {
+    position: relative;
+    padding: 20px 40px;
+    font-size: 1rem;
+}
+.details-2 h2 {
+    color: #555;
+    word-wrap: break-word;
+    padding: 10px;
+}
+.details-2 span {
+    color: #999;
+    font-size: 1.15rem;
+}
+
+.data-2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px;
+    font-size: 0px;
+    transform: translateY(30px);
+    transition: all 0.5s linear;
+}
+.card-v2:hover .data-2 {
+    font-size: 1rem;
+    padding: 20px 0px;
+    transform: translateY(0px);
+}
+
+.data-2 h3 {
+    width: 100%;
+}
+.data-2 h3 span {
+    font-size: 0;
+    transition: all 0.5s linear;
+}
+.card-v2:hover .data-2 span {
+    font-size: 1rem;
+}
+
+
+.buttons-2 {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    opacity: 0;
+}
+.card-v2:hover .buttons-2 {
+    opacity: 1;
+    transition: all 0.5s linear 0.3s;
+}
+
+.buttons-2 button {
+    padding: 8px 27px;
+    color: #999;
+    background-color: #fff;
+    font-size: 1rem;
+    text-transform: capitalize;
+    border: 1px solid #999;
+    margin: 10px 0px 25px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+button.follow {
+    color: #fff;
+    background-color: #ff5f95;
+    border: none;
+}
