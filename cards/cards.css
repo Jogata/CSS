@@ -190,15 +190,16 @@
 
 
 /* ----------------------------------------------  Card Hover Effect | v.2  ---------------------------------------------- */
+/* v.2.1 - with position relative */
 /* ===============  HTML  =============== 
-    <section class="container flex">
+    <section class="flex" style="flex-direction: column;">
         <div class="card-v2">
             <div class="profile-2">
                 <img src="./assets/img/profile-copy.jpg" alt="Profile picture">
             </div>
             <div class="content-2">
                 <div class="details-2">
-                    <h2>lara croft</h2>
+                    <h2>lara croft </h2>
                     <span>tomb raider</span>
                     <div class="data-2">
                         <h3>342 <br><span>posts</span></h3>
@@ -212,6 +213,7 @@
                 <button>message</button>
             </div>
         </div>
+        <h1 style="margin-top: 20px;">with position <em>relative</em></h1>
     </section>
 */
 
@@ -280,6 +282,7 @@
 .details-2 span {
     color: #999;
     font-size: 1.15rem;
+    word-wrap: break-word;
 }
 
 .data-2 {
@@ -331,6 +334,137 @@
     border: 1px solid #999;
     margin: 10px 0px 25px;
     border-radius: 7px;
+    cursor: pointer;
+}
+button.follow {
+    color: #fff;
+    background-color: #ff5f95;
+    border: none;
+}
+
+/* v.2.2 - with position absolute */
+/* ===============  HTML  =============== 
+    <section class="flex" style="flex-direction: column;">
+        <div class="card-v2a">
+            <div class="profile-2a">
+                <img src="./assets/img/profile-copy.jpg" alt="Profile picture">
+            </div>
+            <div class="content-2a">
+                <div class="details-2a">
+                    <h2>lara croft <br><span>tomb raider</span></h2>
+                    <div class="data-2a">
+                        <h3>342 <br><span>posts</span></h3>
+                        <h3>120k <br><span>followers</span></h3>
+                        <h3>285 <br><span>following</span></h3>
+                    </div>
+                    <div class="buttons-2a">
+                        <button class="follow">follow</button>
+                        <button>message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 style="margin-top: 20px;">with position <em>absolute</em></h1>
+    </section> 
+*/
+    
+/* ===============  CSS  =============== */
+.card-v2a {
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+.card-v2a:hover {
+    height: 450px;
+}
+.profile-2a {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.card-v2a:hover .profile-2a {
+    width: 250px;
+    height: 250px;
+}
+.profile-2a img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content-2a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+.details-2a {
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    text-transform: capitalize;
+    transform: translateY(150px);
+    transition: 0.5s;
+}
+.card-v2a:hover .content-2a .details-2a {
+    transform: translateY(0px);
+}
+.details-2a h2 {
+    color: #444;
+    font-size: 1.25rem;
+    line-height: 1.2rem;
+}
+.details-2a h2 span {
+    color: #999;
+    font-size: 0.75em;
+}
+
+.data-2a {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+.data-2a h3 {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.2rem;
+}
+.data-2a h3 span {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.buttons-2a {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.buttons-2a button {
+    padding: 10px 30px;
+    color: #999;
+    background-color: #fff;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    text-transform: capitalize;
+    border: 1px solid #999;
     cursor: pointer;
 }
 button.follow {
