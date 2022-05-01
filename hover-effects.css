@@ -324,4 +324,97 @@ font-family: 'Raleway', sans-serif;
 }
 
 
+/* ----------------------------------------------  Move from Left to Right on Hover  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./hover-effects.css" />
+</head>
 
+    <section class="container flex">
+        <div class="box">
+            <div class="imgbox">
+                <img class="img-1" src="./assets/img/spring-forest-copy.jpg" alt="">
+                <img class="img-2" src="./assets/img/pngegg38-copy.png" alt="">
+            </div>
+            <div class="contentbox flex">
+                <div class="content">
+                    <h2>write something clever</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum iusto nulla veritatis est rem voluptatum nisi eligendi commodi fuga odit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+.box {
+    position: relative;
+    width: min(95%, 450px);
+    height: 320px;
+    background: #000;
+}
+.imgbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);
+    overflow-x: clip;
+}
+.img-1, .img-2 {
+    position: absolute;
+    object-fit: cover;
+}
+.img-1 {
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.img-2 {
+    top: 10px;
+    right: -30px;
+    height: 110%;
+    opacity: 0;
+    z-index: 2;
+    transition: 0.5s;
+}
+.box:hover .img-2 {
+    right: 30px;
+    opacity: 1;
+}
+.contentbox {
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    right: 40px;
+    width: 100%;
+    background: #fff;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.box:hover .contentbox {
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform 0.5s;
+}
+.content {
+    position: relative;
+    padding: 20px 110px 20px 60px;
+    opacity: 0;
+}
+.box:hover .content {
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.content h2 {
+    color: #222;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+.content p {
+    color: #222;
+}
