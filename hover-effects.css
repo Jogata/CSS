@@ -135,6 +135,86 @@ font-family: 'Raleway', sans-serif;
       transform: scaleX(1);
 }
 
+/* ----------------------------------------------  Flip Hover Effect  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./hover-effects.css" />
+</head>
+
+    <ul class="nav" id="nav3">
+        <li>
+            <a href="nav3" class="nav-link3">
+                <span>home</span>
+                <span>home</span>
+            </a>
+        </li>
+        <li>
+            <a href="nav3" class="nav-link3">
+                <span>about</span>
+                <span>about</span>
+            </a>
+        </li>
+        <li>
+            <a href="nav3" class="nav-link3">
+                <span>services</span>
+                <span>services</span>
+            </a>
+        </li>
+        <li>
+            <a href="nav3" class="nav-link3">
+                <span>portfolio</span>
+                <span>portfolio</span>
+            </a>
+        </li>
+        <li>
+            <a href="nav3" class="nav-link3">
+                <span>team</span>
+                <span>team</span>
+            </a>
+        </li>
+        <li>
+            <a href="nav3" class="nav-link3">
+                <span>contact</span>
+                <span>contact</span>
+            </a>
+        </li>
+    </ul>
+*/
+
+/* ===============  CSS  =============== */
+.nav {
+    background: #161616;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-link3 {
+    position: relative;
+    display: block;
+    height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.nav-link3 span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    transition: 0.5s;
+}
+.nav-link3 span:nth-child(1) {
+    color: #666;
+}
+.nav-link3:hover span {
+    transform: translateY(-100%);
+}
+
 
 
 /* ----------------------------------------------  Hover Effect v.1  ---------------------------------------------- */
@@ -333,7 +413,7 @@ font-family: 'Raleway', sans-serif;
     <section class="container flex">
         <div class="box">
             <div class="imgbox">
-                <img class="img-1" src="./assets/img/spring-forest-copy.jpg" alt="">
+                <img class="img-1" src="./assets/img/foggy-lake-quang-nguyen-vinh-2166695-copy.jpg" alt="">
                 <img class="img-2" src="./assets/img/pngegg38-copy.png" alt="">
             </div>
             <div class="contentbox flex">
@@ -394,6 +474,7 @@ font-family: 'Raleway', sans-serif;
     transform-origin: right;
     transform: scaleX(0);
     transition: transform 0.5s;
+    border-radius: 50%;
 }
 .box:hover .contentbox {
     transform-origin: left;
