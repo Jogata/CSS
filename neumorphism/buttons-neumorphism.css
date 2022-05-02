@@ -19,6 +19,16 @@ body {
     height: 100vh;
 }
 
+.container {
+    width: 100%;
+    height: 100vh;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* ========================================================  Neumorphic Hamburger Button  ======================================================== */
 /* ---------------  HTML  --------------- 
 <head>
@@ -1078,26 +1088,26 @@ input:checked ~ .fa-times {
 
 /* ---------------  CSS  --------------- */
 .sci-buttons-v2-container {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#18191f;
-    min-height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #18191f;
+    min-height: 50vh;
 }
 .sci-buttons-v2 {
-    display:flex;
+    display: flex;
     margin: 40px auto;
 }
 .sci-buttons-v2 li {
-    list-style:none;
+    list-style: none;
 }
 .sci-buttons-v2 li a {
-    display:block;
-    width:50px;
-    height:50px;
-    background:#18191f;
-    line-height:55px;
-    text-align:center;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #18191f;
+    line-height: 55px;
+    text-align: center;
     margin: 0 10px;
     border-radius: 15px;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.2),
@@ -1106,7 +1116,7 @@ input:checked ~ .fa-times {
 }
 
 .sci-buttons-v2 li a .fa {
-    font-size:22px;
+    font-size: 22px;
     color: #555;
 }
 .sci-buttons-v2 li:nth-child(1) a:hover .fa {
@@ -1211,6 +1221,79 @@ input:checked ~ .fa-times {
         color: #4cd137;
         text-shadow: 0 0 15px #4cd137;
     } */
+
+
+/* ===========================================  Neumorphic Power Button  =========================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
+</head>
+
+    <section class="bg1 container flex">
+        <label id="powerlabel" for="power">
+            <input type="checkbox" name="" id="power">
+            <span class="btn"></span>
+            <i class="fa fa-power-off" aria-hidden="true"></i>
+        </label>
+    </section>
+
+/* ---------------  CSS  --------------- */
+.bg1 {
+    background: #0c0c0c;
+    height: 50vh;
+}
+
+#powerlabel {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#powerlabel .btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #1b1b1b;
+    box-shadow: 0px 3px 4px rgb(0, 0, 0),
+    inset 0px -2px 5px rgb(0, 0, 0),
+    inset 0px 2px 2px rgba(255, 255, 255, 0.5),
+    0px 0px 0px 2px #000,
+    0px 0px 0px 5px #0c0c0c,
+    0px 0px 0px 5.5px #080808;
+}
+#power {
+    visibility: hidden;
+}
+#powerlabel .fa-power-off {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: #0c0c0c;
+}
+
+#power:checked ~ .btn {
+    box-shadow: 0px 0px 0px rgb(0, 0, 0),
+    inset 0px -2px 5px rgb(0, 0, 0),
+    inset 0px 1px 1px rgba(255, 255, 255, 0.1),
+    0px 0px 0px 2px #000,
+    0px 0px 0px 4.5px #0c0c0c,
+    0px 0px 0px 5.5px #00a1ff;
+}
+#power:checked ~ .fa-power-off {
+    color: #00ffe7;
+    text-shadow: 0px 0px 15px #00a1ff,
+                0px 0px 30px #00a1ff;
+}
+
 
 
 /* ===========================================  Neumorphic Button with Hollow Hover Effect  =========================================== */
