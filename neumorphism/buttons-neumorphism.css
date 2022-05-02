@@ -171,7 +171,7 @@ body {
 }
 
 .onoff-container {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -268,6 +268,110 @@ body {
   .neu-onoff-check input {
     display: none;
   }
+
+
+/* ===========================================  Neumorphic Power Button  =========================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
+</head>
+
+    <section class="bg2 container flex">
+        <button class="neumorphicpowerbutton1 toggle" type="button" role="switch" aria-checked="false">
+            <span></span>
+        </button>
+    </section>
+
+/* ---------------  CSS  --------------- */
+.bg2 {
+    background-image: linear-gradient(to bottom, #dee9da, #c6cfc7);
+}
+
+.neumorphicpowerbutton1 {
+	-webkit-tap-highlight-color: transparent;
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 0px;
+	background-color: #d0d7cd;
+	box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.25), 
+    inset 0 10px 20px 0 rgba(51, 51, 51, 0.375);
+	transition: 0.5s ease;
+	cursor: pointer;
+}
+
+.neumorphicpowerbutton1:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #e7f2e1, #afb0aa);
+    box-shadow: 0 15px 20px 0 rgba(51, 51, 51, 0.375),
+            inset 0 -3px 0 0 rgba(51, 51, 51, 0.125);
+    transition: 0.5s ease;
+}
+
+.neumorphicpowerbutton1:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #d6ded1, #e1ebdb);
+    box-shadow: inset 0 -3px 0 0 rgba(238, 238, 238, 0.75), 
+                inset 0 3px 0 0 rgba(51, 51, 51, 0.1);
+}
+
+.neumorphicpowerbutton1 span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.25s ease;
+    z-index: 1;
+}
+
+.neumorphicpowerbutton1 span:before,
+.neumorphicpowerbutton1 span:after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 32px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 99em;
+    background-color: #B6B5B1;
+    box-shadow: inset 2px -3px 4px 0 rgba(51, 51, 51, 0.25);
+    transition: 0.25s ease;
+}
+		
+.neumorphicpowerbutton1 span:before {
+    left: -10px;
+}
+		
+.neumorphicpowerbutton1 span:after {
+    left: 10px;
+}
+
+.neumorphicpowerbutton1.active:before {
+    box-shadow: 0 5px 20px 0 rgba(51, 51, 51, 0.25),
+        inset 0 -3px 0 0 rgba(51, 51, 51, 0.125);
+}
+
+span.active:before, span.active:after {
+    background-color: #E05879;
+    box-shadow: inset 2px -3px 4px 0 rgba(51, 51, 51, 0.75);	
+}
+
 
 /* ========================================================  Neumorphic Pulse Button  ======================================================== */
 /* ---------------  HTML  --------------- 
