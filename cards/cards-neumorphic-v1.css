@@ -10,24 +10,24 @@ body {
     width: 100%;
     height: 100vh;
     background: #2a2b2f;
-    background-position: center;
-    background-size: 120% 120%;
-    animation: move 60s linear infinite alternate;
-}
-@keyframes move {
-    0% {background-position: left;}
-    100% {background-position: right;}
+    font-family: 'Poppins', sans-serif;
 }
 
+
+/* ----------------------------------------------  Neumorphic Cards | v.1  ---------------------------------------------- */
 /* ===============  HTML  =============== 
-    <section class="cards-neumorphic-v1-container flex" id="target">
+<head>
+    <link rel="stylesheet" href="./cards/cards-neumorphic-v1.css" />
+</head>
+
+    <section class="cards-neumorphic-v1-container flex" id="target1">
         <article class="card-neumorphic-v1">
             <div class="card-neumorphic-v1-box flex">
                 <div class="card-neumorphic-v1-content">
                     <h2>01</h2>
                     <h3>Card One</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laudantium explicabo inventore iste expedita nesciunt, nulla dicta facilis? Aut quo fugit nisi pariatur consectetur perspiciatis asperiores at fuga eveniet laudantium!</p>
-                    <a href="#target">read more</a>
+                    <a href="#target1">read more</a>
                 </div>
             </div>
         </article>
@@ -37,7 +37,7 @@ body {
                     <h2>02</h2>
                     <h3>Card Two</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatum est quis optio molestias? Consectetur labore ex excepturi distinctio reprehenderit.</p>
-                    <a href="#target">read more</a>
+                    <a href="#target1">read more</a>
                 </div>
             </div>
         </article>
@@ -47,7 +47,7 @@ body {
                     <h2>03</h2>
                     <h3>Card Three</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatum est quis optio molestias? Consectetur labore ex excepturi distinctio reprehenderit.</p>
-                    <a href="#target">read more</a>
+                    <a href="#target1">read more</a>
                 </div>
             </div>
         </article>
@@ -55,10 +55,6 @@ body {
 */
 
 /* ===============  CSS  =============== */
-body {
-    flex-wrap: wrap;
-    font-family: 'Poppins', sans-serif;
-}
 .flex {
     display: flex;
     align-items: center;
@@ -66,7 +62,6 @@ body {
 }
 .cards-neumorphic-v1-container {
     flex-wrap: wrap;
-    max-width: 1200px;
     min-height: 100vh;
     margin: 40px 0;
 }
@@ -153,4 +148,92 @@ body {
 }
 .card-neumorphic-v1:nth-child(3) a {
     background: #97dc47;
+}
+
+
+/* ----------------------------------------------  Neumorphic Cards | v.2  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./cards/cards-neumorphic-v1.css" />
+</head>
+
+    <section class="cards-neumorphic-v2-container flex" id="target2">
+        <div class="card-neumorphic-v2">
+            <div class="imagebox">
+                <img src="./assets/img/river-bank-copy.jpg" alt="">
+            </div>
+            <div class="main-title">
+                <h2>image 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit error laboriosam repudiandae, assumenda eaque voluptas temporibus consequatur corporis dolore explicabo soluta illum iure impedit voluptatibus distinctio totam quidem labore excepturi</p>
+            </div>
+        </div>
+        <div class="card-neumorphic-v2">
+            <div class="imagebox">
+                <img src="./assets/img/scenic-view-of-lake-against-sky-during-sunset-copy.jpg" alt="">
+            </div>
+            <div class="main-title">
+                <h2>image 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit error laboriosam repudiandae, assumenda eaque voluptas temporibus consequatur corporis dolore explicabo soluta illum iure impedit voluptatibus distinctio totam quidem labore excepturi</p>
+            </div>
+        </div>
+        <div class="card-neumorphic-v2">
+            <div class="imagebox">
+                <img src="./assets/img/alley-copy.jpg" alt="">
+            </div>
+            <div class="main-title">
+                <h2>image 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit error laboriosam repudiandae, assumenda eaque voluptas temporibus consequatur corporis dolore explicabo soluta illum iure impedit voluptatibus distinctio totam quidem labore excepturi</p>
+            </div>
+        </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+.cards-neumorphic-v2-container {
+    width: 100%;
+    min-height: 100vh;
+    background: #ebecf0;
+    flex-wrap: wrap;
+}
+
+.card-neumorphic-v2 {
+    width: max(280px, 450px);
+    margin: 5vh 3vw;
+    padding: 40px 3vw;
+    border-radius: 30px;
+    box-shadow: -7px -7px 20px #fff,
+    1px 1px 4px rgba(255, 255, 255, 0.2),
+    7px 7px 10px rgba(55, 84, 170, 0.15);
+}
+
+.imagebox {
+    width: 100%;
+    height: 300px;
+    border: 4px solid #f3f4f7;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: -7px -7px 20px #fff,
+    1px 1px 4px rgba(255, 255, 255, 0.2),
+    7px 7px 10px rgba(55, 84, 170, 0.15);
+}
+.imagebox img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+.card-neumorphic-v2 .main-title {
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+.card-neumorphic-v2 .main-title h2 {
+    padding: 2px 0px;
+    color: #555f76;
+    font-size: 22px;
+    text-align: center;
+}
+.card-neumorphic-v2 .main-title p {
+    color: #8d96a8;
+    padding: 5px;
 }
