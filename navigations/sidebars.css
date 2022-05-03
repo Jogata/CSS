@@ -113,6 +113,7 @@ body {
 /* ---------------  CSS  --------------- */
 
 .sidebar-v1-container {
+    position: absolute;
     width: 300px;
     height: 100vh;
     text-align: center;
@@ -216,10 +217,12 @@ body {
     /* color: #333; */
     color: #fff;
     /* background: rgba(0, 0, 0, 0.6); */
+    display: none;
     opacity: 0;
     transition: 0.5s;
 }
 .sidebar-v1.opened ul li a .text {
+    display: inline;
     opacity: 1;
 }
 
@@ -397,7 +400,138 @@ body {
 
 
 
-/* ==========================================================  Side Bar .v3  ==========================================================  */
+/* ==========================================================  Side Bar v.3  ==========================================================  */
+/* ---------------  HTML  --------------- 
+    <section id="section3">
+        <ul class="ul3">
+            <li class="li3">
+                <a class="lia3 spotify1" href="#section3">
+                    <span>spotify</span>
+                    <i class="fa fa-spotify" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="li3">
+                <a class="lia3 soundcloud1" href="#section3">
+                    <span>soundcloud</span>
+                    <i class="fa fa-soundcloud" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="li3">
+                <a class="lia3 skype1" href="#section3">
+                    <span>spotify</span>
+                    <i class="fa fa-skype" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="li3">
+                <a class="lia3 dribbble1" href="#section3">
+                    <span>spotify</span>
+                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </section>
+*/
+
+/* ---------------  CSS  --------------- */
+#section3 {
+    position: absolute;
+    left: 350px;
+    width: fit-content;
+    height: 100vh;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    overflow: hidden;
+}
+.ul3 {
+    list-style: none;
+}
+.li3 {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.lia3 {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-left: -2px;
+    margin-bottom: 1rem;
+    line-height: 60px;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #2980b9;
+    background: #fff;
+    transition: all 0.4s ease;
+}
+.lia3 span {
+    position: absolute;
+    left: -120px;
+    padding: 0px 30px;
+    text-transform: capitalize;
+    transition: left 0.4s ease;
+}
+.lia3:hover {
+    width: 180px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px -7px rgba(0, 0, 0, 0.5);
+}
+.lia3:hover span {
+    left: 0;
+}
+
+.lia3 i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    font-size: 1.5rem;
+}
+
+.spotify1 {
+    color: #27ae60;
+    background: rgba(39, 174, 96, 0.1);
+    border: 1px solid #27ae60;
+}
+a.spotify1:hover {
+    background: rgba(39, 174, 96, 1);
+}
+
+.soundcloud1 {
+    color: #e67e22;
+    background: rgba(230, 126, 34, 0.1);
+    border: 1px solid #e67e22;
+}
+a.soundcloud1:hover {
+    background: rgba(230, 126, 34, 1);
+}
+
+.skype1 {
+    color: #22a7f0;
+    background: rgba(34, 167, 240, 0.1);
+    border: 1px solid #22a7f0;
+}
+a.skype1:hover {
+    background: rgba(34, 167, 240, 1);
+}
+
+.dribbble1 {
+    color: #d2527f;
+    background: rgba(210, 82, 127, 0.1);
+    border: 1px solid #d2527f;
+}
+a.dribbble1:hover {
+    background: rgba(210, 82, 127, 1);
+}
+
+
+
+/* ==========================================================  Side Bar .v4  ==========================================================  */
 /* ---------------  HTML  --------------- 
 <head>
     <link rel="stylesheet" href="./navigations/sidebars.css" />
@@ -684,7 +818,9 @@ section.active .nav-bar ul li {
 }
 
 
-/* ==========================================================  Side Bar .v2  ==========================================================  */
+
+
+/* ==========================================================  Side Bar .v3  ==========================================================  */
 /* ---------------  HTML  --------------- 
 */
 
