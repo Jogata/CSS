@@ -626,6 +626,119 @@ a.dribbble1:hover {
 }
 
 
+/* ==========================================================  Stretchy Side Bar .v1  ==========================================================  */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="./navigations/sidebars.css" />
+</head>
+
+    <input type="checkbox" name="start" id="trigger">
+    <nav id="stretchy">
+        <ul class="menu01">
+            <li>
+                <label for="trigger" class="trigger">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </label>
+            </li>
+            <li><i class="fa fa-home" aria-hidden="true"></i></li>
+            <li><i class="fa fa-bell" aria-hidden="true"></i></li>
+            <li><i class="fa fa-envelope" aria-hidden="true"></i></li>
+            <li><i class="fa fa-cog" aria-hidden="true"></i></li>
+            <li><i class="fa fa-laptop" aria-hidden="true"></i></li>
+            <li><i class="fa fa-edit" aria-hidden="true"></i></li>
+            <li><i class="fa fa-user" aria-hidden="true"></i></li>
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i></li>
+        </ul>
+        <ul class="menu02">
+            <li>home</li>
+            <li>services</li>
+            <li>contact</li>
+            <li>about</li>
+            <li>FAQ</li>
+            <LI>terms</LI>
+            <li>projects</li>
+            <li>location</li>
+        </ul>
+    </nav>
+*/
+
+/* ---------------  CSS  --------------- */
+#trigger {
+    position: absolute;
+    display: none;
+    /* top: -200px; */
+}
+
+#stretchy {
+    position: fixed;
+    top: 10px;
+    right: 100px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.menu01, .menu02 {
+    list-style: none;
+}
+.menu01 {
+    width: 70px;
+    height: 70px;
+    padding-top: 4px;
+    border-radius: 50px;
+    background: #11998e;
+    background: linear-gradient(to right, #38ef7d, #11998e);
+    background: linear-gradient(to right, transparent, #000);
+    overflow: hidden;
+    transition: height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.trigger {
+    cursor: pointer;
+}
+
+.menu01 li {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    font-size: 22px;
+    text-align: center;
+}
+.menu01 li span {
+    position: absolute;
+    color: transparent;
+    transition: all 0.8s;
+}
+.menu01 li i {
+    line-height: 1.6em;
+}
+
+.menu02 {
+    position: absolute;
+    top: 70px;
+    opacity: 0;
+    cursor: pointer;
+}
+.menu02 li {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 2rem;
+}
+
+#trigger:checked ~ nav .menu01 {
+    height: 630px;
+}
+#trigger:checked ~ nav .menu02 {
+    opacity: 1;
+    transform: translateX(-70px);
+    transition: transform 0.8s, opacity 0.4s linear;
+}
+
 /* ==========================================================  Side Bar .v3  ==========================================================  */
 /* ---------------  HTML  --------------- 
     <header class="header5">
