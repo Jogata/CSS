@@ -626,6 +626,165 @@ a.dribbble1:hover {
 }
 
 
+/* ==========================================================  Side Bar .v3  ==========================================================  */
+/* ---------------  HTML  --------------- 
+    <header class="header5">
+        <div class="bar flex">
+            <ul class="nav5">
+                <li class="li5 active5">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                        </span>
+                        <div class="tooltip bottom">home</div>
+                    </a>
+                </li>
+                <li class="li5">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                        </span>
+                        <div class="tooltip bottom">home</div>
+                    </a>
+                </li>
+                <li class="li5">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                        </span>
+                        <div class="tooltip bottom">home</div>
+                    </a>
+                </li>
+                <li class="li5">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                        </span>
+                        <div class="tooltip bottom">home</div>
+                    </a>
+                </li>
+                <li class="li5">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                        </span>
+                        <div class="tooltip bottom">home</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+*/
+
+/* ---------------  JS  --------------- 
+    <script>
+        const links5 = document.querySelectorAll('.li5');
+
+        links5.forEach(link => {
+            link.addEventListener('click', () => {
+                const activeLink = document.querySelector('.li5.active5');
+                activeLink.classList.remove('active5');
+                link.classList.add('active5');
+            })
+        })
+    </script>
+*/
+
+/* ---------------  CSS  --------------- */
+.header5 {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #111;
+    z-index: 2;
+}
+
+.bar {
+    position: relative;
+    width: 80px;
+    height: 100%;
+    border-left: 3px solid #000;
+    background: #212121;
+    overflow-y: scroll;
+    overflow: visible;
+}
+
+.nav5 {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.li5 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    z-index: 1;
+}
+
+.li5 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    color: #555;
+    text-decoration: none;
+    z-index: 1;
+    transition: all 0.5s ease-in;
+}
+
+.icon {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    transition: all 0.5s;
+}
+
+.li5:hover:not(.active5) .icon {
+    color: #888;
+    transform: scale(1.2);
+}
+.li5.active5 {
+    left: -50%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    /* border: 3px solid #111; */
+    background-image: linear-gradient(#232323, #141516d1);
+    box-shadow: 0px 3px 4px rgb(0 0 0), 
+    inset 0px -2px 5px rgb(0 0 0), 
+    inset 0px 2px 2px rgb(255 255 255 / 50%), 
+    0px 0px 0px 2px #000, 
+    0px 0px 0px 3px #0c0c0c, 
+    0px 0px 0px 2.5px #080808;
+    transition: all 0.5s;
+}
+.li5.active5 a .icon {
+    color: #ff651c;
+}
+
+.tooltip {
+    position: absolute;
+    right: 0;
+    padding: 0 10px;
+    color: transparent;
+    font-size: 22px;
+    text-transform: capitalize;
+    transition: all 0.9s;
+    opacity: 0;
+}
+.li5:hover .tooltip {
+    right: 100%;
+    color: #ff651c;
+    opacity: 1;
+}
 /* ==========================================================  3D Navigation Bar Animation  ==========================================================  */
 /* ---------------  HTML  --------------- 
     <section class="grid container" id="anb3d">
