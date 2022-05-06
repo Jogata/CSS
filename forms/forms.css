@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;700;800&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Montserrat:wght@300;400;600&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;700;800&family=Raleway&display=swap');
 
 /* 
 font-family: 'Abril Fatface', cursive;
@@ -8,6 +8,7 @@ font-family: 'Great Vibes', cursive;
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Limelight', cursive;
 font-family: 'Montserrat', sans-serif;
+font-family: 'Oleo Script Swash Caps', cursive;
 font-family: 'Poppins', sans-serif;
 font-family: 'Raleway', sans-serif;
 */
@@ -164,8 +165,105 @@ font-family: 'Raleway', sans-serif;
 }
 
 
-/* ==========================================================  Transparent Form | v.1  ==========================================================  */
+/* ==========================================================  Transparent Form | v.2  ==========================================================  */
 /* ===============  HTML  =============== 
+    <section class="container flex" id="form2">
+        <div class="transparent-login-body flex">
+            <header>
+                <h2>login</h2>
+            </header>
+            <section class="transparent-login-main">
+                <form>
+                    <span>
+                        <i class="fa fa-user"></i>
+                        <!-- <i class="far fa-user"></i> -->
+                        <!-- <i class="fas fa-pray"></i> -->
+                        <!-- <i class="fas fa-user-check"></i> -->
+                        <!-- <i class="fas fa-user-slash"></i> -->
+                        <input type="text" name="username" id="username4" placeholder="Username" autocomplete="off">
+                    </span>
+                    <span>
+                        <i class="fa fa-user-secret" aria-hidden="true"></i>
+                        <input type="password" name="password4" id="password4" placeholder="Password">
+                    </span>
+                    <button type="button" id="transparent-login-submit">login</button>
+                </form>
+            </section>
+        </div>
+    </section>
 */
 
 /* ===============  CSS  =============== */
+#form2 {
+    background: url("../assets/img/clouds-bg-copy.jpg");
+    background-position: bottom;
+    background-size: cover;
+}
+.transparent-login-body {
+    width: 380px;
+    margin: auto;
+    padding-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 17px #333;
+    border-radius: 25px;
+    flex-direction: column;
+}
+
+.transparent-login-body header,
+#transparent-login-submit {
+    text-align: center;
+    text-transform: capitalize;
+}
+.transparent-login-body header h2 {
+    color: #333;
+    font-size: 45px;
+    font-weight: 700;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    margin: 50px 0;
+}
+
+.transparent-login-main form > * {
+    display: block;
+    position: relative;
+    margin: 30px auto;
+}
+input::placeholder {
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+.transparent-login-main form span i {
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    font-size: 20px;
+}
+#username4, #password4,
+#transparent-login-submit {
+    width: 300px;
+    height: 40px;
+    color: #333;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 2px 5px #555;
+}
+#username4, #password4 {
+    padding-left: 40px;
+}
+#transparent-login-submit {
+    background: rgba(255, 255, 255, 0.1);
+    font-family: 'Oleo Script Swash Caps', cursive;
+    transition: box-shadow 0.3s;
+}
+#transparent-login-submit:active,
+#username4:active, #password4:active, 
+#username4:focus, #password4:focus {
+    box-shadow: 
+    inset -2px -2px 5px #fff,
+    inset 2px 2px 5px #555;
+}
+#transparent-login-submit:active {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
