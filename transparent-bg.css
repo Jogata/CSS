@@ -1,59 +1,69 @@
-/* ===============  HTML  =============== */
-/* <div class="transparent-bg">
-<h1>Change the <em>href</em> attribute of the stylesheet in order to see the result</h1>
-</div> */
-
-/* ===============  CSS  =============== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+.container {
     width: 100%;
     height: 100vh;
-    background: url("./assets/img/stock-photo-127204601-copy.jpg") no-repeat;
-    /* background: url("./assets/img/stock-photo-131318185-copy.jpg") no-repeat; */
-    /* background: url("./assets/img/stock-photo-245492421-copy.jpg") no-repeat; */
-    background-position: center;
-    background-size: cover;
-    animation: move 60s linear infinite alternate;
 }
-@keyframes move {
-    0% {background-position: left;}
-    100% {background-position: right;}
-}
-
-.transparent-bg {
-    position: relative;
+.flex {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 400px;
-    height: 400px;
-    background: transparent;
-    border: 1px solid #fff;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.transparent-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid #fff;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    z-index: -1;
 }
 
 h1 {
-    width: 100% !important;
+    width: 80%;
     color: white;
+}
+em {
+    color: palevioletred;
+}
+
+/* ===============  HTML  =============== 
+    <section class="container flex" id="box1">
+        <div class="transparent-box1 flex">
+            <h1>Change the <em>href</em> attribute of the stylesheet in order to see the result</h1>
+        </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+#box1 {
+    background: url("./assets/img/stock-photo-127204601-copy.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.transparent-box1 {
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+
+/* ===============  HTML  =============== 
+    <section class="container flex" id="box2">
+        <section class="transparent-box2 flex">
+            <h1>Change the <em>href</em> attribute of the stylesheet in order to see the result</h1>
+        </section>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+#box2 {
+    background-image: url('./assets/img/foggy-lake-quang-nguyen-vinh-2166695-copy.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#box2 .transparent-box2 {
+    width: 700px;
+    height: 420px;
+    border: 10px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
