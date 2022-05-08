@@ -483,7 +483,7 @@ button.follow {
 
 /* v.2.3 */
 /* ===============  HTML  =============== 
-    <section class="container flex" id="cardsv2b">
+    <section id="cardsv2b">
         <div class="card-v2b">
             <div class="imagebox-2b">
                 <img src="../CSS/assets/img/profile-copy.jpg" alt="picture">
@@ -516,6 +516,10 @@ button.follow {
 
 /* ===============  CSS  =============== */
 #cardsv2b {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
     padding: 30px 20px;
@@ -553,16 +557,15 @@ button.follow {
 }
 .content-2b {
     position: relative;
-    height: 0px;
     padding: 10px 15px;
     color: #111;
     text-align: center;
-    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
 }
 .card-v2b:hover .content-2b {
-    opacity: 1;
-    height: auto;
-    transition: opacity 0.2s ease-in-out;
+    transform: scaleY(1);
+    transition: all 0.2s ease-in-out;
 }
 .title-2b {
     text-transform: capitalize;
