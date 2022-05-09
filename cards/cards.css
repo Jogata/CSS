@@ -779,13 +779,13 @@ button.follow {
     <section class="container flex" id="nike-glass">
         <div class="product-card3" id="nike-glass1">
             <ul class="thumbs">
-                <li><img src="../assets/img/nike-shoes1.png" alt=""></li>
-                <li><img src="../assets/img/nike-shoes2.png" alt=""></li>
-                <li><img src="../assets/img/nike-shoes3.png" alt=""></li>
+                <li><img src="./assets/img/nike-shoes1.png" alt=""></li>
+                <li><img src="./assets/img/nike-shoes2.png" alt=""></li>
+                <li><img src="./assets/img/nike-shoes3.png" alt=""></li>
             </ul>
             <div class="imgbox3">
                 <h2>nike air zoom</h2>
-                <img src="../assets/img/nike-shoes1.png" alt="nike">
+                <img src="./assets/img/nike-shoes1.png" alt="nike">
                 <ul class="sizes3 flex">
                     <span>size</span>
                     <li class="size3">7</li>
@@ -798,18 +798,36 @@ button.follow {
         </div>
         <div class="product-card3" id="nike-glass2">
             <ul class="thumbs">
-                <li><img src="../assets/img/nike-shoes1.png" alt=""></li>
-                <li><img src="../assets/img/nike-shoes2.png" alt=""></li>
-                <li><img src="../assets/img/nike-shoes3.png" alt=""></li>
+                <li><img src="./assets/img/nike-shoes1.png" alt=""></li>
+                <li><img src="./assets/img/nike-shoes2.png" alt=""></li>
+                <li><img src="./assets/img/nike-shoes3.png" alt=""></li>
             </ul>
             <div class="imgbox3">
                 <h2>nike air zoom</h2>
-                <img src="../assets/img/nike-shoes2.png" alt="nike">
+                <img src="./assets/img/nike-shoes2.png" alt="nike">
                 <ul class="sizes3 flex">
                     <span>size</span>
                     <li class="size3">7</li>
                     <li class="size3">8</li>
                     <li class="size3">9</li>
+                </ul>
+                <a href="nike-glass" class="cart3">add to cart</a>
+            </div>
+        </div>
+        <div class="product-card3" id="nike-glass3">
+            <ul class="thumbs">
+                <li><img src="./assets/img/nike-shoes1.png" alt=""></li>
+                <li><img src="./assets/img/nike-shoes2.png" alt=""></li>
+                <li><img src="./assets/img/nike-shoes3.png" alt=""></li>
+            </ul>
+            <div class="imgbox3">
+                <h2>nike air zoom</h2>
+                <img src="./assets/img/nike-shoes3.png" alt="nike">
+                <ul class="sizes3 flex">
+                    <span>size</span>
+                    <li class="size3">7</li>
+                    <li class="size3">9</li>
+                    <li class="size3">10</li>
                 </ul>
                 <a href="nike-glass" class="cart3">add to cart</a>
             </div>
@@ -828,7 +846,7 @@ button.follow {
 
 .product-card3 {
     position: relative;
-    width: 400px;
+    min-width: 400px;
     height: 400px;
     margin: 100px 6rem;
     z-index: 2;
@@ -916,6 +934,25 @@ button.follow {
     justify-content: space-around;
     flex-direction: column;
     z-index: 3;
+}
+#nike-glass3 .imgbox3::before {
+    content: '';
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset: 0 -50px 0 50px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14rem;
+    font-size: clamp(10rem, 14rem, 20vw);
+    font-family: 'Abril Fatface', cursive;
+    font-style: italic;
+    text-transform: uppercase;
+    background: url('../assets/img/nike-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
 }
 
 .imgbox3 h2 {
