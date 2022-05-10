@@ -17,6 +17,95 @@
 }
 
 
+/* ----------------------------------------------  Responsive Card  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+    <section class="flex" id="rescard">
+        <div class="card-dragon">
+            <div class="content-dragon">
+                <h2>dragon</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet adipisci repellat aliquam hic, voluptatibus alias nesciunt aspernatur laboriosam dolorum accusamus aliquid perferendis, fugit maxime quos temporibus vero dolorem. Quidem, exercitationem!</p>
+                <a href="#">read more</a>
+            </div>
+            <img class="img-dragon" src="../CSS/assets/img/dragon-copy.png" alt="">
+        </div>
+    </section>
+*/
+#rescard {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.card-dragon {
+    position: relative;
+    width: 610px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: #1e6b7b;
+    transition: all 1s;
+}
+.content-dragon {
+    position: relative;
+    max-width: 300px;
+    margin: auto;
+    padding: 20px 20px 40px;
+    color: #fff;
+    z-index: 3;
+    display: none;
+    transition: all 1s;
+}
+.card-dragon:hover .content-dragon {
+    display: block;
+}
+.content-dragon h2 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+.content-dragon a {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #111;
+    background: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+@media screen and (max-width: 660px) { 
+    .content-dragon {
+        max-width: 90%;
+    }
+}
+@media screen and (max-width: 510px) { 
+    .content-dragon {
+        width: 100%;
+        padding: 0px 0px 40px;
+    }
+}
+.content-dragon a:hover {
+    background: #1a2f3f;
+    background: #fff;
+}
+.img-dragon {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    transform: scale(1.1);
+    transition: all 1s;
+}
+.img-dragon {
+    border-radius: 50%;
+}
+.card-dragon:hover .img-dragon {
+    transform: scale(1.5);
+}
+
+
 /* ----------------------------------------------  Curled Gold Page Effect  ---------------------------------------------- */
 /* ===============  HTML  =============== 
     <section class="container flex">
@@ -1002,8 +1091,7 @@ button.follow {
     color: #1e6b7b;
     border-radius: 30px;
     background-color: rgb(212, 214, 218);
-    backdrop-filter: blur(2px);
-    box-shadow: 0px 2px 10px rgb(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
     text-decoration: none;
     transition: 0.25s;
 }
