@@ -48,7 +48,6 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     background-color: #1e6b7b;
-    transition: all 1s;
 }
 .content-dragon {
     position: relative;
@@ -58,12 +57,9 @@
     color: #fff;
     z-index: 3;
     display: none;
-    transform: scale(0);
-    transition: all 1s;
 }
 .card-dragon:hover .content-dragon {
     display: block;
-    transform: scale(1);
 }
 .content-dragon h2 {
     font-size: 2.2rem;
@@ -102,7 +98,6 @@
     min-width: 250px;
     margin: auto;
     transform: scale(1.1);
-    transition: all 1s;
 }
 .img-dragon {
     border-radius: 50%;
@@ -140,14 +135,15 @@
     min-width: 250px;
     margin: auto;
     padding: 20px 20px 40px;
-    font-size: 0px;
     color: #fff;
+    font-size: 0px;
     grid-column: 2 / 3;
     grid-row: 1 / 1;
     display: none;
+    z-index: 3;
+
     transform: scale(0);
     opacity: 0;
-    z-index: 3;
     overflow: hidden;
 }
 .card-dragon:hover .content-dragon {
@@ -949,10 +945,10 @@ button.follow {
 }
 .product-card4 {
     position: relative;
-    /* display: flex; */
-    /* flex-wrap: wrap; */
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 900px;
+    max-width: 900px;
     height: 600px;
     margin: 20px;
     background-color: #fff;
@@ -963,11 +959,22 @@ button.follow {
     width: 50%;
     height: 100%;
     background-color: #006dbc;
-    float: left;
+}
+.imgbox4::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 150px;
+    inset: 20px auto auto 20px;
+    opacity: 0.3;
+    background-image: url('../assets/img/nike-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 .imgbox4 img {
     position: relative;
-    width: 700px;
+    max-width: 700px;
     left: -50px;
     transform: rotate(-30deg);
 }
@@ -990,7 +997,54 @@ button.follow {
 }
 .description4 {
     max-width: 85%;
-    shape-outside: url('../assets/img/running_shoes_PNG5816.png');
+    margin-left: 15%;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 15px;
+}
+.price4 {
+    float: left;
+    color: #2a2a2a;
+    font-size: 2.5rem;
+}
+.buy4 {
+    float: right;
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 40px;
+    background-color: #006dbc;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 760px) {
+    .product-card4 {
+        height: auto;
+    }
+    .imgbox4 {
+        padding: 40px;
+        width: 100% !important;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+    .imgbox4 img {
+        left: initial;
+        max-width: 100%;
+        transform: rotate(0deg);
+    }
+    .details {
+        width: 100% !important;
+        height: auto;
+        padding: 20px;
+    }
+    .description4 {
+        max-width: 90%;
+        margin-left: 0px;
+    }
 }
 
 
