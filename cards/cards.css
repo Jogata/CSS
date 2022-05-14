@@ -31,6 +31,8 @@
         </div>
     </section>
 */
+
+/* ===============  CSS | with FLEX and Media Querries  =============== */
 #rescard {
     position: relative;
     width: 100%;
@@ -56,10 +58,12 @@
     color: #fff;
     z-index: 3;
     display: none;
+    transform: scale(0);
     transition: all 1s;
 }
 .card-dragon:hover .content-dragon {
     display: block;
+    transform: scale(1);
 }
 .content-dragon h2 {
     font-size: 2.2rem;
@@ -95,6 +99,7 @@
     position: relative;
     width: 100%;
     max-width: 300px;
+    min-width: 250px;
     margin: auto;
     transform: scale(1.1);
     transition: all 1s;
@@ -105,6 +110,88 @@
 .card-dragon:hover .img-dragon {
     transform: scale(1.5);
 }
+
+/* ===============  CSS | with GRID  =============== */
+/* #rescard {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-dragon {
+    position: relative;
+    max-width: 800px;
+    width: 800px;
+    width: fit-content;
+    margin: 20px;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(max(250px, 50%), 1fr));
+    background-color: #1e6b7b;
+}
+
+.content-dragon {
+    position: relative;
+    width: 100%;
+    min-width: 250px;
+    margin: auto;
+    padding: 20px 20px 40px;
+    font-size: 0px;
+    color: #fff;
+    grid-column: 2 / 3;
+    grid-row: 1 / 1;
+    display: none;
+    transform: scale(0);
+    opacity: 0;
+    z-index: 3;
+    overflow: hidden;
+}
+.card-dragon:hover .content-dragon {
+    font-size: 1rem;
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+    display: block;
+    transform: scale(1);
+    opacity: 1;
+}
+.content-dragon h2 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+.content-dragon a {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #111;
+    background: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.content-dragon a:hover {
+    background: #1a2f3f;
+    background: #fff;
+}
+.img-dragon {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    margin: auto;
+    border-radius: 50%;
+    transform: scale(1.1);
+    grid-column: 1 / 3;
+    grid-row: 1 / 1;
+}
+.card-dragon:hover .img-dragon {
+    transform: scale(1.5);
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+} */
 
 
 /* ----------------------------------------------  Curled Gold Page Effect  ---------------------------------------------- */
@@ -667,7 +754,7 @@ button.follow {
 }
 
 
-/* ----------------------------------------------  Product Card UI Design  ---------------------------------------------- */
+/* ----------------------------------------------  Product Card UI Design | Nike v.1  ---------------------------------------------- */
 /* ===============  HTML  =============== 
     <section class="container flex" id="nike">
         <div class="card">
@@ -697,14 +784,9 @@ button.follow {
 
 /* ===============  CSS  =============== */
 
-#nike {
+#nikev1 {
     font-family: 'Poppins', sans-serif;
     background: #131313;
-    background-attachment: fixed, fixed;
-    background-repeat: no-repeat, no-repeat;
-    background-position: center, center;
-    background-size: cover, cover;
-    background-blend-mode: soft-light;
 }
 .product-card1 {
     position: relative;
@@ -856,8 +938,198 @@ button.follow {
     transition-delay: transform 0.75s, opacity 0.75s;
 }
 
+
+/* ----------------------------------------------  Product Card UI Design | Nike v.2  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+*/
+
+/* ===============  CSS  =============== */
+#nikev2 {
+    background-color: #070c24;
+}
+.product-card4 {
+    position: relative;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    width: 900px;
+    height: 600px;
+    margin: 20px;
+    background-color: #fff;
+}
+
+.imgbox4 {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: #006dbc;
+    float: left;
+}
+.imgbox4 img {
+    position: relative;
+    width: 700px;
+    left: -50px;
+    transform: rotate(-30deg);
+}
+
+.details {
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+}
+.product-name4 {
+    font-size: 2.5rem;
+    line-height: 2rem;
+    text-transform: capitalize;
+}
+.product-name4 span {
+    color: #999;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.description4 {
+    max-width: 85%;
+    shape-outside: url('../assets/img/running_shoes_PNG5816.png');
+}
+
+
 /* ----------------------------------------------  Product Card UI Design - Glassmorphism  ---------------------------------------------- */
 /* ===============  HTML  =============== 
+    <section class="container flex" id="nikev2glass">
+        <div class="product-card2 flex with">
+            <div class="imgbox2 flex">
+                <img src="../CSS/assets/img/running_shoes_PNG5816.png" alt="">
+            </div>
+            <h2>nike shoes</h2>
+            <div class="contentbox2">
+                <div class="sizes2 flex">
+                    <h3>size :</h3>
+                    <span class="size2">7</span>
+                    <span class="size2">8</span>
+                    <span class="size2">9</span>
+                    <span class="size2">10</span>
+                </div>
+                <div class="colors2 flex">
+                    <h3>color :</h3>
+                    <span class="color2"></span>
+                    <span class="color2"></span>
+                    <span class="color2"></span>
+                </div>
+                <a href="#nikev2glass" class="buy2">buy now</a>
+            </div>
+        </div>
+        <div class="product-card2 flex">
+            <div class="imgbox2 flex">
+                <img src="../CSS/assets/img/running_shoes_PNG5816.png" alt="">
+            </div>
+            <h2>nike shoes</h2>
+            <div class="contentbox2">
+                <div class="sizes2 flex">
+                    <h3>size :</h3>
+                    <span class="size2">7</span>
+                    <span class="size2">8</span>
+                    <span class="size2">9</span>
+                    <span class="size2">10</span>
+                </div>
+                <div class="colors2 flex">
+                    <h3>color :</h3>
+                    <span class="color2"></span>
+                    <span class="color2"></span>
+                    <span class="color2"></span>
+                </div>
+                <a href="#nikev2glass" class="buy2">buy now</a>
+            </div>
+        </div>
+        <div class="product-card2 flex">
+            <div class="imgbox2 flex">
+                <img src="../CSS/assets/img/running_shoes_PNG5816.png" alt="">
+            </div>
+            <h2>nike shoes</h2>
+            <div class="contentbox2">
+                <div class="sizes2 flex">
+                    <h3>size :</h3>
+                    <span class="size2">7</span>
+                    <span class="size2">8</span>
+                    <span class="size2">9</span>
+                    <span class="size2">10</span>
+                </div>
+                <div class="colors2 flex">
+                    <h3>color :</h3>
+                    <span class="color2"></span>
+                    <span class="color2"></span>
+                    <span class="color2"></span>
+                </div>
+                <a href="#nikev2glass" class="buy2">buy now</a>
+            </div>
+        </div>
+        <div class="product-card2 flex">
+            <div class="imgbox2 flex">
+                <img src="../CSS/assets/img/running_shoes_PNG5816.png" alt="">
+            </div>
+            <h2>nike shoes</h2>
+            <div class="contentbox2">
+                <div class="sizes2 flex">
+                    <h3>size :</h3>
+                    <span class="size2">7</span>
+                    <span class="size2">8</span>
+                    <span class="size2">9</span>
+                    <span class="size2">10</span>
+                </div>
+                <div class="colors2 flex">
+                    <h3>color :</h3>
+                    <span class="color2"></span>
+                    <span class="color2"></span>
+                    <span class="color2"></span>
+                </div>
+                <a href="#nikev2glass" class="buy2">buy now</a>
+            </div>
+        </div>
+        <div class="product-card2 flex">
+            <div class="imgbox2 flex">
+                <img src="../CSS/assets/img/running_shoes_PNG5816.png" alt="">
+            </div>
+            <h2>nike shoes</h2>
+            <div class="contentbox2">
+                <div class="sizes2 flex">
+                    <h3>size :</h3>
+                    <span class="size2">7</span>
+                    <span class="size2">8</span>
+                    <span class="size2">9</span>
+                    <span class="size2">10</span>
+                </div>
+                <div class="colors2 flex">
+                    <h3>color :</h3>
+                    <span class="color2"></span>
+                    <span class="color2"></span>
+                    <span class="color2"></span>
+                </div>
+                <a href="#nikev2glass" class="buy2">buy now</a>
+            </div>
+        </div>
+        <div class="product-card2 flex">
+            <div class="imgbox2 flex">
+                <img src="../CSS/assets/img/running_shoes_PNG5816.png" alt="">
+            </div>
+            <h2>nike shoes</h2>
+            <div class="contentbox2">
+                <div class="sizes2 flex">
+                    <h3>size :</h3>
+                    <span class="size2">7</span>
+                    <span class="size2">8</span>
+                    <span class="size2">9</span>
+                    <span class="size2">10</span>
+                </div>
+                <div class="colors2 flex">
+                    <h3>color :</h3>
+                    <span class="color2"></span>
+                    <span class="color2"></span>
+                    <span class="color2"></span>
+                </div>
+                <a href="#nikev2glass" class="buy2">buy now</a>
+            </div>
+        </div>
+    </section>
 */
 
 /* ===============  CSS  =============== */
@@ -1303,7 +1575,7 @@ button.follow {
 */
 
 /* ===============  CSS  =============== */
-#phillips {
+/* #phillips {
     font-family: 'Abril Fatface', cursive;
     background-color: #09161d;
 }
@@ -1391,4 +1663,4 @@ button.follow {
 }
 .product-card4:hover .buy4 {
     opacity: 1;
-}
+} */
