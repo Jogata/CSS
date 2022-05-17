@@ -2013,40 +2013,62 @@ button.follow {
 
 /* ----------------------------------------------  Product Card UI Design | v.6  ---------------------------------------------- */
 /* ===============  HTML  =============== 
-    <section class="container flex">
-        <div class="product-card8 card">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./cards/cards.css">
+</head>
+
+    <section class="container flex" id="sony">
+        <div class="product-card8 flex">
             <div class="cover flex">
-                <img src="./assets/img/watches_PNG9907.png" alt="Sony Watch">
+                <img src="./assets/img/watches_PNG9907.png" alt="Watch Sony">
             </div>
             <div class="contentbox8 flex">
                 <div class="imgbox8">
-                    <img src=".assets/img/watches_PNG9907.png" alt="Sony Watch">
+                    <img src="./assets/img/watches_PNG9907.png" alt="Watch Sony">
                 </div>
                 <h2 class="product-name8">new sony watch</h2>
                 <h3 class="price8"><sup>$</sup>450</h3>
                 <button type="button" class="buy8">buy now</button>
+                <a href="#sony" class="toggle-info">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <i class="fa fa-info" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="description8 flex">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus eligendi eius, recusandae, sapiente excepturi quam fugiat suscipit placeat perferendis non, dolorem nulla ullam. Saepe possimus quisquam asperiores dolorem quo facilis!</p>
             </div>
         </div>
     </section>
 */
 
+/* 
+    <script>
+        const toggleInfo = document.querySelector(".toggle-info");
+        const description = document.querySelector(".description8");
+        toggleInfo.addEventListener('click', () => {
+            description.classList.toggle("visible");
+        })
+    </script>
+*/
+
 /* ===============  CSS  =============== */
 .product-card8 {
     position: relative;
-    width: 300px;
+    flex-wrap: wrap;
     height: 400px;
     background-color: #fff;
     transform-style: preserve-3d;
     transform: perspective(2000px);
     transition: all 1s ease-in-out 0.3s;
 }
-.product-card8:hover {
+/* .product-card8:hover {
     transform: perspective(2000px) translateX(50%);
-}
+} */
 
 .cover {
-    position: relative;
-    width: 100%;
+    position: absolute;
+    width: 300px;
     height: 100%;
     background-color: #fff;
     transform-style: preserve-3d;
@@ -2085,14 +2107,15 @@ button.follow {
 
 .contentbox8 {
     position: absolute;
-    inset: 0 0 0 0;
+    width: 300px;
+    height: 100%;
     flex-direction: column;
     border-left: 3px solid #479903;
     border-right: 3px solid #479903;
     border-top: 3px solid #d2e205;
     border-bottom: 3px solid #d2e205;
     border-radius: 20px;
-    overflow: hidden;
+    background-color: #fff;
     z-index: 1;
     transition: all 0.5s;
 }
@@ -2140,3 +2163,61 @@ button.follow {
     letter-spacing: 2px;
     box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.5);
 }
+
+.toggle-info {
+    position: absolute;
+    inset: 47% -14px auto auto;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #479903;
+    animation: leftright 1.2s linear infinite;
+}
+.toggle-info i {
+    position: absolute;
+    color: #d7e062;
+    border-radius: 50%;
+}
+.toggle-info .fa-chevron-right {
+    font-size: 14px;
+    padding: 4px 7px;
+    opacity: 1;
+}
+.toggle-info:hover .fa-chevron-right {
+    opacity: 0;
+}
+.toggle-info .fa-info {
+    font-size: 16px;
+    padding: 3px 8px;
+    opacity: 0;
+}
+.toggle-info:hover .fa-info {
+    opacity: 1;
+}
+@keyframes leftright {
+    33% { right: -12px;}
+    66% { right: -16px;}
+}
+
+.description8 {
+    position: absolute;
+    /* inset: 20px; */
+    width: 280px;
+    /* height: calc(100% - 20px); */
+    padding: 20px 10px;
+    border-left: 3px solid #479903;
+    border-right: 3px solid #479903;
+    border-top: 3px solid #d2e205;
+    border-bottom: 3px solid #d2e205;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: -1;
+    transition: all 1s ease-out;
+}
+
+.visible {
+    position: relative;
+    transform: translateX(104%);
+}
+
