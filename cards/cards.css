@@ -2009,3 +2009,134 @@ button.follow {
     border: none;
     border-radius: 10px;
 }
+
+
+/* ----------------------------------------------  Product Card UI Design | v.6  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+    <section class="container flex">
+        <div class="product-card8 card">
+            <div class="cover flex">
+                <img src="./assets/img/watches_PNG9907.png" alt="Sony Watch">
+            </div>
+            <div class="contentbox8 flex">
+                <div class="imgbox8">
+                    <img src=".assets/img/watches_PNG9907.png" alt="Sony Watch">
+                </div>
+                <h2 class="product-name8">new sony watch</h2>
+                <h3 class="price8"><sup>$</sup>450</h3>
+                <button type="button" class="buy8">buy now</button>
+            </div>
+        </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+.product-card8 {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: all 1s ease-in-out 0.3s;
+}
+.product-card8:hover {
+    transform: perspective(2000px) translateX(50%);
+}
+
+.cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    border-left: 3px solid #479903;
+    border-right: 3px solid #479903;
+    border-top: 3px solid #d2e205;
+    border-bottom: 3px solid #d2e205;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 2;
+    transition: all 1s ease-in-out;
+}
+.product-card8:hover .cover {
+    transform: rotateY(-180deg);
+}
+.cover img {
+    width: 70%;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+}
+.product-card8:hover .cover img {
+    transform: rotateY(180deg);
+}
+.cover::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 125%;
+    background-color: #d2e205;
+    transform: rotate(40.5deg);
+    box-shadow: 10px 0 0 2px #479903,
+                -10px 0 0 2px #479903;
+    transition: all 0.5s;
+}
+
+.contentbox8 {
+    position: absolute;
+    inset: 0 0 0 0;
+    flex-direction: column;
+    border-left: 3px solid #479903;
+    border-right: 3px solid #479903;
+    border-top: 3px solid #d2e205;
+    border-bottom: 3px solid #d2e205;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s;
+}
+
+.imgbox8 {
+    width: 100%;
+}
+.imgbox8 img {
+    width: 55%;
+    display: block;
+    margin: auto;
+}
+
+.product-name8 {
+    color: #479903;
+    margin: 5px 0px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.price8 {
+    color: #479903;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.price8 sup {
+    color: #479903;
+    font-size: 1rem;
+}
+
+.buy8 {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 20px;
+    color: #d7e062;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 25px;
+    background: #479903;
+    transition: all 0.5s;
+}
+.buy8:hover {
+    letter-spacing: 2px;
+    box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.5);
+}
