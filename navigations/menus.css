@@ -746,10 +746,23 @@ input#d:is(:checked) + label {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
+    overflow: hidden;
     transition: 0.5s;
 }
 .glass-menu-ul li a:hover {
     transform: translateY(-20px);
+}
+.glass-menu-ul li a::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 0 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: skewX(45deg) translateX(120px);
+}
+.glass-menu-ul li a:hover::before {
+    transform: skewX(45deg) translateX(-120px);
+    transition: 1.5s;
 }
 
 
