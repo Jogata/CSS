@@ -216,6 +216,130 @@ font-family: 'Raleway', sans-serif;
 }
 
 
+/* ----------------------------------------------  Z-Index Transition Hover Effect  ---------------------------------------------- */
+/* ===============  HTML  ===============
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./hover-effects.css" />
+</head>
+
+    <section class="container flex" id="menu-glass">
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <ul class="glass-menu-ul">
+            <li><a href="#menu-glass">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a></li>
+            <li><a href="#menu-glass">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a></li>
+            <li><a href="#menu-glass">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a></li>
+            <li><a href="#menu-glass">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a></li>
+            <li><a href="#menu-glass">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a></li>
+        </ul>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+#menu-glass {
+    position: relative;
+    height: 300px;
+    background: linear-gradient(to bottom, #ff4f8b, #dff1ff);
+    overflow: hidden;
+}
+#menu-glass::before {
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
+.color {
+    position: absolute;
+    filter: blur(150px);
+}
+.color:nth-child(1) {
+    width: 600px;
+    height: 600px;
+    top: -350px;
+    background: #ff359b;
+}
+.color:nth-child(2) {
+    width: 500px;
+    height: 500px;
+    left: 100px;
+    bottom: -150px;
+    background: #00d2ff;
+}
+.color:nth-child(3) {
+    width: 300px;
+    height: 300px;
+    right: 0px;
+    bottom: 50px;
+    background: #fffd87;
+}
+
+.glass-menu-ul {
+    position: relative;
+    display: flex;
+}
+.glass-menu-ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px;
+}
+.glass-menu-ul li a {
+    position: relative;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 5px 45px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    z-index: 1;
+    transition: top 0.5s, z-index 0.5s, transform 0.5s;
+    transition-delay: 0.5s, 0s, 0s;
+}
+.glass-menu-ul li a:hover {
+    transition-delay: 0s, 0.5s, 0.5s;
+    top: -50%;
+    transform: translateY(40%);
+    z-index: 3;
+}
+.glass-menu-ul li a::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 0 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: skewX(45deg) translateX(120px);
+}
+.glass-menu-ul li a:hover::before {
+    transform: skewX(45deg) translateX(-120px);
+    transition: 1.5s;
+}
+
 
 /* ----------------------------------------------  Hover Effect v.1  ---------------------------------------------- */
 /* ===============  HTML  =============== 
