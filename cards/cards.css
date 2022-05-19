@@ -1193,7 +1193,7 @@ button.follow {
 }
 .description4 {
     max-width: 85%;
-    margin-left: 15%;
+    /* margin-left: 15%; */
     margin-bottom: 15px;
     color: #333;
     font-size: 15px;
@@ -1242,6 +1242,147 @@ button.follow {
         margin-left: 0px;
     }
 }
+
+
+/* ----------------------------------------------  Product Card UI Design | Nike v.3  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+    <section class="container flex" id="nikev3">
+        <div class="product-card5">
+            <svg height="50px" width="50px" fill="#111" viewBox="0 0 26 32"><path d="M14.4 5.52v-.08q0-.56.36-1t.92-.44 1 .36.48.96-.36 1-.96.4l-.24.08.08.12-.08.44-.16 1.28q.08.08.08.16l-.16.8q-.08.16-.16.24l-.08.32q-.16.64-.28 1.04t-.2.64V12q-.08.4-.12.64t-.28.8q-.16.32 0 1.04l.08.08q0 .24.2.56t.2.56q.08 1.6-.24 2.72l.16.48q.96.48.56 1.04l.4.16q.96.48 1.36.84t.8.76q.32.08.48.24l.24.08q1.68 1.12 3.36 2.72l.32.24v.08l-.08.16.24.16h.08q.24.16.32.16h.08q.08 0 .16-.08l.16-.08q.16-.16.32-.24h.32q.08 0 0 .08l-.32.16-.4.48h.56l.56.08q.24-.08.4-.16l.4-.24q.24-.08.48.16h.08q.08.08-.08.24l-.96.88q-.4.32-.72.4l-1.04.72q-.08.08-.16 0l-.24-.32-.16-.32-.2-.28-.24-.32-.2-.24-.16-.2-.32-.24q-.16 0-.32-.08l-1.04-.8q-.24 0-.56-.24-1.2-1.04-1.6-1.28l-.48-.32-.96-.16q-.48-.08-1.28-.48l-.64-.32q-.64-.32-.88-.32l-.32-.16q-.32-.08-.48-.16l-.16-.16q-.16 0-.32.08l-1.6.8-2 .88q-.8.64-1.52 1.04l-.88.4-1.36.96q-.16.16-.32 0l-.16.16q-.24.08-.32.08l-.32.16v.16h-.16l-.16.24q-.16.32-.32.36t-.2.12-.08.12l-.16.16-.24.16-.36-.04-.48.08-.32.08q-.4.08-.64-.12t-.4-.6q-.16-.24.16-.4l.08-.08q.08-.08.24-.08h.48L1.6 26l.32-.08q0-.16.08-.24.08-.08.24-.08v-.08q-.08-.16-.08-.32-.08-.16-.04-.24t.08-.08h.04l.08.24q.08.4.24.24l.08-.16q.08-.16.24-.16l.16.16.16-.16-.08-.08q0-.08.08-.08l.32-.32q.4-.48.96-.88 1.12-.88 2.4-1.36.4-.4.88-.4.32-.56.96-1.2.56-.4.8-.56.16-.32.4-.32H10l.16-.16q.16-.08.24-.16v-.4q0-.4.08-.64t.4-.24l.32-.32q-.16-.32-.16-.72h-.08q-.16-.24-.16-.48-.24-.4-.32-.64h-.24q-.08.24-.4.32l-.08.16q-.32.56-.56.84t-.88.68q-.4.4-.56.88-.08.24 0 .48l-.08.16h.08q0 .16.08.16h.08q.16.08.16.2t-.24.08-.36-.16-.2-.12l-.24.24q-.16.24-.32.2t-.08-.12l.08-.08q.08-.16 0-.16l-.64.16q-.08.08-.2 0t.04-.16l.4-.16q0-.08-.08-.08-.32.16-.64.08l-.4-.08-.08-.08q0-.08.08-.08.32.08.8-.08l.56-.24.64-.72.08-.16q.32-.64.68-1.16t.76-.84l.08-.32q.16-.32.32-.56t.4-.64l.24-.32q.32-.48.72-.48l.24-.24q.08-.08.08-.24l.16-.16-.08-.08q-.48-.4-.48-.72-.08-.56.36-.96t.88-.36.68.28l.16.16q.08 0 .08.08l.32.16v.24q.16.16.16.24.16-.24.48-.56l.4-1.28q0-.32.16-.64l.16-.24v-.16l.24-.96h.16l.24-.96q.08-.24 0-.56l-.32-.8z"></path></svg>
+            <div class="imgbox5 flex">
+                <img src="../CSS/assets/img/nike-air-zoom-maxfly-more-uptempo.png" alt="nike shoes">
+            </div>
+            <div class="details5 flex">
+                <div class="contentbox5 flex">
+                    <h2 class="product-name5">nike air zoom maxfly</h2>
+                    <h4 class="product-category5">athletics sprinting spikes</h4>
+                    <p class="description5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus eligendi eius, recusandae, sapiente excepturi quam fugiat suscipit placeat perferendis non, dolorem nulla ullam. Saepe possimus quisquam asperiores dolorem quo facilis!</p>
+                    <h3 class="price5">$249.99</h3>
+                    <button class="buy5">buy now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+#nikev3 {
+    background-color: #070c24;
+}
+.product-card5 {
+    position: relative;
+    display: flex;
+    max-width: 900px;
+    height: 600px;
+    margin: 20px;
+    background-color: #fff;
+}
+
+#nikev3 svg {
+    position: absolute;
+    inset: 20px 20px auto auto;
+    z-index: 2;
+}
+
+.imgbox5 {
+    position: relative;
+    width: 50%;
+    min-width: 250px;
+    height: 100%;
+    background-color: #000;
+}
+.imgbox5::before {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 50px;
+    inset: 20px auto auto 20px;
+    background-image: url('../assets/img/nike-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.imgbox5 img {
+    position: relative;
+    bottom: 0;
+    max-width: 120%;
+    transform: rotateY(180deg) rotateZ(15deg);
+    animation: updownnike 2s linear infinite;
+}
+@keyframes updownnike {
+    33% { bottom: -12px;}
+    66% { bottom: 12px;}
+}
+
+.details5 {
+    position: relative;
+    width: 50%;
+    min-width: 250px;
+    height: 100%;
+    padding: 40px;
+}
+.contentbox5 {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.product-name5 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    text-transform: capitalize;
+}
+.product-category5 {
+    margin: 1rem 0;
+    color: #999;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.description5 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 15px;
+}
+.price5 {
+    color: #2a2a2a;
+    font-size: 2.5rem;
+}
+.buy5 {
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 40px;
+    background-color: #006dbc;
+    box-shadow: none;
+}
+
+/* @media screen and (max-width: 760px) {
+    .product-card5 {
+        height: auto;
+    }
+    .imgbox5 {
+        padding: 40px;
+        width: 100% !important;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+    svg {
+        fill: #fff;
+    }
+    .details5 {
+        width: 100% !important;
+        height: auto;
+        padding: 20px;
+    }
+    .description5 {
+        max-width: 90%;
+        margin-left: 0px;
+    }
+} */
 
 
 /* ----------------------------------------------  Product Card UI Design - Glassmorphism  ---------------------------------------------- */
