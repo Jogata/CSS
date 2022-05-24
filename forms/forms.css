@@ -21,12 +21,16 @@ font-family: 'Raleway', sans-serif;
 
 .container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 .flex {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+input::placeholder {
+    font-family: 'Oleo Script Swash Caps', cursive;
 }
 
 
@@ -71,7 +75,7 @@ font-family: 'Raleway', sans-serif;
 }
 #form1 input:focus, #form1 a:focus {
     outline: 1px solid rgb(255, 255, 255, 0.5);
-    padding-left: 10px;
+    padding: 0px 10px;
     border-radius: 20px;
     transition: padding-left 0.5s;
 }
@@ -117,10 +121,20 @@ font-family: 'Raleway', sans-serif;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
     border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 20px;
-    background: rgba(17, 103, 177, 0.4);
+    background-color: transparent;
+    box-shadow: 3px 3px 5px rgb(4, 17, 27);
     cursor: pointer;
+}
+#form1 .submit:active {
+    transform: translate(-0.7px);
+    border-top: 1px solid rgb(4, 17, 27);
+    border-left: 1px solid rgb(4, 17, 27);
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.3);
 }
 #form1 .bottom {
     width: 100%;
@@ -227,16 +241,14 @@ font-family: 'Raleway', sans-serif;
     position: relative;
     margin: 30px auto;
 }
-input::placeholder {
-    font-family: 'Oleo Script Swash Caps', cursive;
-}
 .transparent-login-main form span i {
     position: absolute;
     top: 10px;
     left: 14px;
     font-size: 20px;
 }
-#username4, #password4,
+
+#username2, #password2,
 #transparent-login-submit {
     width: 300px;
     height: 40px;
@@ -248,17 +260,21 @@ input::placeholder {
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 0px 2px 5px #555;
 }
-#username4, #password4 {
+#username2, #password2 {
     padding-left: 40px;
 }
 #transparent-login-submit {
+    font-size: 20px;
+    letter-spacing: 1px;
     background: rgba(255, 255, 255, 0.1);
     font-family: 'Oleo Script Swash Caps', cursive;
     transition: box-shadow 0.3s;
+    cursor: pointer;
+    transition: all 0.5s;
 }
 #transparent-login-submit:active,
-#username4:active, #password4:active, 
-#username4:focus, #password4:focus {
+#username2:active, #password2:active, 
+#username2:focus, #password2:focus {
     box-shadow: 
     inset -2px -2px 5px #fff,
     inset 2px 2px 5px #555;
@@ -266,4 +282,159 @@ input::placeholder {
 #transparent-login-submit:active {
     font-size: 14px;
     letter-spacing: 0.5px;
+}
+
+/* ==========================================================  Transparent Form | v.2 - Responsive  ==========================================================  */
+/* ===============  HTML  =============== 
+    <section class="container flex" id="form3">
+        <h1>TODO ":placeholder-shown"</h1>
+        <div class="transparent-login2-container">
+            <h2 class="form3-title">login</h2>
+            <form class="transparent-login2-body">
+                <label class="form3-label" for="username3">username
+                    <input type="text" name="username" id="username3" placeholder="Username" autocomplete="off">
+                    <span class="form3-input-pseudolabel">username</span>
+                </label>
+                <label class="form3-label" for="password3">password
+                    <input type="password" name="password" placeholder="Password" id="password3">
+                    <span class="form3-input-pseudolabel">password</span>
+                </label>
+            </form>
+            <button type="button" id="transparent-login-submit3">login</button>
+            <a class="forgotten-password3" href="#form3">forgot password ?</a>
+        </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+
+#form3 {
+    position: relative;
+    background: linear-gradient(to right, #3f5efb, #fc466b);
+}
+
+.transparent-login2-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: min(100%, 25rem);
+    min-width: 210px;
+    height: 28rem;
+    margin: 5px;
+    color: #fff;
+    border-radius: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgb(255, 255, 255, 0.06);
+    box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.37);
+}
+
+.form3-title {
+    font-size: 50px;
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    opacity: 0.7;
+}
+
+.transparent-login2-body {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form3-label {
+    position: relative;
+    width: 80%;
+    margin-top: 30px;
+    color: transparent;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+#username3, #password3 {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    padding: 5px 0px;
+    margin: 0px auto;
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.6);
+    background-color: transparent;
+    opacity: 0.8;
+    z-index: 3;
+}
+#username3::placeholder, 
+#password3::placeholder {
+    opacity: 0;
+}
+
+.form3-input-pseudolabel {
+    width: 100%;
+    position: absolute;
+    inset: 0 auto auto 0;
+    color: #fff;
+    text-align: center;
+    opacity: 0.8;
+    transition: all 1s;
+}
+#username3:focus ~ span, 
+#username3:not(:placeholder-shown) ~ span,
+#password3:focus ~ span, 
+#password3:not(:placeholder-shown) ~ span {
+    top: -100%;
+}
+
+#transparent-login-submit3 {
+    width: max(200px, 50%);
+    margin: 5% auto;
+    padding: 10px 30px;
+    color: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.57);
+    opacity: 0.7;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#transparent-login-submit3:hover, 
+#transparent-login-submit3:focus {
+    transform: scale(1.1);
+    outline: 1px solid rgb(255, 255, 255, 0.5);
+}
+#transparent-login-submit3:active {
+    transform: translate(-1px);
+    border-top: 1px solid rgba(255, 255, 255, 0);
+    border-left: 1px solid rgba(255, 255, 255, 0);
+    box-shadow: inset 2px 2px 3px 0px rgba(0, 0, 0, 0.57),
+    inset -2px -2px 3px 0px rgba(255, 255, 255, 0.2);
+}
+
+.forgotten-password3 {
+    color: inherit;
+    font-size: 15px;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+.forgotten-password3:hover, 
+.forgotten-password3:focus {
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    transform: scale(1.1);
 }
