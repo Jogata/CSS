@@ -289,8 +289,8 @@ input::placeholder {
     <section class="container flex" id="form3">
         <main class="transparent-login2-main flex">
             <nav class="transparent-login2-nav">
-                <a class="transparent-login2-nav-link" href="#">home</a>
-                <a class="transparent-login2-nav-link" href="#">sign up</a>
+                <a class="transparent-login2-nav-link" href="#form3">home</a>
+                <a class="transparent-login2-nav-link" href="#form3">sign up</a>
                 <div class="empty-square" style="--i:5;"></div>
                 <div class="empty-square" style="--i:6;"></div>
                 <div class="empty-square" style="--i:8;"></div>
@@ -326,7 +326,7 @@ input::placeholder {
     width: min(100%, 25rem);
     min-width: 210px;
     height: 28rem;
-    margin: 50px 0px;
+    margin: 50px 5px;
     color: #fff;
 }
 .transparent-login2-nav > * {
@@ -510,4 +510,16 @@ input::placeholder {
     border: none;
     border-radius: 20px;
     transform: scale(1.1);
+}
+
+@media (max-width: 650px) {
+    .empty-square {
+        display: none;
+    }
+    .transparent-login2-nav-link:nth-child(1) {
+        inset: -12% 0 auto auto;
+    }
+    .transparent-login2-nav-link:nth-child(2) {
+        inset: auto auto -12% 0;
+    }
 }
