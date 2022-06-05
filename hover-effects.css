@@ -630,3 +630,86 @@ font-family: 'Raleway', sans-serif;
 .content p {
     color: #222;
 }
+
+
+/* ----------------------------------------------  Reveal Text on Hover - Split  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./hover-effects.css" />
+</head>
+
+    <section class="container flex">
+        <article class="card">
+            <div class="card-content">
+                <h3 class="card-title">title</h3>
+                <p class="card-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis voluptate, accusamus aspernatur ipsum
+                    minima quibusdam accusantium cum possimus modi perferendis?
+                </p>
+            </div>
+        </article>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+.card {
+    position: relative;
+    width: 252px;
+    height: 350px;
+    background-image: url('./assets/img/foggy-lake-quang-nguyen-vinh-2166695-copy.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 0.5s 0.25s ease-in;
+    overflow: hidden;
+    z-index: 1;
+}
+.card::before, 
+.card::after {
+    content: '';
+    width: 100%;
+    height: calc(69%);
+    position: absolute;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s 0.25s ease-in;
+    z-index: -1;
+}
+.card::before {
+    top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 100%);
+    transform: translateY(-100%);
+}
+.card::after {
+    bottom: 0;
+    clip-path: polygon(0 55%, 100% 0, 100% 100%, 0 100%);
+    transform: translateY(100%);
+}
+.card:hover::before, 
+.card:hover::after {
+    transform: translateY(0%);
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.25s;
+}
+.card:hover .card-content {
+    opacity: 1;
+    transition-delay: 0.75s;
+}
+.card-title {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.card-description {
+    font-size: 1rem;
+}
