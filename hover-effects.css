@@ -635,7 +635,7 @@ font-family: 'Raleway', sans-serif;
 /* ----------------------------------------------  Reveal Text on Hover - Split  ---------------------------------------------- */
 /* ===============  HTML  =============== 
 <head>
-    <link rel="stylesheet" href="./hover-effects.css" />
+   <link rel="stylesheet" href="./hover-effects.css" />
 </head>
 
     <section class="container flex">
@@ -712,4 +712,62 @@ font-family: 'Raleway', sans-serif;
 }
 .card-description {
     font-size: 1rem;
+}
+
+
+/* ----------------------------------------------  3D-Rotation  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+   <link rel="stylesheet" href="./hover-effects.css" />
+</head>
+
+    <section class="container flex">
+        <article id="card-3d">
+            <div class="cover"></div>
+        </article>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+#card-3d {
+    width: 250px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: 311px 400px;
+    background-position: -60px;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+}
+.cover::before {
+    position: absolute;
+    inset: 0 auto auto -30px;
+    content: '';
+    width: 60px;
+    height: 100%;
+    transform: rotateY(-90deg) translateX(-29px);
+    background-size: 280px 400px;
+}
+.cover, .cover::before {
+    background-image: url('./assets/img/foggy-lake-quang-nguyen-vinh-2166695-copy.jpg');
+}
+.cover:hover {
+    transform: rotateY(35deg);
+}
+
+.cover::after {
+    position: absolute;
+    inset: auto auto -10% -4%;
+    content: '';
+    width: 108%;
+    height: 15%;
+    border-radius: 40%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateZ(-25px);
+    filter: blur(10px);
 }
