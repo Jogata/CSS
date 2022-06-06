@@ -2674,10 +2674,13 @@ button.follow {
 }
 .profile-card {
     width: 80%;
-    max-width: 600px;
+    width: fit-content;
+    max-width: 664px;
+    margin: min(5vw, 2em);
     padding: 2em;
     display: flex;
-    /* flex-direction: column; */
+    justify-content: center;
+    flex-wrap: wrap;
     text-align: center;
     border-radius: 20px;
     color: #fff;
@@ -2713,10 +2716,14 @@ button.follow {
 }
 
 
+.profile-sidebar, 
 .profile-info {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-block: 0.5em;
+    min-width: 200px;
+    max-width: 300px;
 }
 
 .profile-name {
@@ -2748,20 +2755,22 @@ button.follow {
     display: flex;
     justify-content: space-around;
     width: 80%;
+    gap: 0.5em;
     margin: 2em auto 0;
     list-style: none;
 }
-.profile-social-links li {
-    /* width: 3rem; */
-    /* height: 3rem; */
-}
+
 .social-link {
-    display: inline-block;
-    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
     font-size: 2rem;
+    text-decoration: none;
     color: #fff;
     border-radius: 50%;
-    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.9), 
+    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.9),
     inset -2px -2px 10px rgba(255, 255, 255, 0.2);
     transition: all 0.5s ease;
 }
@@ -2770,7 +2779,12 @@ button.follow {
     color: #e01d48;
     box-shadow: unset;
 }
-.social-link i {
-    width: 1em;
-    aspect-ratio: 1 / 1;
+.social-link:focus {
+    outline: 1px solid rgba(255, 255, 255, 0.2);
+}
+.social-link:active {
+    transform: scale(1.1);
+    color: #e01d48;
+    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.9),
+    inset -2px -2px 10px rgba(255, 255, 255, 0.2);
 }
