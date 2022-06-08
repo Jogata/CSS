@@ -772,6 +772,49 @@ font-family: 'Raleway', sans-serif;
     filter: blur(10px);
 }
 
+.cover figcaption {
+    position: absolute;
+    inset: 50% auto auto -8%;
+    opacity: 0;
+    transform: translateY(50px) translateZ(30px);
+    transition: all 0.5s;
+    transition-delay: 0.5s;
+} 
+.cover:hover figcaption {
+    opacity: 1;
+    transform: translateY(0px) translateZ(30px);
+}
+
+.cover figcaption h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.cover figcaption h3 {
+    position: relative;
+    padding-left: 1em;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.cover figcaption h3::before {
+    position: absolute;
+    inset: auto auto 10px 0px;
+    content: '';
+    width: 0.5em;
+    border: 2px solid #000;
+}
+.cover figcaption h3::after {
+    position: absolute;
+    inset: auto auto -5px 0px;
+    content: '';
+    width: 1.6em;
+    border: 1px solid #000;
+}
+
+.cover figcaption p {
+    padding-top: 1em;
+}
+
 
 /* ----------------------------------------------  3D-Rotation - two sides  ---------------------------------------------- */
 /* ===============  HTML  =============== 
