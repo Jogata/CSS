@@ -780,6 +780,8 @@ font-family: 'Raleway', sans-serif;
 </head>
 
     <section class="container flex" id="rc3d1">
+        <div class="arrow left"></div>
+        <div class="arrow right"></div>
         <article class="card-3d-container">
             <figure class="front">
                 <figcaption>
@@ -806,6 +808,27 @@ font-family: 'Raleway', sans-serif;
     filter: blur(7px);
 }
 
+.arrow {
+    position: absolute;
+    width: 150px;
+    height: 400px;
+    color: #fff;
+    font-size: 2rem;
+    z-index: 5;
+}
+.left {
+    transform: translateX(-100px);
+}
+.right {
+    transform: translateX(100px);
+}
+.left:hover ~ article {
+    transform: rotateY(-30deg);
+}
+.right:hover ~ article {
+    transform: rotateY(30deg);
+}
+
 .card-3d-container {
     position: relative;
     width: 300px;
@@ -814,9 +837,9 @@ font-family: 'Raleway', sans-serif;
     perspective: 2000px;
     transform-style: preserve-3d;
 }
-.card-3d-container:hover {
-    transform: rotateY(-30deg);
-}
+/* .card-3d-container:hover { */
+    /* transform: rotateY(-30deg); */
+/* } */
 
 .front {
     position: relative;
