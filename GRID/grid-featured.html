@@ -51,24 +51,39 @@
         .grid-element figcaption {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             gap: 1em;
             position: absolute;
             inset: 100% 0 0 0;
-            padding: 2em;
+            padding: min(3vw, 2em);
             color: #fff;
             background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
             transition: all 0.5s;
         }
         .grid-element:hover figcaption {
-            top: 0;
+            inset: 0;
+            opacity: 1;
+        }
+        @media screen and (max-width: 560px) {
+            .grid-element figcaption {
+                gap: 0em;
+            }
         }
 
         .grid-element h2 {
             width: 100%;
             margin-bottom: auto;
-            font-size: 3.625rem;
+            font-size: 1.625rem;
             text-transform: capitalize;
         }
+        .grid-element.featured h2 {
+            font-size: clamp(20px, 5vw, 3.625rem);
+        }
+        .grid-element p {
+            font-size: 1rem;
+        }
+
         .link {
             width: fit-content;
             padding: 0.4em;
