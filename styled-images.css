@@ -332,6 +332,42 @@ font-family: 'Raleway', sans-serif;
 }
 
 
+/* ----------------------------------------------  Portrait with Cracked Skin  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./styled-images.css" />
+</head>
+
+    <section class="flex">
+        <div class="portrait flex">
+            <img src="./assets/img/wp-man-black-wall.jpg" alt="Portrait of a man">
+            <img src="./assets/img/cracked-earth-texture.jpg" class="texture" alt="Cracked soil">
+        </div>
+    </section>
+
+*/
+
+/* ===============  CSS  =============== */
+.portrait {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+}
+.portrait img {
+    position: absolute;
+    top: 0;
+    max-width: 100%;
+    min-height: 800px;
+    max-height: 100vh;
+    object-fit: cover;
+}
+.texture {
+    mix-blend-mode: multiply;
+}
+
+
 /* ----------------------------------------------  |  ---------------------------------------------- */
 /* ===============  HTML  =============== 
 <head>
