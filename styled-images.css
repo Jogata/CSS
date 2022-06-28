@@ -18,7 +18,7 @@ font-family: 'Raleway', sans-serif;
 
 .container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 .flex {
     display: flex;
@@ -244,10 +244,10 @@ font-family: 'Raleway', sans-serif;
 
     <section class="container flex" style="overflow: hidden;">
         <div class="sliced-image-container flex">
-            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="" class="slice-1">
-            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="" class="slice-2">
-            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="" class="slice-3">
-            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="" class="slice-4">
+            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="Landscape" class="slice-1">
+            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="Landscape" class="slice-2">
+            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="Landscape" class="slice-3">
+            <img src="./assets/img/stock-photo-127204601-copy.jpg" alt="Landscape" class="slice-4">
         </div>
     </section>
 */
@@ -365,6 +365,37 @@ font-family: 'Raleway', sans-serif;
 }
 .texture {
     mix-blend-mode: multiply;
+}
+
+
+/* ----------------------------------------------  Image Mask | Fit Image Inside Black Image  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./styled-images.css" />
+</head>
+
+    <section class="container flex">
+        <div class="lions-container flex">
+            <img src="../CSS/assets/img/africa-lions.jpg" class="lions" alt="Lions">
+            <img src="../CSS/assets/img/africa.jpg" class="africa" alt="Africa">
+        </div>
+    </section>
+
+*/
+
+/* ===============  CSS  =============== */
+.lions-container {
+    position: relative;
+    overflow: hidden;
+}
+.lions-container img {
+    max-width: 100%;
+}
+.lions {
+    position: absolute;
+}
+.africa {
+    mix-blend-mode: screen;
 }
 
 
