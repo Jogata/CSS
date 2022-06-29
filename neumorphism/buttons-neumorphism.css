@@ -1484,6 +1484,77 @@ input:checked ~ .fa-times {
     color: #5a84a2;
 }
 
+
+/* ===========================================  Concave Neumorphic Social Media icons  =========================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
+</head>
+
+    <section id="concave-sci">
+        <ul class="concave-ul">
+            <li class="concave-li">
+                <a class="aci" href="#concave-sci"> <i class="fa fa-instagram"></i> </a>
+            </li>
+            <li class="concave-li">
+                <a class="acf" href="#concave-sci"> <i class="fa fa-facebook-square"></i> </a>
+            </li>
+            <li class="concave-li">
+                <a class="act" href="#concave-sci"> <i class="fa fa-twitter"></i> </a>
+            </li>
+            <li class="concave-li">
+                <a class="aca" href="#concave-sci"> <i class="fa fa-apple"></i> </a>
+            </li>
+        </ul>
+    </section>
+*/
+
+/* ---------------  CSS  --------------- */
+#concave-sci {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    background-color: #ececec;
+}
+.concave-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 4rem;
+    gap: 1em;
+}
+.concave-li a {
+    color: transparent;
+    background-color: #bdbdbd;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+}
+.concave-li a i {
+    transition: all 0.5s;
+}
+
+.aci:hover {
+    background-color: rgba(240, 10, 201);
+    text-shadow: 3px 3px 3px rgba(240, 10, 201, 0.5);
+}
+.acf:hover {
+    background-color: rgba(13, 16, 233);
+    text-shadow: 3px 3px 3px rgba(13, 16, 233, 0.5);
+}
+.act:hover {
+    background-color: rgba(9, 177, 228);
+    text-shadow: 3px 3px 3px rgba(9, 177, 228, 0.5);
+}
+.aca:hover {
+    background-color: rgba(0, 0, 0);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
 /* ========================================================  Buttons .v3  ======================================================== */
 /* ---------------  HTML  --------------- 
 <head>
@@ -2102,15 +2173,13 @@ input:checked ~ .fa-times {
     color: #b6bbc5;
     border-radius: 50%;
     background: #dde1e7;
-    box-shadow:
-    -3px -3px 7px #ffffff73,
+    box-shadow: -3px -3px 7px #ffffff73,
     3px 3px 5px rgba(94, 104, 121, 0.288);
 }
 
 .icons-v1 i:active {
     color: #b6bbc5;
-    box-shadow:
-    inset -3px -3px 7px #ffffff73,
+    box-shadow: inset -3px -3px 7px #ffffff73,
     inset 3px 3px 5px rgba(94, 104, 121, 0.288);
 }
 
@@ -2144,8 +2213,7 @@ input:checked ~ .fa-times {
         border-radius: 50%;
         background: #dde1e7;
         list-style: none;
-        box-shadow:
-        -3px -3px 7px #ffffff73,
+        box-shadow: -3px -3px 7px #ffffff73,
         3px 3px 5px rgba(94, 104, 121, 0.288);
     }
     
@@ -2159,14 +2227,12 @@ input:checked ~ .fa-times {
         font-size: 24px;
         line-height: 60px;
         border-radius: 50%;
-        box-shadow:
-        inset -3px -3px 7px #ffffff73,
+        box-shadow: inset -3px -3px 7px #ffffff73,
         inset 3px 3px 5px rgba(94, 104, 121, 0.288);
     }
     
     .iconsv12 li a:active {
-        box-shadow:
-        inset 0px 0px 0px #ffffff73,
+        box-shadow: inset 0px 0px 0px #ffffff73,
         inset 0px 0px 0px rgba(94, 104, 121, 0.288);
     }
     .iconsv12 li a:active span{
