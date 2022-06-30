@@ -917,7 +917,7 @@ input[type="checkbox"]:checked+label::after {
 }
 
 
-/* ========================================================  Social Buttons v.4  ======================================================== */
+/* ========================================================  Social Media Buttons v.4  ======================================================== */
 /* ---------------  HTML  --------------- 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -927,21 +927,21 @@ input[type="checkbox"]:checked+label::after {
     <section id="sciv4" class="container flex">
         <ul class="sci-buttons-v4">
             <a href="sciv4" class="facebook">
-                <i class="fa fa-facebook-f"></i>
+              <i class="fa fa-facebook-f"></i>
             </a>
-            <a href="sciv4">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <a href="sciv4">
+            <a href="sciv4" class="instagram">
                 <i class="fa fa-instagram"></i>
             </a>
-            <a href="sciv4">
-                <i class="fa fa-linkedin"></i>
+            <a href="sciv4" class="twitter">
+                <i class="fa fa-twitter"></i>
             </a>
-            <a href="sciv4">
+            <a href="sciv4" class="dribbble">
                 <i class="fa fa-dribbble"></i>
             </a>
-            <a href="sciv4">
+            <a href="sciv4" class="linkedin">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="sciv4" class="pinterest">
                 <i class="fa fa-pinterest-p"></i>
             </a>
         </ul>
@@ -955,15 +955,15 @@ input[type="checkbox"]:checked+label::after {
 }
 
 .sci-buttons-v4 {
-    width: 50%;
     margin: 3em auto;
-    padding: 1em 0em;
+    padding: 0.5em 1em;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 1em;
     border-radius: 50px;
-    box-shadow: 6px 6px 9px rgba(70, 70, 70, 0.12),
-    -6px -6px 9px rgba(255, 255, 255, 0.5);
+    box-shadow: inset 6px 6px 9px rgba(70, 70, 70, 0.12),
+    inset -6px -6px 9px rgba(255, 255, 255, 0.5);
 }
 
 .sci-buttons-v4 a {
@@ -975,7 +975,26 @@ input[type="checkbox"]:checked+label::after {
     color: #000;
     text-decoration: none;
     border-radius: 50%;
-    transition: all 0.3s;
+    transition: color 0.3s;
+}
+
+.sci-buttons-v4 .facebook:hover {
+    color: #3b5998;
+}
+.sci-buttons-v4 .instagram:hover {
+    color: #c32aa3;
+}
+.sci-buttons-v4 .twitter:hover {
+    color: #09b1e4;
+}
+.sci-buttons-v4 .dribbble:hover {
+    color: #ea4c89;
+}
+.sci-buttons-v4 .linkedin:hover {
+    color: #0072b1;
+}
+.sci-buttons-v4 .pinterest:hover {
+    color: #bd081c;
 }
 
 .sci-buttons-v4 a:hover {
