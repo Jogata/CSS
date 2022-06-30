@@ -916,6 +916,119 @@ input[type="checkbox"]:checked+label::after {
     color: #92969e;
 }
 
+
+/* ========================================================  Social Buttons v.4  ======================================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
+</head>
+
+    <section id="sciv4" class="container flex">
+        <ul class="sci-buttons-v4">
+            <a href="sciv4" class="facebook">
+                <i class="fa fa-facebook-f"></i>
+            </a>
+            <a href="sciv4">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href="sciv4">
+                <i class="fa fa-instagram"></i>
+            </a>
+            <a href="sciv4">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="sciv4">
+                <i class="fa fa-dribbble"></i>
+            </a>
+            <a href="sciv4">
+                <i class="fa fa-pinterest-p"></i>
+            </a>
+        </ul>
+    </section>
+*/
+
+/* ---------------  CSS  --------------- */
+#sciv4 {
+    height: auto;
+    background-color: #ececec;
+}
+
+.sci-buttons-v4 {
+    width: 50%;
+    margin: 3em auto;
+    padding: 1em 0em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    box-shadow: 6px 6px 9px rgba(70, 70, 70, 0.12),
+    -6px -6px 9px rgba(255, 255, 255, 0.5);
+}
+
+.sci-buttons-v4 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    color: #000;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.sci-buttons-v4 a:hover {
+    border-bottom: currentColor 2px solid;
+    box-shadow: inset 12px 12px 14px rgba(70, 70, 70, 0.12),
+    inset -11px -11px 14px rgba(255, 255, 255, 0.623);
+}
+
+.sci-buttons-v4 a i {
+    font-size: 2rem;
+}
+
+
+
+
+.sci-buttons-v1 input,
+.sci-buttons-v1 button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.sci-buttons-v1 i {
+    color: #b6bbc5;
+    font-size: 1.6rem;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-icon {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, .1),
+        -0.1rem -0.1rem 0.2rem rgba(255, 255, 255, .5);
+}     
+.box-icon:hover {
+    box-shadow: inset 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, .1),
+        inset -0.1rem -0.1rem 0.2rem rgba(255, 255, 255, .5);
+}
+.box-icon:active {
+    box-shadow: none;
+}
+
+.box-icon:hover i {
+    color: #92969e;
+}
+
+
 /* ===========================================  Neumorphic Like Button  =========================================== */
 /* ---------------  HTML  --------------- 
 <head>
