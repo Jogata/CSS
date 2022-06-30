@@ -1531,6 +1531,70 @@ input:checked ~ .fa-times {
 }
 
 
+/* ===========================================  Neumorphic Buttons v.8  =========================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
+</head>
+
+    <section class="bg3 container flex">
+        <button class="btn-8">
+            <i class="fa fa-power-off" aria-hidden="true"></i>
+        </button>
+        <button class="btn-8">
+            <i class="fa fa-wifi" aria-hidden="true"></i>
+        </button>
+        <button class="btn-8">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+        </button>
+    </section>
+
+/* ---------------  CSS  --------------- */
+.bg3 {
+    height: 50vh;
+    background: linear-gradient(90deg, rgb(46, 44, 45) 0%, rgb(66, 64, 67));
+}
+.btn-8 {
+    position: relative;
+    width: 7rem;
+    height: 7rem;
+    margin-inline: 3.5rem;
+    border: 4px solid #090909;
+    border-radius: 50%;
+    outline: none;
+    background: linear-gradient(145deg, #171717, #444245);
+    box-shadow: inset 2px 2px 0px #7d7c7e,
+                inset -2px -2px 0px #1c1c1c;
+}
+.btn-8 i {
+    font-size: 2.5rem;
+}
+.btn-8::before {
+    position: absolute;
+    content: '';
+    width: 7.25rem;
+    height: 7.25rem;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: linear-gradient(145deg, #262626, #606060);
+    box-shadow: 11px 11px 22px #141414,
+                -11px -11px 22px #525252;
+    z-index: -1;
+}
+
+.active8 {
+    background: linear-gradient(-185deg, #131313, #444245);
+    box-shadow: inset 2px 2px 0px #1c1c1c,
+                inset -2px -2px 0px #5e5e5e;
+}
+.active8 i {
+    color: #fff;
+    text-shadow: 0px 0px 15px #008ece;
+}
+
+
 
 /* ===========================================  Neumorphic Button with Hollow Hover Effect  =========================================== */
 /* ---------------  HTML  --------------- 
