@@ -1542,7 +1542,7 @@ input:checked ~ .fa-times {
         <button class="btn-8">
             <i class="fa fa-power-off" aria-hidden="true"></i>
         </button>
-        <button class="btn-8">
+        <button class="btn-8 active-btn-8">
             <i class="fa fa-wifi" aria-hidden="true"></i>
         </button>
         <button class="btn-8">
@@ -1552,8 +1552,10 @@ input:checked ~ .fa-times {
 
 /* ---------------  CSS  --------------- */
 .bg3 {
+    position: relative;
     height: 50vh;
     background: linear-gradient(90deg, rgb(46, 44, 45) 0%, rgb(66, 64, 67));
+    z-index: -2;
 }
 .btn-8 {
     position: relative;
@@ -1579,19 +1581,19 @@ input:checked ~ .fa-times {
     transform: translate(-50%, -50%);
     border-radius: 50%;
     background: linear-gradient(145deg, #262626, #606060);
-    box-shadow: 11px 11px 22px #141414,
-                -11px -11px 22px #525252;
+    box-shadow: 11px 11px 17px #141414,
+                -11px -11px 20px #525252;
     z-index: -1;
 }
 
-.active8 {
+.active-btn-8 {
     background: linear-gradient(-185deg, #131313, #444245);
     box-shadow: inset 2px 2px 0px #1c1c1c,
                 inset -2px -2px 0px #5e5e5e;
 }
-.active8 i {
-    color: #fff;
-    text-shadow: 0px 0px 15px #008ece;
+.active-btn-8 i {
+    color: #00ffe7;
+    text-shadow: 0px 0px 10px #0782bb, 0px 0px 15px #008ece, 0px 0px 20px #7fafc5;
 }
 
 
