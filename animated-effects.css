@@ -622,6 +622,85 @@ body {
 }
 
 
+/* ----------------------------------------------  Multiplying Share Button  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+    <section class="container flex">
+        <div class="share">
+            <span>share</span>
+            <nav>
+                <a class="facebook" href=""><i class="fa fa-facebook"></i></a>
+                <a class="twitter" href=""><i class="fa fa-twitter"></i></a>
+                <a class="google" href=""><i class="fa fa-google"></i></a>
+                <a class="instagram" href=""><i class="fa fa-instagram"></i></a>
+            </nav>
+        </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+.share {
+    position: absolute;
+    color: #10a294;
+    font-size: 1.6rem;
+    text-align: center;
+}
+.share span {
+    display: inline-block;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    font-family: 'Abril Fatface', cursive;
+    text-transform: uppercase;
+    line-height: 80px;
+    border-radius: 80px;
+    background-color: #fff;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+.share nav {
+    font-size: 0;
+    z-index: 2;
+}
+.share a {
+    display: inline-block;
+    width: 80px;
+    line-height: 80px;
+    margin: 0 -20px;
+    color: #fff;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.share:hover span {
+    opacity: 0;
+    z-index: 1;
+}
+.share:hover nav a {
+    margin: 0 10px;
+    color: #10a294;
+    font-size: 2rem;
+}
+
+.share nav a:hover {
+    color: #fff;
+}
+.facebook:hover {
+    background-color: #71c5ec;
+}
+.twitter:hover {
+    background-color: #3b5998;
+}
+.google:hover {
+    background-color: #ea4335;
+}
+.instagram:hover {
+    background-color: #cd486b;
+}
+
 
 /* ----------------------------------------------    ---------------------------------------------- */
 /* ===============  HTML  =============== */
