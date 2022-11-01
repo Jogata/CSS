@@ -771,6 +771,127 @@ input#d:is(:checked) + label {
 }
 
 
+/* ----------------------------------------------  Speed Dial Menu (Reveal Menu)  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./navigations/menus.css" />
+</head>
+
+    <section class="container flex" style="display: flex;">
+        <div class="speed-dial-menu">
+            <button type="button" class="speed-dial-button primary-button">menu
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="options">
+                <button type="button" class="speed-dial-button">power
+                    <i class="fa fa-power-off" aria-hidden="true"></i>
+                </button>
+                <a class="speed-dial-button" href="#">share
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </a>
+                <span class="speed-dial-button">calendar
+                    <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+*/
+
+/* ===============  JS  =============== 
+    <script>
+        const menuButton = document.querySelector(".primary-button");
+        menuButton.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const menu = document.querySelector(".speed-dial-menu");
+            menu.classList.toggle("active");
+            document.addEventListener("click", () => {
+                menu.classList.toggle("active");
+            }, {once: true})
+        })
+    </script>
+*/
+
+
+/* ===============  CSS  =============== */
+.speed-dial-menu {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+.speed-dial-menu i {
+    padding: 0 0.1em;
+    color: #333333;
+    font-size: 1.4rem;
+}
+.speed-dial-menu .fa-calendar-o {
+    padding: 0.065em 0.1em;
+}
+.speed-dial-menu a {
+    text-decoration: none;
+}
+.speed-dial-button {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: #ddd;
+    box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.speed-dial-button:active {
+    background-color: #ccc;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5), 
+    inset -1px -1px 2px rgba(255, 255, 255, 0.5);
+}
+.speed-dial-button i {
+    font-size: 2rem;
+}
+
+.primary-button {
+    background-color: #009879;
+    position: relative;
+    z-index: 1;
+}
+.primary-button:active {
+    background-color: #00856a;
+}
+.primary-button i {
+    padding: 0.2em 0.3em;
+    color: #fff;
+    font-size: 3rem;
+}
+
+.options {
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.speed-dial-button:not(.primary-button) {
+    opacity: 0;
+    transform: translateY(40px);
+    visibility: hidden;
+}
+
+.speed-dial-menu.active .speed-dial-button {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+
+
 /* ----------------------------------------------  Menu with Floating Effect  ---------------------------------------------- */
 /* ===============  HTML  =============== 
 <head>
