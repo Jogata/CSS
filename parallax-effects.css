@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Lobster&family=Montserrat:wght@300;400;600&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;700;800&family=Raleway:ital,wght@0,400;1,300;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+/* 
+font-family: 'Abril Fatface', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Limelight', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Kaushan Script', cursive;
+*/
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===================================== Parallax Effect v.1 ===================================== */
+/* ------------- HTML ------------- 
+    <section id="parallax-v1" class="container">
+        <div class="frame">
+            <img src="../CSS/assets/img/parallax/v1/plan1.png" id="img1" alt="">
+            <img src="../CSS/assets/img/parallax/v1/mist.png" id="img2" alt="">
+            <img src="../CSS/assets/img/parallax/v1/plan2.png" id="img3" alt="">
+            <img src="../CSS/assets/img/parallax/v1/mist2.png" id="img4" alt="">
+            <img src="../CSS/assets/img/parallax/v1/00.png" id="img5" alt="">
+        </div>
+    </section>
+*/
+
+/* ------------- CSS ------------- */
+#parallax-v1 {
+    background-color: #111;
+    background-image: url("./assets/img/parallax/v1/bg.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%);
+    overflow: hidden;
+}
+
+#parallax-v1 .frame {
+    position: relative;
+    inset: 100px auto auto 50%;
+    transform: translateX(-50%);
+    width: 550px;
+    height: 698px;
+    margin-top: -70px;
+    margin-bottom: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px #000;
+    overflow: hidden;
+}
+#parallax-v1 img {
+    position: absolute;
+    transform-origin: 50%;
+    width: 100%;
+    transition: 2s ease;
+}
+#parallax-v1 .frame:hover #img1 {
+    transform: scale(1.2);
+    filter: blur(4px);
+}
+#parallax-v1 #img2 {
+    width: 2000px;
+    height: 300px;
+    bottom: 0;
+    left: -100%;
+    transition: 60s linear;
+    z-index: 4;
+}
+#parallax-v1 .frame:hover #img2 {
+    left: 0;
+}
+#parallax-v1 #img4 {
+    width: 200%;
+    height: 200px;
+    bottom: 0;
+    z-index: 6;
+}
+#parallax-v1 .frame:hover #img4 {
+    transform: translate(-50%, 100%);
+}
+#parallax-v1 .frame #img5 {
+    z-index: 5;
+}
+#parallax-v1 .frame:hover #img5 {
+    transform: scale(2);
+}
