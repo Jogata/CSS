@@ -46,7 +46,7 @@ font-family: 'Kaushan Script', cursive;
 /* ------------- CSS ------------- */
 #parallax-v1 {
     background-color: #111;
-    background-image: url("./assets/img/parallax/v1/bg.jpeg");
+    background-image: url("./assets/img/miao-gengxin-gu435nBTLW4-unsplash.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -101,4 +101,46 @@ font-family: 'Kaushan Script', cursive;
 }
 #parallax-v1 .frame:hover #img5 {
     transform: scale(2);
+}
+
+
+/* ===================================== Parallax Effect v.2 ===================================== */
+/* ------------- HTML ------------- 
+    <section id="parallax-v2" class="container flex">
+        <span class="text" text="NIKE">nike</span>
+        <img src="../CSS/assets/img/nike-air-zoom-maxfly-more-uptempo.png" alt="Nike shoes">
+    </section>
+*/
+
+/* ------------- CSS ------------- */
+#parallax-v2 {
+    background-color: #222;
+    overflow: hidden;
+}
+#parallax-v2 .text {
+    position: absolute;
+    font-size: 25vw;
+    font-family: 'Abril Fatface', cursive;
+    text-transform: uppercase;
+}
+#parallax-v2 .text::after {
+    position: absolute;
+    inset: 0 auto auto 0;
+    content: attr(text);
+    color: transparent;
+    -webkit-text-stroke: 0.15vw #000;
+    z-index: 2;
+}
+
+#parallax-v2 img {
+    width: 60vw;
+    animation: parallax 3s cubic-bezier(0.25, 1, 0.5, 1) alternate infinite;
+}
+@keyframes parallax {
+    0%, 10% {
+        transform: translate(100vw, 0) rotate(15deg);
+    }
+    90%, 100% {
+        transform: translate(0, 0) rotate(30deg);
+    }
 }
