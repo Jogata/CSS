@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Lobster&family=Montserrat:wght@300;400;600&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;700;800&family=Raleway:ital,wght@0,400;1,300;1,600&display=swap');
+/* 
+font-family: 'Abril Fatface', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Limelight', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -23,7 +38,7 @@ body {
 /* ----------------------------------------------  Rotating Border Animation Effects  ---------------------------------------------- */
 /* ==============   HTML   ============== 
 <head>
-    <link rel="stylesheet" href="./animated-effects.js" />
+    <link rel="stylesheet" href="./animated-effects.css" />
 </head>
 
     <section class="border-effect-v1 container">
@@ -435,7 +450,7 @@ body {
 /* ----------------------------------------------  Range Sliders  ---------------------------------------------- */
 /* ===============  HTML  =============== 
 <head>
-    <link rel="stylesheet" href="./animated-effects.js" />
+    <link rel="stylesheet" href="./animated-effects.css" />
 </head>
 
     <section class="range-bars container flex">
@@ -655,6 +670,7 @@ body {
     line-height: 80px;
     border-radius: 80px;
     background-color: #fff;
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
     pointer-events: none;
@@ -700,6 +716,61 @@ body {
 .instagram:hover {
     background-color: #cd486b;
 }
+
+
+/* ----------------------------------------------  Magnifying Glass Effect  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./animated-effects.css" />
+</head>
+
+    <section class="container flex" id="magnifying">
+        <h1 id="h1-magnifying">some long title</h1>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+#magnifying {
+    position: relative;
+    background-image: url("./assets/img/scenic-view-of-lake-against-sky-during-sunset-copy.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#magnifying::before {
+    position: absolute;
+    inset: 0 auto auto 0;
+    content: '';
+    width: 20%;
+    height: 100%;
+    background-image: url("./assets/img/scenic-view-of-lake-against-sky-during-sunset-copy.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto 120%;
+    box-shadow: 
+    20px 0 100px rgba(0, 0, 0, 0.2),
+    -20px 0 100px rgba(0, 0, 0, 0.2);
+    animation: magnifying 5s ease-in-out infinite;
+}
+@keyframes magnifying {
+    50% {
+        left: 80%;
+    }
+}
+
+#h1-magnifying {
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 2px cadetblue;
+    filter: drop-shadow(1px 1px 1px #000);
+    z-index: 2;
+}
+
 
 
 /* ----------------------------------------------    ---------------------------------------------- */
