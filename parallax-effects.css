@@ -30,6 +30,85 @@ font-family: 'Kaushan Script', cursive;
     justify-content: center;
 }
 
+
+/* ===================================== Parallax Effect | Fixed background ===================================== */
+
+
+
+/* ===================================== Parallax Effect | Transform Perspective ===================================== */
+/* ------------- HTML ------------- 
+        <div class="container flex parallax">
+            <img src="../CSS/assets/img/headphone.png" alt="Headphones">
+        </div>
+        <div class="container flex regular">
+            <img src="../CSS/assets/img/can-real-sugar-reg.png" alt="Pepsi">
+        </div>
+*/
+
+/* ------------- CSS ------------- */
+html {
+    overflow: hidden;
+}
+body {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Great Vibes', cursive;
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+}
+
+/* #perspective {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Great Vibes', cursive;
+    min-height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+} */
+
+.parallax {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    /* padding-top: 20vh; */
+    background-image: url("./assets/img/alley-copy.jpg");
+    background-size: cover;
+    transform-style: preserve-3d;
+    transform: translateZ(-1px) scale(2);
+}
+/* .parallax::before {
+    position: absolute;
+    inset: 0 auto auto 0;
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./assets/img/alley-copy.jpg");
+    background-size: cover;
+    z-index: -1;
+} */
+.regular {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    /* padding-top: 20vh; */
+    background-image: url("./assets/img/road-bg.jpeg");
+    background-size: cover;
+    z-index: 2;
+}
+.content {
+    /* margin: 0 auto; */
+    padding: 50px;
+    max-width: 50%;
+    background-color: #111;
+}
+section > img {
+    max-width: 30%;
+}
+
+
 /* ===================================== Parallax Effect v.1 ===================================== */
 /* ------------- HTML ------------- 
     <section id="parallax-v1" class="container">
@@ -101,46 +180,4 @@ font-family: 'Kaushan Script', cursive;
 }
 #parallax-v1 .frame:hover #img5 {
     transform: scale(2);
-}
-
-
-/* ===================================== Parallax Effect v.2 ===================================== */
-/* ------------- HTML ------------- 
-    <section id="parallax-v2" class="container flex">
-        <span class="text" text="NIKE">nike</span>
-        <img src="../CSS/assets/img/nike-air-zoom-maxfly-more-uptempo.png" alt="Nike shoes">
-    </section>
-*/
-
-/* ------------- CSS ------------- */
-#parallax-v2 {
-    background-color: #222;
-    overflow: hidden;
-}
-#parallax-v2 .text {
-    position: absolute;
-    font-size: 25vw;
-    font-family: 'Abril Fatface', cursive;
-    text-transform: uppercase;
-}
-#parallax-v2 .text::after {
-    position: absolute;
-    inset: 0 auto auto 0;
-    content: attr(text);
-    color: transparent;
-    -webkit-text-stroke: 0.15vw #000;
-    z-index: 2;
-}
-
-#parallax-v2 img {
-    width: 60vw;
-    animation: parallax 3s cubic-bezier(0.25, 1, 0.5, 1) alternate infinite;
-}
-@keyframes parallax {
-    0%, 10% {
-        transform: translate(100vw, 0) rotate(15deg);
-    }
-    90%, 100% {
-        transform: translate(0, 0) rotate(30deg);
-    }
 }
