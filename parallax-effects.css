@@ -32,30 +32,132 @@ font-family: 'Kaushan Script', cursive;
 
 
 /* ===================================== Parallax Effect | Fixed background ===================================== */
+/* ------------- HTML ------------- 
+    <div id="fixed-bg">
+        <div class="container flex bg">
+            <span class="border">
+                parallax example
+            </span>
+        </div>
+        <section>
+            <h2>section one</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ducimus necessitatibus dicta perferendis mollitia libero nesciunt, quia quod doloribus omnis autem labore soluta nisi temporibus dolor commodi iure illum eligendi harum ratione voluptas aliquam? Ratione eum possimus reprehenderit eaque accusamus dignissimos, eveniet, nihil, molestiae est voluptatum molestias similique? Beatae facilis maiores obcaecati laborum ad, ducimus nostrum vel ipsa hic nulla incidunt consequuntur! Quas ducimus ab officia eveniet vel dolorum quidem asperiores numquam omnis consectetur eaque beatae esse pariatur quo unde, nihil saepe commodi! Impedit est, nulla veritatis iste odio ipsam eligendi repellendus reiciendis cumque nisi quisquam, blanditiis enim illum corrupti.</p>
+        </section>
 
+        <div class="container flex bg">
+            <span class="border">
+                image two text
+            </span>
+        </div>
+        <section>
+            <h2>section two</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ullam quae nulla, quibusdam asperiores dolores rerum mollitia totam distinctio quos fuga ipsa voluptate reiciendis quidem consequatur? Non porro odit fugiat laborum, incidunt, in vero voluptatem eveniet deleniti veniam aut aliquid nesciunt architecto accusamus. Recusandae ipsum laudantium, deleniti, quam impedit aliquid voluptatibus similique minima ipsam ut voluptates repellendus alias sunt rem iusto itaque nemo, molestias illo eveniet quisquam omnis numquam ratione accusamus ducimus! Quos praesentium velit laudantium sequi enim nihil explicabo. Ea ab error neque, recusandae id veritatis tempore impedit laboriosam perferendis est quo pariatur eaque maxime vitae eius sapiente. Sunt!</p>
+        </section>
+        
+        <div class="container flex bg">
+            <span class="border">
+                image three text
+            </span>
+        </div>
+        <section>
+            <h2>section three</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis iste numquam pariatur voluptatum accusamus? Similique ad corporis doloremque dolores maiores. Dolore labore corporis, ea distinctio aspernatur possimus inventore nesciunt asperiores autem ullam doloremque, natus ad rerum eveniet accusamus veniam commodi fugit cumque! Hic ab aut amet? Animi illum accusantium suscipit magnam facilis rem tempora, beatae delectus debitis ea? Magnam alias veniam soluta libero debitis ad corporis, tenetur natus, adipisci officiis a minus omnis, at obcaecati perferendis neque dolore dolor esse.</p>
+        </section>
+
+        <div class="container flex bg">
+            <span class="border">
+                parallax example
+            </span>
+        </div>
+    </div>
+*/
+
+/* ------------- CSS ------------- */
+#fixed-bg {
+    text-align: center;
+}
+#fixed-bg h2 {
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+}
+#fixed-bg p {
+    line-height: 1.8em;
+}
+
+#fixed-bg .bg {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+#fixed-bg .bg:first-child, 
+#fixed-bg .bg:last-child {
+    background-image: url("./assets/img/branch-copy.jpg");
+}
+#fixed-bg .bg:nth-child(3) {
+    min-height: 400px;
+    background-image: url("./assets/img/foggy-lake-quang-nguyen-vinh-2166695-copy.jpg");
+}
+#fixed-bg .bg:nth-child(5) {
+    min-height: 400px;
+    background-image: url("./assets/img/scenic-view-of-lake-against-sky-during-sunset-copy.jpg");
+}
+
+.border {
+    font-size: 5rem;
+    text-transform: capitalize;
+}
+
+#fixed-bg section {
+    padding: 3rem 5rem;
+}
+
+/* Turn Off Parallax Effects on Mobile */
+@media screen and (max-width: 568px) {
+    #fixed-bg .bg {
+        background-attachment: scroll;
+    }
+}
 
 
 /* ===================================== Parallax Effect | Transform Perspective ===================================== */
 /* ------------- HTML ------------- 
-        <div class="container flex parallax">
-            <img src="../CSS/assets/img/headphone.png" alt="Headphones">
+    <section class="container flex parallax">
+        <img src="../CSS/assets/img/headphone.png" alt="Headphones">
+        <div class="content">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum iure dicta impedit autem explicabo at dignissimos ipsam expedita adipisci alias pariatur dolorem officiis modi asperiores nam numquam quam magnam earum, voluptatem nobis minima obcaecati placeat! Exercitationem eaque eos quia vero pariatur officia optio corrupti, esse voluptates nobis iusto maiores.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi doloribus repellat nam molestias quibusdam quidem? Eveniet excepturi adipisci nesciunt maiores eius magni tempora sapiente maxime ratione deleniti dolores eligendi, suscipit beatae! Iusto ipsum quisquam reiciendis? Ducimus neque quaerat, sunt voluptatibus deserunt minus dignissimos in possimus odio omnis sapiente, distinctio dolorum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ex reiciendis cupiditate est sed, doloremque consectetur nobis eum optio cumque nulla odit libero voluptates. Ipsam tenetur veritatis optio natus praesentium error doloremque architecto adipisci quas. Magnam ab quibusdam cum fugit? Provident ratione at quia debitis architecto repudiandae dolores deleniti eos.</p>
         </div>
-        <div class="container flex regular">
-            <img src="../CSS/assets/img/can-real-sugar-reg.png" alt="Pepsi">
+    </section>
+    <section class="container flex regular">
+        <img src="../CSS/assets/img/can-real-sugar-reg.png" alt="Pepsi">
+        <div class="content">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum iure dicta impedit autem explicabo at dignissimos ipsam expedita adipisci alias pariatur dolorem officiis modi asperiores nam numquam quam magnam earum, voluptatem nobis minima obcaecati placeat! Exercitationem eaque eos quia vero pariatur officia optio corrupti, esse voluptates nobis iusto maiores.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi doloribus repellat nam molestias quibusdam quidem? Eveniet excepturi adipisci nesciunt maiores eius magni tempora sapiente maxime ratione deleniti dolores eligendi, suscipit beatae! Iusto ipsum quisquam reiciendis? Ducimus neque quaerat, sunt voluptatibus deserunt minus dignissimos in possimus odio omnis sapiente, distinctio dolorum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ex reiciendis cupiditate est sed, doloremque consectetur nobis eum optio cumque nulla odit libero voluptates. Ipsam tenetur veritatis optio natus praesentium error doloremque architecto adipisci quas. Magnam ab quibusdam cum fugit? Provident ratione at quia debitis architecto repudiandae dolores deleniti eos.</p>
         </div>
+    </section>
 */
 
 /* ------------- CSS ------------- */
-html {
+/* ========== Uncomment the next lines to make it work =========== */
+/* html {
     overflow: hidden;
 }
 body {
-    color: #fff;
+    transform-style: preserve-3d;
+}
+.parallax {
+    transform: translateZ(-1px) scale(2);
+} */
+/* =========================================== */
+
+body {
     font-size: 18px;
     font-family: 'Great Vibes', cursive;
     height: 100vh;
     perspective: 1px;
-    transform-style: preserve-3d;
     overflow-x: hidden;
 }
 
@@ -70,14 +172,13 @@ body {
 } */
 
 .parallax {
+    flex-wrap: wrap;
     position: relative;
     width: 100vw;
-    height: 100vh;
-    /* padding-top: 20vh; */
-    background-image: url("./assets/img/alley-copy.jpg");
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #005b9e, #000);
     background-size: cover;
     transform-style: preserve-3d;
-    transform: translateZ(-1px) scale(2);
 }
 /* .parallax::before {
     position: absolute;
@@ -90,22 +191,21 @@ body {
     z-index: -1;
 } */
 .regular {
+    flex-wrap: wrap;
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    /* padding-top: 20vh; */
-    background-image: url("./assets/img/road-bg.jpeg");
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #000, #005b9e);
     background-size: cover;
     z-index: 2;
 }
 .content {
-    /* margin: 0 auto; */
+    max-width: max(300px, 50%);
     padding: 50px;
-    max-width: 50%;
-    background-color: #111;
+    color: #fff;
+    text-align: center;
 }
 section > img {
-    max-width: 30%;
+    max-width: max(200px, 30%);
 }
 
 
