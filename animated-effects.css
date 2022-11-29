@@ -222,6 +222,46 @@ body {
 }
 
 
+/* ===================================== Animation v.1 ===================================== */
+/* ------------- HTML ------------- 
+    <section id="animation-v1" class="container flex">
+        <span class="text" text="NIKE">nike</span>
+        <img src="../CSS/assets/img/nike-air-zoom-maxfly-more-uptempo.png" alt="Nike shoes">
+    </section>
+*/
+
+/* ------------- CSS ------------- */
+#animation-v1 {
+    background-color: #222;
+    overflow: hidden;
+}
+#animation-v1 .text {
+    position: absolute;
+    font-size: 25vw;
+    font-family: 'Abril Fatface', cursive;
+    text-transform: uppercase;
+}
+#animation-v1 .text::after {
+    position: absolute;
+    inset: 0 auto auto 0;
+    content: attr(text);
+    color: transparent;
+    -webkit-text-stroke: 0.15vw #000;
+    z-index: 2;
+}
+
+#animation-v1 img {
+    width: 60vw;
+    animation: parallax 3s cubic-bezier(0.25, 1, 0.5, 1) alternate infinite;
+}
+@keyframes parallax {
+    0%, 10% {
+        transform: translate(100vw, 0) rotate(15deg);
+    }
+    90%, 100% {
+        transform: translate(0, 0) rotate(30deg);
+    }
+}
 
 
 /* ----------------------------------------------  Auto Typing Animation Effect  ---------------------------------------------- */
