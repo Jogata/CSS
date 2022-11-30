@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Lobster&family=Montserrat:wght@300;400;600&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;700;800&family=Raleway:ital,wght@0,400;1,300;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Herr+Von+Muellerhoff&family=Kaushan+Script&family=Playfair+Display&display=swap');
+/* 
+font-family: 'Abril Fatface', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Limelight', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Fraunces', serif;
+font-family: 'Herr Von Muellerhoff', cursive;
+font-family: 'Playfair Display', serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+
+/* ==========================================================  Transparent Form | v.1  ==========================================================  */
+/* ===============  HTML  =============== 
+*/
+
+/* ===============  CSS  =============== */
+#skewedv1 {
+    row-gap: 2rem;
+    flex-direction: column;
+    background-color: #1f1f1f;
+}
+
+#skewedv1 .skewed {
+    width: 45rem;
+    display: flex;
+    font-family: 'Great Vibes', cursive;
+    border-radius: 1rem;
+    background-color: #111;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.7);
+    overflow: hidden;
+}
+
+.text {
+    width: 50%;
+    padding: 1.5em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.text h2 {
+    color: #f1f1f1;
+    font-size: 3rem;
+}
+.text p, .text small {
+    color: #8f8f8f;
+}
+.text h2, .text small {
+    font-family: 'Kaushan Script', cursive;
+    text-transform: capitalize;
+}
+.text a {
+    margin-top: auto;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+#skewedv1 .image div {
+    height: 100%;
+}
+#skewedv1 .image {
+    position: relative;
+    width: 50%;
+    height: 17em;
+    overflow: hidden;
+}
+#skewedv1 .image::before {
+    content: '';
+    width: 40%;
+    height: 130%;
+    position: absolute;
+    top: -50%;
+    left: -25%;
+    transform: translateY(25%) rotate(20deg);
+    background-color: #111;
+}
+#skewedv1 .left .image::before {
+    left: 85%;
+    transform: translateY(25%) rotate(-20deg);
+}
+#skewedv1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================================    ==========================================================  */
+/* ===============  HTML  =============== 
+*/
+
+/* ===============  CSS  =============== */
