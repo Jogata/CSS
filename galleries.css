@@ -1,13 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;700;800&family=Raleway&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Lobster&family=Montserrat:wght@300;400;600&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;700;800&family=Raleway:ital,wght@0,400;1,300;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Herr+Von+Muellerhoff&family=Kaushan+Script&family=Playfair+Display&display=swap');
 /* 
+font-family: 'Abril Fatface', cursive;
+font-family: 'Courgette', cursive;
 font-family: 'Dancing Script', cursive;
 font-family: 'Great Vibes', cursive;
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Limelight', cursive;
+font-family: 'Lobster', cursive;
 font-family: 'Montserrat', sans-serif;
+font-family: 'Oleo Script Swash Caps', cursive;
 font-family: 'Poppins', sans-serif;
 font-family: 'Raleway', sans-serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Fraunces', serif;
+font-family: 'Herr Von Muellerhoff', cursive;
+font-family: 'Playfair Display', serif;
 */
 
 *, *::before, *::after {
@@ -61,12 +69,12 @@ font-family: 'Raleway', sans-serif;
             </li>
         </ul>
     </section>
-    
 */
 
 /* ===============  CSS  =============== */
 .sgi {
     font-family: 'Raleway', sans-serif;
+    background-color: #333;
 }
 .gallerie-v1 {
     position: relative;
@@ -120,6 +128,92 @@ font-family: 'Raleway', sans-serif;
 .gallerie-v1 li:hover {
     width: 750px;
 }
+
+
+/* ----------------------------------------------  Gallerie v.2 | floating  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./galleries.css" />
+</head>
+
+    <section id="fg2" class="container">
+        <div class="container-fg2">
+            <div class="panel-fg2 active">
+                <h3>Alley</h3>
+                <img src="../CSS/assets/img/alley-copy.jpg" alt="">
+            </div>
+            <div class="panel-fg2">
+                <h3>Branch</h3>
+                <img src="../CSS/assets/img/branch-copy.jpg" alt="">
+            </div>
+            <div class="panel-fg2">
+                <h3>River</h3>
+                <img src="../CSS/assets/img/river-bank-copy.jpg" alt="">
+            </div>
+            <div class="panel-fg2">
+                <h3>Road</h3>
+                <img src="../CSS/assets/img/road-copy.jpg" alt="">
+            </div>
+            <div class="panel-fg2">
+                <h3>Spring</h3>
+                <img src="../CSS/assets/img/spring-forest-copy.jpg" alt="">
+            </div>
+            <div class="panel-fg2">
+                <h3>Winter</h3>
+                <img src="../CSS/assets/img/winter-painting-copy.jpg" alt="">
+            </div>
+        </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+#fg2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    overflow: hidden;
+}
+.container-fg2 {
+    display: flex;
+    width: 90%;
+}
+
+.panel-fg2 {
+    position: relative;
+    height: 80vh;
+    margin: 0 1%;
+    flex: 0.5;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
+    transition: flex 0.7s ease-in;
+    cursor: pointer;
+    overflow: hidden;
+}
+.panel-fg2:hover {
+    flex: 5;
+}
+.panel-fg2 h3 {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 2% 5%;
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    background-image: linear-gradient(to top, #000, transparent);
+    opacity: 0;
+}
+.panel-fg2:hover h3 {
+    opacity: 1;
+    transition: all 0.3s ease-in-out 0.4s;
+}
+.panel-fg2 img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 /* ----------------------------------------------  Stacked Gallerie  ---------------------------------------------- */
 /* ===============  HTML  =============== 
