@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Lobster&family=Montserrat:wght@300;400;600&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;700;800&family=Raleway:ital,wght@0,400;1,300;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Herr+Von+Muellerhoff&family=Kaushan+Script&family=Playfair+Display&display=swap');
+/* 
+font-family: 'Abril Fatface', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Limelight', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Fraunces', serif;
+font-family: 'Herr Von Muellerhoff', cursive;
+font-family: 'Playfair Display', serif;
+*/
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -778,7 +798,7 @@ input#d:is(:checked) + label {
     <link rel="stylesheet" href="./navigations/menus.css" />
 </head>
 
-    <section class="container flex" style="display: flex;">
+    <section class="container flex">
         <div class="speed-dial-menu">
             <button type="button" class="speed-dial-button primary-button">menu
                 <i class="fa fa-bars" aria-hidden="true"></i>
@@ -889,6 +909,128 @@ input#d:is(:checked) + label {
     transform: translateY(0);
     visibility: visible;
 }
+
+
+/* ----------------------------------------------  Full Screen Navigation  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="./navigations/menus.css" />
+</head>
+
+    <section class="full-screen-navigation">
+        <a href="#" class="panel-container-fsn">
+            <div class="panel-fsn">
+                <h3>studio</h3>
+            </div>
+        </a>
+        <a href="#" class="panel-container-fsn">
+            <div class="panel-fsn">
+                <h3>home</h3>
+            </div>
+        </a>
+        <a href="#" class="panel-container-fsn">
+            <div class="panel-fsn">
+                <h3>news</h3>
+            </div>
+        </a>
+        <a href="#" class="panel-container-fsn">
+            <div class="panel-fsn">
+                <h3>projects</h3>
+            </div>
+        </a>
+        <a href="#" class="panel-container-fsn">
+            <div class="panel-fsn">
+                <h3>blog</h3>
+            </div>
+        </a>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+.full-screen-navigation {
+    width: 100%;
+    height: 100vh;
+    min-height: 30em;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.panel-container-fsn {
+    display: inline-block;
+    flex: 1;
+    text-decoration: none;
+}
+
+.panel-fsn {
+    position: relative;
+    min-width: 5rem;
+    height: 100%;
+    min-height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border: 1px solid #ccc;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+.panel-fsn::before {
+    position: absolute;
+    inset: 0 auto auto 0;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.panel-container-fsn:nth-child(1) .panel-fsn {
+    background-image: url('../assets/img/alley-copy.jpg');
+}
+.panel-container-fsn:nth-child(2) .panel-fsn {
+    background-image: url('../assets/img/rainforest-kunal-shinde--f0YLss50Bs-unsplash.jpg');
+}
+.panel-container-fsn:nth-child(3) .panel-fsn {
+    background-image: url('../assets/img/river-bank-copy.jpg');
+}
+.panel-container-fsn:nth-child(4) .panel-fsn {
+    background-image: url('../assets/img/road-copy.jpg');
+}
+.panel-container-fsn:nth-child(5) .panel-fsn {
+    background-image: url('../assets/img/scenic-view-of-lake-against-sky-during-sunset-copy.jpg');
+}
+
+.panel-fsn h3 {
+    position: relative;
+    color: whitesmoke;
+    font-family: 'Great Vibes', cursive;
+    text-transform: capitalize;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+.panel-fsn:hover {
+    min-width: 40vw;
+    flex: none;
+}
+.panel-fsn:hover h3 {
+    font-size: 2em;
+}
+
+@media screen and (max-width: 700px) {
+    .full-screen-navigation {
+        flex-direction: column;
+    }
+    .panel-fsn:hover {
+        min-height: 40vh;
+        flex: none;
+    }
+}
+
+
+
 
 
 
