@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;700;800&family=Raleway&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Lobster&family=Montserrat:wght@300;400;600&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;700;800&family=Raleway:ital,wght@0,400;1,300;1,600&display=swap');
 /* 
+font-family: 'Abril Fatface', cursive;
+font-family: 'Courgette', cursive;
 font-family: 'Dancing Script', cursive;
 font-family: 'Great Vibes', cursive;
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Limelight', cursive;
+font-family: 'Lobster', cursive;
 font-family: 'Montserrat', sans-serif;
+font-family: 'Oleo Script Swash Caps', cursive;
 font-family: 'Poppins', sans-serif;
 font-family: 'Raleway', sans-serif;
 */
@@ -1016,6 +1019,10 @@ font-family: 'Raleway', sans-serif;
 
 /* ----------------------------------------------  Multiplying Share Button  ---------------------------------------------- */
 /* ===============  HTML  =============== 
+<head>
+   <link rel="stylesheet" href="./hover-effects.css" />
+</head>
+
     <section class="container flex">
         <div class="share">
             <span>share</span>
@@ -1047,6 +1054,7 @@ font-family: 'Raleway', sans-serif;
     line-height: 80px;
     border-radius: 80px;
     background-color: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
     pointer-events: none;
@@ -1091,4 +1099,62 @@ font-family: 'Raleway', sans-serif;
 }
 .instagram:hover {
     background-color: #cd486b;
+}
+
+
+/* ----------------------------------------------  Pop-out Image Effect  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+   <link rel="stylesheet" href="./hover-effects.css" />
+</head>
+
+    <section class="container flex" id="pop-out-image-effect">
+        <div class="person-container">
+            <img class="person-img" src="../assets/img/winter-girl-4-copy.png" alt="Girl">
+        </div>
+        <div class="person-container">
+            <img class="person-img" src="../assets/img/winter-girl-5-copy.png" alt="Girl">
+        </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+#pop-out-image-effect {
+    background-color: #eee;
+    background-image: url('../CSS/assets/img/winter-painting-copy.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.person-container {
+    position: relative;
+    width: 20rem;
+    max-width: 20rem;
+    aspect-ratio: 1;
+    margin-inline: auto;
+    background-image: url('../CSS/assets/img/winter-bg.png');
+    background-position: center;
+    background-size: cover;
+    border: 5px solid transparent;
+    box-shadow: 2px 2px 2px #000, 
+    inset 2px 2px 2px #000, 
+    inset -2px -2px 2px #fff, 
+    -2px -2px 2px #fff;
+    border-radius: 50%;
+}
+.person-img {
+    position: relative;
+    max-height: 100%;
+    display: block;
+    padding-inline: 20%;
+    transform-origin: bottom;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
+.person-img:hover {
+    transform: scale(1.2);
+}
+
+.person-container img {
+    max-width: 100%;
+    margin: auto;
 }
