@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Montserrat:wght@300;400;600&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;700;800&family=Raleway&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Lobster&family=Montserrat:wght@300;400;600&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;700;800&family=Raleway:ital,wght@0,400;1,300;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Herr+Von+Muellerhoff&family=Kaushan+Script&family=Playfair+Display&display=swap');
 /* 
 font-family: 'Abril Fatface', cursive;
 font-family: 'Courgette', cursive;
@@ -7,10 +7,15 @@ font-family: 'Dancing Script', cursive;
 font-family: 'Great Vibes', cursive;
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Limelight', cursive;
+font-family: 'Lobster', cursive;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Oleo Script Swash Caps', cursive;
 font-family: 'Poppins', sans-serif;
 font-family: 'Raleway', sans-serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Fraunces', serif;
+font-family: 'Herr Von Muellerhoff', cursive;
+font-family: 'Playfair Display', serif;
 */
 
 * {
@@ -524,4 +529,246 @@ input::placeholder {
     .transparent-login2-nav-link:nth-of-type(2) {
         inset: auto auto -12% 0;
     }
+}
+
+
+/* ==========================================================  Transparent Form | Water Drop  ==========================================================  */
+/* ===============  HTML  =============== 
+    <section class="container" id="water-drop">
+        <div class="title">
+            <h1>liquid dr <span><div class="drop"></div></span> p</h1>
+            <h2>login page <span>ui</span> design</h2>
+        </div>
+        <div class="drop flex">
+            <div class="content flex">
+                <h2>sign in</h2>
+                <form action="">
+                    <div class="inputbox">
+                        <input type="text" name="" id="" placeholder="Username">
+                    </div>
+                    <div class="inputbox">
+                        <input type="password" name="" id="" placeholder="Password">
+                    </div>
+                    <div class="inputbox submit">
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="btns">
+            <a href="water-drop" class="btn sign-in">sign up</a>
+            <a href="water-drop" class="btn">forgot password</a>
+        </div>
+    </section>
+*/
+
+/* ===============  CSS  =============== */
+#water-drop {
+    display: flex;
+    background-color: #eff0f4;
+}
+#water-drop .title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 4em;
+    color: #ddd;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #000;
+}
+#water-drop h1 {
+    width: min-content;
+    margin-bottom: 1rem;
+    font-size: 7rem;
+    line-height: 1.1;
+}
+#water-drop h2 {
+    font-size: 1.8rem;
+}
+#water-drop h2 span {
+    color: #ff0f5b;
+}
+.title .drop {
+    display: inline-block;
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    margin: 0px -30px -9px;
+    border-radius: 49% 51% 42% 58% / 56% 47% 53% 44%;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.05), 
+    15px 10px 15px rgba(0, 0, 0, 0.025), 
+    inset 2px 5px 10px rgba(0, 0, 0, 0.1), 
+    inset -2px -5px 10px rgb(255, 255, 255, 0.9);
+}
+.title .drop::before {
+    position: absolute;
+    inset: 12px auto auto 22px;
+    width: 15px;
+    height: 15px;
+}
+.title .drop:after {
+    position: absolute;
+    inset: 27px auto auto 34px;
+    width: 7px;
+    height: 7px;
+}
+
+.drop {
+    position: relative;
+    width: 350px;
+    min-width: 350px;
+    height: 350px;
+    margin: auto 0 auto auto;
+    font-family: 'Kaushan Script', cursive;
+    border-radius: 52% 48% 33% 67% / 38% 45% 55% 62%;
+    box-shadow: 25px 35px 20px rgba(0, 0, 0, 0.05), 
+    25px 30px 30px rgba(0, 0, 0, 0.05), 
+    inset 20px 20px 20px rgba(0, 0, 0, 0.05), 
+    inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+    transition: all 0.5s;
+}
+.drop:hover {
+    border-radius: 50%;
+}
+
+.drop::before, 
+.drop::after {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.9;
+}
+.drop::before {
+    inset: 50px auto auto 85px;
+    width: 35px;
+    height: 35px;
+}
+.drop::after {
+    inset: 90px auto auto 110px;
+    width: 15px;
+    height: 15px;
+}
+
+.drop .content {
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    gap: 15px;
+}
+.drop .content h2 {
+    color: #333;
+    font-size: 1.5rem;
+}
+.drop .content h2::first-letter {
+    text-transform: uppercase;
+}
+
+.drop .content form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.drop .content form .inputbox {
+    width: 225px;
+    border-radius: 25px;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.05), 
+    15px 10px 15px rgba(0, 0, 0, 0.025), 
+    inset 2px 5px 10px rgba(0, 0, 0, 0.1), 
+    inset -2px -5px 10px rgb(255, 255, 255, 0.9);
+}
+
+.drop .content form .inputbox input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.drop .content form .inputbox.submit {
+    width: 120px;
+    margin-left: auto;
+    background-color: #ff0f5b;
+    transition: all 0.5s;
+}
+.drop .content form .inputbox.submit:hover {
+    width: 150px;
+}
+.submit input {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.drop input::placeholder {
+    font-family: initial;
+}
+
+.btns {
+    margin: 41vh auto 22vh 0;
+}
+#water-drop .btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    box-shadow: 15px 25px 10px rgba(190, 1, 254, 0.1), 
+    15px 20px 20px rgba(190, 1, 254, 0.1), 
+    inset 10px 10px 10px rgba(190, 1, 254, 0.05), 
+    inset -10px -10px 15px rgba(255, 255, 255, 0.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#water-drop .btn:first-of-type {
+    width: 90px;
+    height: 90px;
+    margin: 40px 0px 40px 70px;
+    border-radius: 65% 35% 57% 43% / 48% 32% 68% 52%;
+    background-color: #55acee;
+}
+#water-drop .btn:last-of-type {
+    width: 120px;
+    height: 120px;
+    border-radius: 44% 56% 65% 35% / 57% 58% 42% 43%;
+    background-color: #c61dff;
+}
+#water-drop .btn:hover {
+    border-radius: 50%;
+}
+
+#water-drop .btn::before {
+    position: absolute;
+    inset: 17px auto auto 22px;
+    content: '';
+    width: 30px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 15px 25px 10px rgba(190, 1, 254, 0.1), 
+    15px 20px 20px rgba(190, 1, 254, 0.1), 
+    inset 10px 10px 10px rgba(190, 1, 254, 0.05), 
+    inset -10px -10px 15px rgba(255, 255, 255, 0.5);
+    transform: rotateZ(-30deg);
+    opacity: 0.85;
+}
+#water-drop .btn.sign-in::before {
+    inset: 11px auto auto 22px;
+    height: 6px;
+    transform: rotateZ(-15deg);
 }
