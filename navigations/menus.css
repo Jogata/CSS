@@ -24,6 +24,13 @@ font-family: 'Playfair Display', serif;
     box-sizing: border-box;
 }
 
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
 .container {
     width: 100%;
     height: 100vh;
@@ -42,7 +49,6 @@ font-family: 'Playfair Display', serif;
         -1px -1px 3px 0 rgba(255, 255, 255, 0.075),
         inset 3px 3px 6px 0px rgba(0, 0, 0, 0.28),
         inset 2px 2px 3px 0 rgba(255, 255, 255, 0.07);
-
 }
 
 /* ----------------------------------------------  Circle Menu v.1  ---------------------------------------------- */
@@ -185,32 +191,182 @@ font-family: 'Playfair Display', serif;
     <link rel="stylesheet" href="./navigations/menus.css" />
 </head>
 
+    <section class="container flex" id="menu-v1">
+        <nav class="flex">
+            <button id="menu-btn-v1"><i></i></button>
+            <div class="menu">
+                <ul>
+                    <li style="--i:0.2s">
+                        <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:0.1s">
+                        <a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:0.1s">
+                        <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:0.2s">
+                        <a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+*/
+
+/* ===============  JS  =============== 
+    <script>
+        const menuBtnv1 = document.querySelector("#menu-btn-v1");
+        menuBtnv1.addEventListener("click", () => {
+            menuBtnv1.classList.toggle("active");
+        })
+    </script>
+ */
+
+/* ===============  CSS  =============== */
+#menu-v1 {
+    background-color: #20415c;
+}
+#menu-btn-v1 {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid var(--clr);
+    border-radius: 50%;
+    background-color: #ff4886;
+    transform: translateY(-30px);
+    cursor: pointer;
+    z-index: 1;
+}
+#menu-btn-v1::before {
+    position: absolute;
+    content: "+";
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    color: #fff;
+    transform: translateY(-1px) rotate(0deg);
+    transition: all 1.5s;
+}
+#menu-btn-v1.active::before {
+    transform: translateX(-1px) rotate(225deg);
+}
+#menu-btn-v1 i {
+    position: absolute;
+    inset: 0;
+}
+#menu-btn-v1 i::before {
+    position: absolute;
+    top: 22px;
+    left: -23px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 3px -6px var(--clr);
+}
+#menu-btn-v1 i::after {
+    position: absolute;
+    top: 22px;
+    right: -23px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -3px -6px var(--clr);
+}
+
+#menu-v1 .menu {
+    position: absolute;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 70px;
+    background-color: #fff;
+    transform: translateY(-30px);
+    transition: transform 0.5s, width 0.5s, height 0.5s;
+    transition-delay: 1s, 0.5s, 0.5s;
+}
+#menu-v1 .menu ul {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin: auto;
+}
+#menu-v1 .menu li {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30px);
+    transition: 0.25s;
+    transition-delay: calc(0s + var(--i));
+}
+#menu-v1 .menu li:nth-child(odd) {
+    margin-left: auto;
+}
+#menu-v1 .menu li:nth-child(even) {
+    margin-right: auto;
+}
+#menu-v1 .menu a {
+    color: #555;
+    font-size: 2rem;
+}
+#menu-v1 .menu a:hover {
+    color: #ff4886;
+}
+
+#menu-btn-v1.active ~ .menu {
+    width: 360px;
+    height: 70px;
+    transform: translateY(0px);
+    transition-delay: 0s, 0.5s, 0.5s;
+}
+#menu-btn-v1.active ~ .menu li {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    transition-delay: calc(0.75s + var(--i));
+}
+
+/* ----------------------------------------------  Menu v.2  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./navigations/menus.css" />
+</head>
+
     <section class="bg1 container">
-        <div class="menuv1">
-            <ul class="menuv1-ul">
-                <li class="menuv1-li flex">
-                    <div class="menuv1-li-item flex">
+        <div class="menuv2">
+            <ul class="menuv2-ul">
+                <li class="menuv2-li flex">
+                    <div class="menuv2-li-item flex">
                         <input type="radio" name="tab" id="a">
                         <label for="a" class="flex"><i class="fa fa-home" aria-hidden="true"></i></label>
                         <div class="floater"></div>
                     </div>
                 </li>
-                <li class="menuv1-li flex">
-                    <div class="menuv1-li-item flex">
+                <li class="menuv2-li flex">
+                    <div class="menuv2-li-item flex">
                         <input type="radio" name="tab" id="b">
                         <label for="b" class="flex"><i class="fa fa-beer" aria-hidden="true"></i></label>
                         <div class="floater"></div>
                     </div>
                 </li>
-                <li class="menuv1-li flex">
-                    <div class="menuv1-li-item flex">
+                <li class="menuv2-li flex">
+                    <div class="menuv2-li-item flex">
                         <input type="radio" name="tab" id="c">
                         <label for="c" class="flex"><i class="fa fa-bell" aria-hidden="true"></i></label>
                         <div class="floater"></div>
                     </div>
                 </li>
-                <li class="menuv1-li flex">
-                    <div class="menuv1-li-item flex">
+                <li class="menuv2-li flex">
+                    <div class="menuv2-li-item flex">
                         <input type="radio" name="tab" id="d">
                         <label for="d" class="flex"><i class="fa fa-user" aria-hidden="true"></i></label>
                         <div class="floater"></div>
@@ -226,7 +382,7 @@ font-family: 'Playfair Display', serif;
     background-color: #abe9cd;
     background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
 }
-.menuv1 {
+.menuv2 {
     position: relative;
     display: block;
     max-width: 300px;
@@ -238,30 +394,30 @@ font-family: 'Playfair Display', serif;
     transform: scale(1.4);
 }
 
-.menuv1-ul {
+.menuv2-ul {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
 }
 
-.menuv1-li {
+.menuv2-li {
     width: 50px;
     height: 50px;
     color: #fff;
 }
 
-.menuv1-li-item {
+.menuv2-li-item {
     width: 80%;
     height: 80%;
     border-radius: 50%;
 }
-.menuv1-li-item > * {
+.menuv2-li-item > * {
     position: absolute;
 }
-.menuv1-li-item input {
+.menuv2-li-item input {
     opacity: 0;
 }
-.menuv1-li-item label {
+.menuv2-li-item label {
     width: 42px;
     height: 42px;
     font-size: 1.4rem;
@@ -1028,9 +1184,6 @@ input#d:is(:checked) + label {
         flex: none;
     }
 }
-
-
-
 
 
 
