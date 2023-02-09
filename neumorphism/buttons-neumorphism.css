@@ -123,13 +123,13 @@ body {
     transform: rotate(45deg);
 }
 
-/* ========================================================  On-Off  ======================================================== */
+/* ========================================================  On/Off  ======================================================== */
 /* ---------------  HTML  --------------- 
 <head>
     <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
 </head>
 
-    <div class="onoff-container">
+    <div class="onoff-container flex">
         <div id="neu-onoff-button" class="onoff-button">
             <div class="onoff-button-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
@@ -172,10 +172,7 @@ body {
 
 .onoff-container {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 50vh;
     background-color: var(--white-color);
   }
   
@@ -1393,6 +1390,17 @@ input:checked ~ .fa-times {
                 </label>
             </li>
         </ul>
+
+        --------------------  v2.2  ------------------------
+        <div class="neumorphic-buttons-v22-container">
+            <ul class="neumorphic-buttons-v22" id="nav">
+                <li><i class="fa fa-television" aria-hidden="true"></i></li>
+                <li><i class="fa fa-gamepad" aria-hidden="true"></i></li>
+                <li class="active"><i class="fa fa-headphones" aria-hidden="true"></i></li>
+                <li><i class="fa fa-microphone" aria-hidden="true"></i></li>
+                <li><i class="fa fa-wifi" aria-hidden="true"></i></li>
+            </ul>
+        </div>
     </section>
 
 */
@@ -1535,7 +1543,7 @@ input:checked ~ .fa-times {
     } */
 
 
-    /* --------------------  v2.1  ------------------------ */
+    /* --------------------  v2.2  ------------------------ */
     .neumorphic-buttons-v22-container {
         width: 420px;
         height: 80px;
@@ -1667,6 +1675,140 @@ input:checked ~ .fa-times {
     color: #00ffe7;
     text-shadow: 0px 0px 15px #00a1ff,
                 0px 0px 30px #00a1ff;
+}
+
+
+/* ===========================================  Neumorphic On/Off Button  =========================================== */
+/* ---------------  HTML  --------------- 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./neumorphism/buttons-neumorphism.css">
+</head>
+
+    <section id="bg4" class="container flex">
+        <h1>css only</h1>
+        <div class="checkbox">
+            <input type="checkbox" name="name" id="name">
+            <div class="switchbox">
+                <div class="switch">
+                    <span class="on">on</span>
+                </div>
+                <div class="light"></div>
+            </div>
+        </div>
+    </section>
+
+/* ---------------  CSS  --------------- */
+#bg4 {
+    position: relative;
+    height: 50vh;
+    background-color: #565656;
+}
+#bg4 h1 {
+    position: absolute;
+    inset: 1rem auto auto 1rem;
+    color: #414141;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    text-shadow: 0 -0.04em 0 #000;
+}
+
+#bg4 .checkbox {
+    position: relative;
+    width: 6.5em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2em;
+    background: linear-gradient(0deg, #777, #414141);
+    box-shadow: inset 0 0.05em 0 #222, 
+            inset 0 -0.05em 0 #909090;
+}
+
+#bg4 input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#bg4 .switch {
+    position: relative;
+    width: 5.6em;
+    height: 2.2em;
+    padding-right: 0.7em;
+    text-align: right;
+    border: 0.06em solid #404040;
+    border-radius: 2em;
+    background: linear-gradient(150deg, #5e5e5e 0%, #d6d6d6 45%, #d6d6d6 100%);
+    box-shadow: inset 0 0 0.15em #fff, 0.05em 0.05em 0.1em 0 #000;
+    z-index: 1;
+}
+
+#bg4 .switchbox {
+    position: relative;
+}
+/* Shadow */
+#bg4 .switchbox::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2%;
+    width: 2.2em;
+    height: 2.2em;
+    border-radius: 50%;
+    box-shadow: 0.2em 0.3em 0.8em #222;
+    transition: all 0.3s;
+}
+/* Middle Line */
+#bg4 .switchbox::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 0.1em;
+    height: 1.5em;
+    background-color: #686868;
+    z-index: 1;
+}
+
+#bg4 span {
+    color: #696969;
+    font-weight: bold;
+    vertical-align: sub;
+    text-transform: uppercase;
+    text-shadow: 0 -0.04em 0 #000;
+}
+
+#bg4 .light {
+    position: absolute;
+    right: -35%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: #3d3d3d;
+    box-shadow: inset 0 -0.03em #eee;
+    transition: all 0.3s;
+}
+
+#bg4 .checkbox input:checked + .switchbox .switch {
+    background: linear-gradient(210deg, #5e5e5e 0%, #d6d6d6 45%, #d6d6d6 100%);
+    box-shadow: inset 0 0 0.15em #fff, -0.05em 0.05em 0.1em 0 #000;
+}
+#bg4 .checkbox input:checked + .switchbox::before {
+    left: 0;
+    box-shadow: -0.2em 0.3em 0.8em #222;
+}
+#bg4 .checkbox input:checked + .switchbox .light {
+    background-color: #30f4d6;
+    box-shadow: 0 0 0.5em #30f4d6;
 }
 
 
