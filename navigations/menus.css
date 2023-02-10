@@ -225,6 +225,7 @@ a {
 
 /* ===============  CSS  =============== */
 #menu-v1 {
+    max-height: 50vh;
     background-color: #20415c;
 }
 #menu-btn-v1 {
@@ -237,6 +238,8 @@ a {
     border: 5px solid var(--clr);
     border-radius: 50%;
     background-color: #ff4886;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), 
+        inset -1px -1px 2px rgba(0, 0, 0, 0.2);
     transform: translateY(-30px);
     cursor: pointer;
     z-index: 1;
@@ -314,8 +317,9 @@ a {
     margin-right: auto;
 }
 #menu-v1 .menu a {
-    color: #555;
+    color: #666;
     font-size: 2rem;
+    text-shadow: -1px -1px 0px #000;
 }
 #menu-v1 .menu a:hover {
     color: #ff4886;
@@ -333,6 +337,130 @@ a {
     transform: translateY(0px);
     transition-delay: calc(0.75s + var(--i));
 }
+/* v.1.2 */
+/* ===============  HTML  =============== 
+    <section id="menu-v12">
+        <div class="navigation">
+            <div class="menu-btn-v12"></div>
+            <div class="menu">
+                <ul>
+                    <li style="--i:1"><a href="#">
+                        <i class="fa fa-drupal" aria-hidden="true"></i>
+                    </a></li>
+                    <li style="--i:2"><a href="#">
+                        <i class="fa fa-envira" aria-hidden="true"></i>
+                    </a></li>
+                    <li style="--i:3"><a href="#">
+                        <i class="fa fa-linux" aria-hidden="true"></i>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+*/
+
+/* ===============  JS  =============== 
+    <script>
+        const menuButtonv12 = document.querySelector(".menu-btn-v12");
+        menuButtonv12.addEventListener("click", () => {
+            menuButtonv12.classList.toggle("active");
+        })
+    </script>
+ */
+
+/* ===============  CSS  =============== */
+#menu-v12 {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #ff216d, #2196f3);
+}
+
+#menu-v12 .navigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-v12 .menu-btn-v12 {
+    position: relative;
+    width: 4.4em;
+    height: 4.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), 
+        inset -1px -1px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 2;
+}
+#menu-v12 .menu-btn-v12::before {
+    position: absolute;
+    content: "+";
+    color: #ff216d;
+    font-size: 3em;
+    font-weight: 200;
+    transition: all 1.5s ease;
+}
+#menu-v12 .menu-btn-v12.active::before {
+    transform: rotate(225deg);
+}
+
+#menu-v12 .menu {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    border-radius: 70px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), inset -1px -1px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-delay: 1s, 0.5s, 0.5s;
+    z-index: 1;
+}
+
+#menu-v12 .menu-btn-v12.active ~ .menu {
+    width: 15em;
+    height: 4.4em;
+    transform: translateY(-6em);
+    transition-delay: 0s, 0.5s, 0.5s;
+}
+
+#menu-v12 ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    overflow: hidden;
+}
+
+#menu-v12 li {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0s ease;
+}
+#menu-v12 .menu-btn-v12.active ~ .menu li {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+    transition-delay: calc(0.15s * var(--i) + 0.6s);
+}
+
+#menu-v12 a {
+    color: #555;
+    font-size: 2em;
+    text-shadow: -1px -1px 0 #000;
+    transition: all 0.4s;
+}
+#menu-v12 a:hover {
+    color: #ff216d;
+}
 
 /* ----------------------------------------------  Menu v.2  ---------------------------------------------- */
 /* ===============  HTML  =============== 
@@ -347,29 +475,33 @@ a {
                 <li class="menuv2-li flex">
                     <div class="menuv2-li-item flex">
                         <input type="radio" name="tab" id="a">
-                        <label for="a" class="flex"><i class="fa fa-home" aria-hidden="true"></i></label>
-                        <div class="floater"></div>
+                        <label for="a" class="flex">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                        </label>
                     </div>
                 </li>
                 <li class="menuv2-li flex">
                     <div class="menuv2-li-item flex">
                         <input type="radio" name="tab" id="b">
-                        <label for="b" class="flex"><i class="fa fa-beer" aria-hidden="true"></i></label>
-                        <div class="floater"></div>
+                        <label for="b" class="flex">
+                            <i class="fa fa-beer" aria-hidden="true"></i>
+                        </label>
                     </div>
                 </li>
                 <li class="menuv2-li flex">
                     <div class="menuv2-li-item flex">
                         <input type="radio" name="tab" id="c">
-                        <label for="c" class="flex"><i class="fa fa-bell" aria-hidden="true"></i></label>
-                        <div class="floater"></div>
+                        <label for="c" class="flex">
+                            <i class="fa fa-bell" aria-hidden="true"></i>
+                        </label>
                     </div>
                 </li>
                 <li class="menuv2-li flex">
                     <div class="menuv2-li-item flex">
                         <input type="radio" name="tab" id="d">
-                        <label for="d" class="flex"><i class="fa fa-user" aria-hidden="true"></i></label>
-                        <div class="floater"></div>
+                        <label for="d" class="flex">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </label>
                     </div>
                 </li>
             </ul>
@@ -379,18 +511,17 @@ a {
 
 /* ===============  CSS  =============== */
 .bg1 {
-    background-color: #abe9cd;
-    background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+    background-color: #333;
 }
 .menuv2 {
     position: relative;
-    display: block;
-    max-width: 300px;
-    margin: 0 auto;
-    border-radius: 30px;
-    background: #333;
     inset: 40% 0 0 0;
-    box-shadow: 0px 60px 40px -7px rgba(0, 0, 0, 0.2);
+    max-width: 16em;
+    display: block;
+    margin: 0 auto;
+    border-radius: 2em;
+    background: #333;
+    filter: drop-shadow(-1px -1px 1px #fff3) drop-shadow(0px 1px 1px #000);
     transform: scale(1.4);
 }
 
@@ -401,8 +532,8 @@ a {
 }
 
 .menuv2-li {
-    width: 50px;
-    height: 50px;
+    width: 3em;
+    height: 3em;
     color: #fff;
 }
 
@@ -418,11 +549,12 @@ a {
     opacity: 0;
 }
 .menuv2-li-item label {
-    width: 42px;
-    height: 42px;
-    font-size: 1.4rem;
+    width: 2em;
+    height: 2em;
+    font-size: 1.4em;
     text-align: center;
     line-height: 36px;
+    border: 1px solid #333;
     border-radius: 50%;
     z-index: 2;
 }
@@ -433,17 +565,14 @@ input:checked + label {
     color: #fff;
 }
 
-.floater {
-    width: 50px;
-    height: 50px;
-    background: #333;
-    border-radius: 3rem 0;
-    border-radius: 50%;
-}
-input:checked ~ .floater, 
 input:checked ~ label  {
-    transform: scale(1.2) translate(0, -5px);
+    transform: scale(1.2) translate(0, -0.3em);
     transition: 1s;
+}
+input:checked ~ label {
+    box-shadow: 1px 1px 1px #000, inset 1px 1px 1px #000, 
+    inset -1px -1px 1px rgba(255, 255, 255, 0.2), 
+    -1px -1px 1px rgba(255, 255, 255, 0.2);
 }
 
 input#a:is(:checked) + label {
