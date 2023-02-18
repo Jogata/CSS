@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;700;800&family=Raleway&display=swap');
+
+/* 
+font-family: 'Abril Fatface', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Limelight', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================================  Tabs v.1  ==========================================================  */
+/* ---------------  HTML  --------------- 
+  <div class="wrapper" id="v1">
+    <div class="tabs-container">
+      <div class="tabs-header">
+        <ul>
+          <li class="active">
+            <span class="icon"><i class="fa fa-newspaper-o"></i></span>
+            <span class="item">News</span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa fa-info-circle"></i></span>
+            <span class="item">Info</span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa fa-calendar"></i></span>
+            <span class="item">Topics</span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa fa-map-signs"></i></span>
+            <span class="item">Venue</span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa fa-users"></i></span>
+            <span class="item">Speakers</span>
+          </li>
+        </ul>
+      </div>
+      <div class="tabs-wrapper">
+        <div class="tabs-content active">
+          <div class="tabs-info">
+            <h3>News</h3>
+            <p>The Elder Scrolls V: Skyrim is an action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks. It is the fifth main installment in The Elder Scrolls series, following 2006's The Elder Scrolls IV: Oblivion, and was released worldwide for Microsoft Windows, PlayStation 3, and Xbox 360 on November 11, 2011.</p>
+            <p>The game is set 200 years after the events of Oblivion, and takes place in Skyrim, the northernmost province of Tamriel. Its main story focuses on the player's character, the Dragonborn, on their quest to defeat Alduin the World-Eater, a dragon who is prophesied to destroy the world. Over the course of the game, the player completes quests and develops the character by improving skills. The game continues the open world tradition of its predecessors by allowing the player to travel anywhere in the game world at any time, and to ignore or postpone the main storyline indefinitely.</p>
+            <p>The player character is Dragonborn and is typically referred to as such. The Dragonborn can be male or female, from one of ten races. Each of the ten races has, in addition to a bonus for certain skills, a power specific to their race - for example, Nords start with a bonus to several martial skills, and the ability to intimidate enemies for a short period. The player can recruit one NPC at a time as a follower, who can travel and fight with the Dragonborn; there are forty-five available followers in the base game, with thirteen more added in the downloadable expansions.</p>
+          </div>
+        </div>
+        <div class="tabs-content">
+          <div class="tabs-info">
+            <h3>Info</h3>
+            <p>Elden Ring is an action role-playing game played in a third person perspective, with gameplay focusing on combat and exploration. It features elements similar to those found in other games developed by FromSoftware, such as the Dark Souls series, Bloodborne, and Sekiro: Shadows Die Twice. Set in an open world, players are allowed to freely explore the Lands Between and its six main areas; these locations range from Limgrave, an area featuring grassy plains and ancient ruins, to Caelid, a wasteland home to undead monsters. Open world areas are explorable using the character's mount, Torrent, as the primary mode of transportation, along with the ability to fast travel outside of combat. Throughout the game, players encounter non-player characters (NPCs) and enemies, including the demigods who rule each main area and serve as the game's main bosses. Aside from open world areas, Elden Ring also features hidden dungeons, such as catacombs, tunnels, and caves where players can fight bosses and gather helpful items.</p>
+            <p>The player chooses a character class at the start of the game, which determines their starting spells, equipment, and attributes. Combat with enemies can be within melee range, or from a distance using ranged weapons or spells. Attacks from enemies can be blocked using shields or avoided by dodging. Spells in Elden Ring allow the player to enhance their own weapons, fight enemies from afar, and restore lost hit points. The player can memorize a limited amount of these spells, which can be cast using a staff or Sacred Seal item. Weapons in Elden Ring can be improved using Ashes of War, obtainable "enchantments" that grant weapons new capabilities. Ashes of War can be applied to or removed from weapons, and each Ash adds a Weapon Art, a special ability that can be used during combat. Aside from direct combat, stealth mechanics can be used to avoid enemies entirely, or allow for the targeting of foes with critical hits while hidden.</p>
+            <p>Checkpoints called Sites of Grace are located throughout the game's areas; they are places where the character can increase the power of their attributes, change memorized spells, swap Ashes of War, or walk to using fast travel. Upon death, players respawn at the last Site of Grace they interacted with. Alternatively, they may choose to respawn at certain locations highlighted by "Stakes of Marika" provided they died nearby. To increase their attributes at Sites of Grace, the player must spend runes, an in-game currency acquired by defeating enemies. Runes can also be used to buy items and improve weapons and armor. Dying in Elden Ring will cause the player to lose all collected runes at the location of death, and if the player dies again before retrieving the runes, they will be lost forever.</p>
+          </div>
+        </div>
+        <div class="tabs-content">
+          <div class="tabs-info">
+            <h3>Topics</h3>
+            <p>Horizon Forbidden West is a 2022 action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment. The sequel to 2017's Horizon Zero Dawn, the game is set in a post-apocalyptic version of the Western United States recovering from the aftermath of an extinction event caused by a rogue robot swarm. The player can explore the open world and complete quests using ranged and melee weapons against hostile machine creatures.</p>
+            <p>Horizon Forbidden West was released on February 18, 2022, for PlayStation 4 and PlayStation 5. It was praised for its visuals, combat, vocal performances and technical advancements, while the writing and open world design drew mixed responses. An expansion, Burning Shores, will be released on April 19, 2023.</p>
+            <p>Horizon Forbidden West is an action role-playing game played from a third-person perspective. The player controls Aloy, a hunter in a world populated by dangerous, animalistic machines. In an open world, she explores the mysterious frontier known as the Forbidden West, a post-apocalyptic version of the Western United States, specifically the states of California, Nevada, and Utah.[1] The map is larger than in the previous game. Exploration is improved with new underwater discoveries, and improvements to combat using the Valor Surge system, freeform climbing, and tools such as the Shieldwing, Focus Scanner, Diving Mask, and Pullcaster. The mission structure for quests better supports variety in objectives with compelling reward systems.</p>
+          </div>
+        </div>
+        <div class="tabs-content">
+          <div class="tabs-info">
+            <h3>Venue</h3>
+            <p>Assassin's Creed Unity is an action-adventure,[2] stealth game played from a third-person perspective and set in an open world environment. The game features a historical recreation of Paris in the late 18th-century at a roughly 1:1 scale. The setting is divided into seven major districts—Le Louvre, Île de la Cité, Le Marais, La Bièvre, Les Invalides, Quartier Latin, and Ventre de Paris—and also includes the town of Versailles, located on the outskirts of Paris. The commune of Saint-Denis is featured as part of the free Dead Kings expansion pack.</p>
+            <p>A number of side missions can be found and initiated from within the open world, such as "Paris Stories", which require the player to assist a non-playable character (usually a historical figure) with a minor problem; "Murder Mysteries", in which the player investigates various murder scenes, collecting clues and interrogating witnesses to determine the culprit; and "Nostradamus Enigmas", a series of cryptic riddles that lead the player to different artifacts, which can be used to unlock a special reward. Players can also find a number of collectibles scattered around Paris, including treasure chests, cockades, and artifacts, which provide various rewards, typically in the form of new gear or cosmetic options.</p>
+            <p>For the first time in the series, the player character, Arno Dorian, presents a unique set of abilities that can be upgraded through a skill tree system, enabling the player to assign points earned through gameplay to improve Arno's skills in stealth, melee, and ranged combat, as well as his health. Players are also able to customise Arno's weapons, armor and equipment to further complement their individual style of play. The quality of these items is indicated by their level, which can be a maximum of 5 (in the case of legendary gear). Players also have a wider selection of weapons available, including swords, axes, spears, rifles, pistols and throwable items, such as smoke bombs. The Dead Kings expansion introduces an additional weapon: the Guillotine Gun—an axe which has been converted into a grenade launcher.</p>
+          </div>
+        </div>
+        <div class="tabs-content">
+          <div class="tabs-info">
+            <h3>Speakers</h3>
+            <p>The Witcher is a 2007 action role-playing game developed by CD Projekt Red. It was based on the fantasy novel series The Witcher by Polish author Andrzej Sapkowski. The game's story takes place after the events of the main saga. In 2009, a console version, The Witcher: Rise of the White Wolf, was scheduled for release using an entirely new engine and combat system. This was suspended as a result of payment problems with console developers Widescreen Games. The first game has, to date, two sequels, namely The Witcher 2: Assassins of Kings in 2011 and The Witcher 3: Wild Hunt in 2015.</p>
+            <p>The story takes place in a medieval fantasy world and follows Geralt of Rivia, one of a few traveling monster hunters who have supernatural powers, known as Witchers. Players can choose one of three fighting styles to use in different situations and against different foes. The fast style allows for more rapid, less-damaging attacks with a higher chance of hitting faster enemies; the strong style deals more damage in exchange for a slow attack speed, and a lower chance to hit faster enemies; and the group style features sweeping attacks best used if Geralt is surrounded. The player can switch between the styles at any point. Both of Geralt's main swords also have distinctively different combat styles from other weaponry, and serve specific purposes. The steel blade is used to fight humans and other flesh-and-blood beings, while the silver sword is more effective against supernatural monsters and beasts (against some of which steel may have no effect whatsoever). With precise timing, the player can link Geralt's attacks into combos to damage enemies more effectively.</p>
+            <p>Alchemy is a significant part of the gameplay. The player can create potions that increase health or endurance regeneration, allow Geralt to see in the dark, or provide other beneficial effects. The recipes for these potions can be learned through scrolls, or by experimentation. Once the player creates an unknown potion, he can choose to drink it, but if the potion is a failure it will poison or have other harmful effects on Geralt. Each time Geralt drinks potions, they increase the toxicity level of his body. This can be reduced by drinking a special potion or by meditating at an inn or fireplace. In addition to potions, the player can create oils used to augment the damage done by weapons. They can also create bombs for use as weapons in combat. Neither can be created until talent points have been allocated into the corresponding skills.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+*/
+
+/* ---------------  JS  --------------- 
+  <script>
+    const tabs = document.querySelectorAll(".tabs-header ul li");
+    const tabsContent = document.querySelectorAll(".tabs-content");
+    
+    tabs.forEach(function(tab, index){
+      tab.addEventListener("click", function(){
+        const currentActiveTab = document.querySelector("li.active");
+        currentActiveTab.classList.remove("active");
+        tab.classList.add("active");
+        
+        const currentActiveTabInfo = document.querySelector(".tabs-content.active");
+        currentActiveTabInfo.classList.remove("active");
+        tabsContent[index].classList.add("active");
+      })
+    })
+  </script>
+*/
+
+/* ---------------  CSS  --------------- */
+
+#v1 {
+    background-color: #faf8f8;
+}
+
+.tabs-header {
+    width: 100%;
+    padding-top: 9vh;
+    background-color: #ff5847;
+}
+
+.tabs-header ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tabs-header ul li {
+    position: relative;
+    margin-right: 1px;
+    padding: 1em 2em;
+    color: #fff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tabs-header ul li .icon {
+    margin-right: 3px;
+}
+
+.tabs-header ul li:before,
+.tabs-header ul li:before {
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s ease;
+}
+.tabs-header ul li.active:before,
+.tabs-header ul li:hover:before {
+    background-color: #fff;
+}
+
+.tabs-wrapper {
+    padding: 2em;
+}
+
+.tabs-content {
+    display: none;
+    padding: 2em;
+    border-radius: 0.4em;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.05),
+    -1px -1px 1px rgba(0,0,0,0.05);
+} 
+.tabs-content.active {
+    display: block;
+}
+
+.tabs-info h3 {
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+.tabs-info p {
+    color: #7a7a7a;
+    margin-bottom: 1.2rem;
+}
+
+.tabs-info p:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 40rem){
+    .tabs-header ul li {
+        padding: 1.4em;
+    }
+    .tabs-header ul li .item {
+        display: none;
+    }
+    .tabs-header ul li .icon {
+        font-size: 1.25rem;
+    }
+    .tabs-wrapper,
+    .tabs-content {
+        padding: 1.25em;
+    }
+}
+
+
+
