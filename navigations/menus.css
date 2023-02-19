@@ -184,6 +184,202 @@ a {
 }
 
 
+/* ----------------------------------------------  Circle Menu v.2  ---------------------------------------------- */
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./navigations/menus.css" />
+</head>
+
+    <section id="circlemenuv2">
+        <div class="circlemenuv2">
+            <button class="toggle-btn">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </button>
+            <ul>
+                <li style="--i:0">
+                    <a href="#f">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li style="--i:1">
+                    <a href="#f">
+                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li style="--i:2">
+                    <a href="#f">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li style="--i:3">
+                    <a href="#f">
+                        <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li style="--i:4">
+                    <a href="#f">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li style="--i:5">
+                    <a href="#f">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li style="--i:6">
+                    <a href="#f">
+                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li style="--i:7">
+                    <a href="#f">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+*/
+
+/* ===============  JS  =============== 
+    <script>
+        const menu = document.querySelector(".circlemenuv2");
+        const toggleBtn = document.querySelector(".circlemenuv2 .toggle-btn");
+        toggleBtn.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        })
+    </script>
+ */
+
+/* ===============  CSS  =============== */
+#circlemenuv2 a {
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+
+#circlemenuv2 button {
+    border: none;
+    outline: 1px solid transparent;
+    background: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#circlemenuv2 {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2196f3;
+    background-image: linear-gradient(45deg, #0b61a7, #5babec, #0b61a7);
+}
+
+.circlemenuv2 {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#circlemenuv2 .circlemenuv2 .toggle-btn {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 
+    0px 3px 4px rgba(0,0,0,0.15),
+    0px 0px 0px 2px transparent, 
+    0px 0px 0px 8px transparent;
+    transition: all 1.2s;
+    cursor: pointer;
+}
+.circlemenuv2.active .toggle-btn {
+    transform: rotate(360deg);
+    box-shadow: 0 0 0 2px #333, 
+    0px 0px 0px 8px #ffffff,
+    0px 6px 8px rgba(0,0,0,0.15);
+}
+
+.circlemenuv2 .fa-share-alt {
+    color: #333;
+    font-size: 2rem;
+}
+.fa-facebook {
+    color: #1877f2;
+}
+.fa-whatsapp {
+    color: #25d366;
+}
+.fa-twitter {
+    color: #1da1f2;
+}
+.fa-dribbble {
+    color: #ea4c89;
+}
+.fa-linkedin {
+    color: #0a66c2;
+}
+.fa-instagram {
+    color: #c32aa3;
+}
+.fa-pinterest-p {
+    color: #bd081c;
+}
+.fa-youtube-play {
+    color: #ff0000;
+}
+
+.circlemenuv2 ul {
+    display: flex;
+    align-items: center;
+}
+
+.circlemenuv2 li {
+    position: absolute;
+    left: 0;
+    transform-origin: 140px;
+    transform: rotate(calc(360deg/8 * var(--i)));
+    scale: 0;
+    transition: all 0.5s;
+    transition-delay: calc(0.05s * var(--i));
+}
+.circlemenuv2.active li {
+    scale: 1;
+}
+
+.circlemenuv2 li a {
+    position: relative;
+    display: flex;
+    transform: rotate(calc(360deg/-8 * var(--i)));
+}
+.circlemenuv2 li a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 3px 4px rgba(0,0,0,0.15);
+    transition: all 0.5s;
+}
+.circlemenuv2 li:hover a i {
+    font-size: 2.5rem;
+    box-shadow: 
+    0px 0px 0px 2px currentColor, 
+    0px 0px 0px 6px #ffffff;
+}
+
+
 /* ----------------------------------------------  Menu v.1  ---------------------------------------------- */
 /* ===============  HTML  =============== 
 <head>
