@@ -1,14 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;700;800&family=Raleway&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300;400;600&family=Limelight&family=Lobster&family=Montserrat:wght@300;400;600&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;700;800&family=Raleway:ital,wght@0,400;1,300;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Herr+Von+Muellerhoff&family=Kaushan+Script&family=Playfair+Display:wght@400;700&display=swap');
 /* 
 font-family: 'Abril Fatface', cursive;
+font-family: 'Courgette', cursive;
 font-family: 'Dancing Script', cursive;
 font-family: 'Great Vibes', cursive;
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Limelight', cursive;
+font-family: 'Lobster', cursive;
 font-family: 'Montserrat', sans-serif;
+font-family: 'Oleo Script Swash Caps', cursive;
 font-family: 'Poppins', sans-serif;
 font-family: 'Raleway', sans-serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Fraunces', serif;
+font-family: 'Herr Von Muellerhoff', cursive;
+font-family: 'Playfair Display', serif;    //400,700
 */
 
 * {
@@ -21,9 +28,21 @@ ul {
     list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+image {
+  max-width: 100%;
+}
+
+.landing-page {
+  min-height: 100vh;
+}
+
 /* ==========================================================  Tabs v.1  ==========================================================  */
 /* ---------------  HTML  --------------- 
-  <div class="wrapper" id="v1">
+  <div class="landing-page" id="v1">
     <div class="tabs-container">
       <div class="tabs-header">
         <ul>
@@ -211,4 +230,220 @@ ul {
 }
 
 
+/* ==========================================================  Tabs v.2  ==========================================================  */
+/* ---------------  HTML  --------------- 
+      <div class="landing-page" id="v2">
+        <h1>CSS Only</h1>
+        <main>
+            <input type="radio" name="tab" id="tab-1" checked>
+            <input type="radio" name="tab" id="tab-2">
+            <input type="radio" name="tab" id="tab-3">
+            <input type="radio" name="tab" id="tab-4">
+            <input type="radio" name="tab" id="tab-5">
+    
+            <div class="labels">
+                <label for="tab-1">01</label>
+                <label for="tab-2">02</label>
+                <label for="tab-3">03</label>
+                <label for="tab-4">04</label>
+                <label for="tab-5">05</label>
+            </div>
+            <div class="slides-container">
+                <div class="slides">
+                    <section>
+                        <div class="content">
+                            <h2>Alex Grey</h2>
+                            <h3>Build your Porsche</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, eligendi.</p>
+                            <a href="#">read more</a>
+                        </div>
+                        <div class="image">
+                            <img src="../Front-end/Sliders/img/v1/Alex-Grey-315991634.jpg" alt="">
+                            <img src="../Front-end/assets/img/headphones/mask-copy.png" alt="">
+                        </div>
+                    </section>
+                    <section>
+                        <div class="content">
+                            <h2>GTS Red</h2>
+                            <h3>Build your Porsche</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, eligendi.</p>
+                            <a href="#">read more</a>
+                        </div>
+                        <div class="image">
+                            <img src="../Front-end/Sliders/img/v1/GTS-Red-312382293.jpg" alt="">
+                            <img src="../Front-end/assets/img/headphones/mask-copy.png" alt="">
+                        </div>
+                    </section>
+                    <section>
+                        <div class="content">
+                            <h2>Gulf Blue</h2>
+                            <h3>Build your Porsche</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, eligendi.</p>
+                            <a href="#">read more</a>
+                        </div>
+                        <div class="image">
+                            <img src="../Front-end/Sliders/img/v1/Gulf-Blue-312502406.jpg" alt="">
+                            <img src="../Front-end/assets/img/headphones/mask-copy.png" alt="">
+                        </div>
+                    </section>
+                    <section>
+                        <div class="content">
+                            <h2>Ice Green Metallic</h2>
+                            <h3>Build your Porsche</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, eligendi.</p>
+                            <a href="#">read more</a>
+                        </div>
+                        <div class="image">
+                            <img src="../Front-end/Sliders/img/v1/Ice-Green-Metallic-314398192.jpg" alt="">
+                            <img src="../Front-end/assets/img/headphones/mask-copy.png" alt="">
+                        </div>
+                    </section>
+                    <section>
+                        <div class="content">
+                            <h2>Racing Green Metallic</h2>
+                            <h3>Build your Porsche</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, eligendi.</p>
+                            <a href="#">read more</a>
+                        </div>
+                        <div class="image">
+                            <img src="../Front-end/Sliders/img/v1/Racing-Green-Metallic-315601499.jpg" alt="">
+                            <img src="../Front-end/assets/img/headphones/mask-copy.png" alt="">
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+      </div>
+*/
 
+/* ---------------  CSS  --------------- */
+#v2 h1 {
+  text-align: center;
+color: #fff;
+text-shadow: -1px -1px 1px #000;
+}
+
+main {
+  position: relative;
+  width: 80%;
+  margin: 6rem auto;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 5px #333;
+}
+.slides-container {
+  border-radius: 1em;
+  overflow-x: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 500%;
+  height: 100%;
+}
+
+.slides section {
+  width: 20%;
+  padding: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.content {
+  flex: 1;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-family: 'Kaushan Script', cursive;
+  text-transform: capitalize;
+}
+h3 {
+  color: #ff3300;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+.content a {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.4em 1em;
+  color: #ff3300;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  border: 1px solid #ff3300;
+}
+img {
+  max-width: 100%;
+}
+.image {
+  position: relative;
+  flex: 1;
+}
+.image img:nth-child(2) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: screen;
+}
+
+.landing-page#v2 input {
+  display: none;
+}
+
+.labels {
+  position: absolute;
+  inset: 0 auto auto 5%;
+  text-transform: capitalize;
+  transform: translateY(-100%);
+  z-index: 1;
+}
+.labels label {
+  padding: 0.97em 1em;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px #000;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.labels label:hover {
+  color: #ff3300;
+}
+
+#tab-1:checked ~ .slides-container .slides section:nth-child(1) {
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+#tab-2:checked ~ .slides-container .slides section:nth-child(2) {
+  margin-left: -20%;
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+#tab-3:checked ~ .slides-container .slides section:nth-child(3) {
+  margin-left: -40%;
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+#tab-4:checked ~ .slides-container .slides section:nth-child(4) {
+  margin-left: -60%;
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+#tab-5:checked ~ .slides-container .slides section:nth-child(5) {
+  margin-left: -80%;
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+
+#tab-1:checked ~ .labels label:nth-child(1), 
+#tab-2:checked ~ .labels label:nth-child(2), 
+#tab-3:checked ~ .labels label:nth-child(3), 
+#tab-4:checked ~ .labels label:nth-child(4), 
+#tab-5:checked ~ .labels label:nth-child(5) {
+  color: #fff;
+  background-color: #ff3300;
+}
