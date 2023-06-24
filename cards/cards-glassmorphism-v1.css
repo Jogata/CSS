@@ -20,6 +20,11 @@ font-family: 'Raleway', sans-serif;
 
 a {
     outline: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: Georgia, serif;
 }
 
 .flex {
@@ -401,8 +406,217 @@ a {
 }
 
 
+/* ===============  HTML  =============== 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./cards/cards-glassmorphism-v1.css">
+</head>
 
+    <section class="cards-glassmorphism-v3-container">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="name">ivet valcheva</h3>
+          <i class="fa fa-ellipsis-v" title="My Portfolio"></i>
+          <!-- <p>my portfolio</p> -->
+        </div>
+        <div class="card-info">
+          <div class="profile-image">
+            <img src="../../../CSS/assets/img/profile-copy.jpg" alt="">
+          </div>
+          <div class="profile-info">
+            <label for="skills">skills:</label>
+            <div>
+              <ul>
+                <li>web designer</li>
+                <li>programmer</li>
+                <li>graphic designer</li>
+              </ul>
+            </div>
+            <ul class="social-icons">
+              <li>
+                <i class="fa fa-facebook"></i>
+              </li>
+              <li>
+                <i class="fa fa-linkedin"></i>
+              </li>
+              <li>
+                <i class="fa fa-instagram"></i>
+              </li>
+              <li>
+                <i class="fa fa-github"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          <input type="submit" value="Hire" class="btn">
+        </div>
+      </div>
+    </section>
+*/
 
+/* ===============  CSS  =============== */
+.cards-glassmorphism-v3-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-color: cornflowerblue;
+    background-image: url("../assets/img/games-the-elder-scrolls-v-skyrim-50003-copy.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 120% 120%;
+    animation: move 60s linear infinite alternate;
+}
+
+.cards-glassmorphism-v3-container .card {
+    position: relative;
+    width: 35rem;
+    margin: auto;
+    padding: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+  }
+
+  .cards-glassmorphism-v3-container .card-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d5cccc24;
+  }
+  .cards-glassmorphism-v3-container .card-header .name {
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+  }
+  .cards-glassmorphism-v3-container .card-header i {
+    padding: 0.3em;
+    font-size: 1.4rem;
+    transition: color 0.4s;
+    cursor: pointer;
+  }
+  .cards-glassmorphism-v3-container .card-header i:hover {
+    color: #3c79db;
+  }
+  .cards-glassmorphism-v3-container .card-header span {
+    position: absolute;
+    bottom: -100%;
+    right: 0.5em;
+    padding: 0.6em 1.2em;
+    text-transform: capitalize;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.15);
+    transform: translateY(10%);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+  }
+  .cards-glassmorphism-v3-container .card-header i:hover ~ span {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .cards-glassmorphism-v3-container .card-info {
+    padding: 1.2rem 1.9rem;
+    display: flex;
+    align-items: center;
+    row-gap: 2rem;
+  }
+
+  .cards-glassmorphism-v3-container .profile-image img {
+    width: 11rem;
+    height: 11rem;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    outline: 3px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .cards-glassmorphism-v3-container .profile-info {
+    margin: 20px 0px 10px 50px;
+  }
+
+  .cards-glassmorphism-v3-container .profile-info label {
+    text-transform: capitalize;
+  }
+
+  .cards-glassmorphism-v3-container .profile-info div {
+    margin: 2rem;
+  }
+
+  .cards-glassmorphism-v3-container ul li {
+    list-style-type: circle;
+    text-transform: capitalize;
+  }
+
+  .cards-glassmorphism-v3-container .social-icons {
+    display: flex;
+    column-gap: 0.6rem;
+    list-style: none;
+  }
+
+  .cards-glassmorphism-v3-container .social-icons li {
+    list-style: none;
+    cursor: pointer;
+  }
+  .cards-glassmorphism-v3-container .social-icons i {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+  }
+  .cards-glassmorphism-v3-container .social-icons li:hover i {
+    color: #3c79db;
+    background-color: #fff;
+    transform: translateY(-4px);
+    box-shadow: inset 0 0 0 15px #fff;
+  }
+
+  .cards-glassmorphism-v3-container .bottom {
+    display: flex;
+    justify-content: right;
+  }
+
+  .cards-glassmorphism-v3-container .btn {
+    margin: 0 5px;
+    padding: 0.4em 1.6em;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: inherit;
+    font-weight: bold;
+    border: 1px solid #3c79db;
+    border-radius: 2em;
+    background-color: transparent;
+    box-shadow: 1px 1px 1px #000, 
+    -1px -1px 1px rgb(255, 255, 255);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+  }
+  .cards-glassmorphism-v3-container .btn:hover {
+    color: #3c79db;
+    background-color: #fff;
+  }
+
+  @media screen and (max-width: 38rem) {
+    .cards-glassmorphism-v3-container .card {
+      width: auto;
+    }
+    .cards-glassmorphism-v3-container .card-info {
+      flex-direction: column;
+    }
+    .cards-glassmorphism-v3-container .bottom {
+        justify-content: center;
+    }
+  }
 
 
 
